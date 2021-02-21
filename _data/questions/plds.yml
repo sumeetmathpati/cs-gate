@@ -1,0 +1,142 @@
+- name: Trees
+  questions:
+    - year: 2000
+      serial: 1
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Consider the following nested representation of binary trees: (X Y Z)
+            indicates Y and Z are the left and right subtrees, respectively, of 
+            node X. Note that Y and Z may be NULL, or further nested. Which of 
+            the following represents a valid binary tree?
+      options:
+        - type: text
+          data: (1 2 (4 5 6 7))
+        - type: text
+          data: (1 ((2 3 4) 5 6) 7)
+        - type: text
+          data: (1 (2 3 4)(5 6 7))
+        - type: text
+          data: (1 (2 3 NULL) (4 5))
+      answer:
+        - type: text
+          data: C
+    - year: 2004-CS
+      serial: 90
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: Choose the best matching between the programming styles in Group 1 and their characteristics in Group 2.
+        - type: table
+          rows:
+            - ["Group 1", "Group 2"]
+            - [ "P) Functional", "1) Command-based, procedural" ]
+            - [ "Q) Logic", "2) Imperative, abstract data type"]
+            - [ "R)  Object-oriented", "3) Side-effect free, declarative, expression evaluation"]
+            - [ "S) Imperative", "4) Declarative, clausal representation, theorem proving"]
+      options:
+        - type: text
+          data: P-2, Q-3, R-4, S-1
+        - type: text
+          data: P-4, Q-3, R-2, S-1
+        - type: text
+          data: P-3, Q-4, R-1, S-2
+        - type: text
+          data: P-3, Q-4, R-2, S-1
+      answer:
+        - type: text
+          data: D
+    - year: 2002
+      serial: 1
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            The number of leaf nodes in a rooted tree of n nodes, with each node having 0 or 3 children is: 
+      options:
+        - type: text
+          data: n/2
+        - type: text
+          data: (n-1)/3
+        - type: text
+          data: (n-1)/2
+        - type: text
+          data: (2n+1)/3
+      answer:
+        - type: text
+          data: D
+        - type: text
+          data: >
+            Let L be the number of leaf nodes and I be the 
+            number of internal nodes, then following relation holds for above given tree
+    - year: 2006-IT
+      serial: 45
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Suppose that we have numbers between 1 and 100 in a binary search 
+            tree and want to search for the number 55. Which of the following 
+            sequences CANNOT be the sequence of nodes examined?
+      options:
+        - type: text
+          data: "{10, 75, 64, 43, 60, 57, 55}"
+        - type: text
+          data: "{90, 12, 68, 34, 62, 45, 55}"
+        - type: text
+          data: "{9, 85, 47, 68, 43, 57, 55}"
+        - type: text
+          data: "{79, 14, 72, 56, 16, 53, 55}"
+      answer:
+        - type: text
+          data: C
+        - type: text
+          data: >
+            Option C cannot be the sequence of BST. Because after 47 we went for 68 
+            (which is greater than 47), that means all the values coming in 
+            the set must be greater than 47. But then we have 43 in set.
+    - year: 2008-IT
+      serial: 71
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            A Binary Search Tree (BST) stores values in the range 37 to 573. Consider 
+            the following sequence of keys.
+        - type: text
+          data: >
+            I.  81, 537, 102, 439, 285, 376, 305
+        - type: text
+          data: >
+            II. 52, 97, 121, 195, 242, 381, 472
+        - type: text
+          data: >
+            III. 142, 248, 520, 386, 345, 270, 307
+        - type: text
+          data: >
+            IV. 550, 149, 507, 395, 463, 402, 270 
+        - type: text
+          data: >
+            Suppose the BST has been unsuccessfully searched for key 273. Which 
+            all of the above sequences list nodes in the order in which we could 
+            have encountered them in the search?
+      options:
+        - type: text
+          data: II and III only
+        - type: text
+          data: I and III only
+        - type: text
+          data: III and IV only
+        - type: text
+          data: III only
+      answer:
+        - type: text
+          data: D
+    
+- name: Array

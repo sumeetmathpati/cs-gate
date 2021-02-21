@@ -1,0 +1,166 @@
+- name: IO Control
+  questions:
+    - year: 2004-CS
+      serial: Q67
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            The microinstructions stored in the control memory of a processor 
+            have a width of 26 bits. Each microinstruction is divided into 
+            three fields: a micro-operation field of 13 bits, a next address 
+            field (X), and a MUX select field (Y). There are 8 status bits 
+            in the input of the MUX.
+        - type: image
+          data: coa-2004-cs-q67.png
+        - type: text
+          data: >
+            How many bits are there in the X and Y fields, and what is 
+            the size of the control memory in number of words?
+      options:
+        - type: text
+          data: 10, 3, 1024
+        - type: text
+          data: 8, 5, 256
+        - type: text
+          data: 5, 8, 2048
+        - type: text
+          data: 10, 3, 512
+      answer:
+        - type: text
+          data: A
+        - type: text
+          data: x + y + 13 = 26 ... (1)
+        - type: text
+          data: y = 3 ... (y is no of bits used to represent 8 different states of multiplexer) ...(2)
+        - type: text
+          data: x is no of bits required represent size of control memory
+        - type: text
+          data: x = 10 from (1) and (2)
+        - type: text
+          data: ∴ Size of control memory = 2^x = 2^10 = 1024
+    - year: 2004-CS
+      serial: Q68
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            A hard disk with a transfer rate of 10 Mbytes/second is constantly 
+            transferring data to memory using DMA. The processor runs at 600 MHz, 
+            and takes 300 and 900 clock cycles to initiate and complete DMA 
+            transfer respectively. If the size of the transfer is 20 Kbytes, 
+            what is the percentage of processor time consumed for the transfer 
+            operation?
+      options:
+        - type: text
+          data: 5.0%
+        - type: text
+          data: 1.0%
+        - type: text
+          data: 0.5%
+        - type: text
+          data: 0.1%
+      answer:
+        - type: text
+          data: D
+        - type: text
+          data: Clock cycle time = 1 / (600×10^6) ... (Frequency = 1/Time)
+        - type: text
+          data: For DMA initiation and completion = (900+300) / (600×10^6) = 2 microsec.
+        - type: text
+          data: Disk Transfer rate = 10 Mbytes/sec
+        - type: text
+          data: 1 byte =1 / (10^7) sec
+        - type: text
+          data: 20 Kbytes = 2 milisec = 2000 micro sec
+        - type: text
+          data: Percentage = [2 / (2+2000)] × 100 = 0.0999 ≃ 0.1%
+    - year: 2005-CS
+      serial: Q21
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            What is the swap space in the disk used for?
+      options:
+        - type: text
+          data: >
+             Saving temporary html pages
+        - type: text
+          data: >
+            Saving process data
+        - type: text
+          data: >
+            Storing the super-block
+        - type: text
+          data: >
+            Storing device drivers
+      answer:
+        - type: text
+          data: B
+        - type: text
+          data: >
+            Let us assume that CPU contains two processes when one process is being 
+            executed on the CPU the other one is swapped out arid all the data is saved on 
+            the disk, and when the other one in progress then all the data of first 
+            process saved  on  the disk, Thus the swap space is basically Used for saving the process data.
+    - year: 2005-CS
+      serial: Q69
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            A device with data transfer rate 10 KB/sec is connected to a CPU. 
+            Data is transferred byte-wise. Let the interrupt overhead be 4 μsec. 
+            The byte transfer time between the device interface register and CPU 
+            or memory is negligible. What is the minimum performance gain of 
+            operating the device under interrupt mode over operating it under 
+            program-controlled mode?
+      options:
+        - type: text
+          data: 12
+        - type: text
+          data: 25
+        - type: text
+          data: 35
+        - type: text
+          data: 45
+      answer:
+        - type: text
+          data: B
+- name: Instruction Pipelining and Addressing Modes
+  questions:
+    - year: 2002-CS
+      serial: Q12
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            The most appropriate matching for the following pairs:
+        - type: list
+          data:
+            - "X: Indirect addressing"
+            - "Y: Immediate addressing"
+            - "Z: Autodecrement addressing"
+        - type: list
+          data:
+            - "1: Loops"
+            - "2:Pointers"
+            - "3:Constants"  
+      options:
+        - type: text
+          data: X−1, Y−3, Z−2
+        - type: text
+          data: X−2, Y−1, Z−3
+        - type: text
+          data: X−3, Y−2, Z−1
+        - type: text
+          data: X−3, Y−1, Z−2
+      answer:
+        - type: text
+          data: C

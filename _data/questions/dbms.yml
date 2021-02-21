@@ -1,0 +1,380 @@
+- name: ER and Relational Model
+  questions:
+    - year: 2004-CS
+      serial: Q34
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            It is desired to design an object-oriented employee record system for a company. 
+            Each employee has a name, unique id, and salary. Employees belong to different 
+            categories and their salary is determined by their category. The functions getName, 
+            getId and compute salary are required. Given the class hierarchy below, possible 
+            locations for these functions are:
+        - type: list
+          data:
+            - I. getId is implemented in the superclass
+            - II. getId is implemented in the subclass
+            - III. getName is an abstract function in the superclass
+            - IV. getName is implemented in superclass
+            - V. getName is implemented in subclass
+            - VI. getSalary is an abstract function in the superclass
+            - VII. getSalary is implemented in the superclass
+            - VIII. getSalary is implemented in the subclass
+        - type: image
+          data: dbms-2004-cs-q34.png
+        - type: text
+          data: Choose the best design
+      options:
+        - type: text
+          data: I, IV, VI, VIII
+        - type: text
+          data: I, IV, VII
+        - type: text
+          data: I, III, V, VI, VIII
+        - type: text
+          data: II, V, VIII
+      answer:
+        - type: text
+          data: A
+        - type: text
+          data: >
+            Name and id are a property of every employee and independent of their category. 
+            So, these should be implemented in superclass. Every employee has a salary but 
+            this is determined by their category. So, getSalary must be a abstract function in 
+            superclass and implemented in subclass.
+    - year: 2004-CS
+      serial: Q73
+      marks: 2
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Consider the following entity relationship diagram (ERD), where two entities 
+            E1 and E2 have a relation R of cardinality 1:m.
+        - type: image
+          data: dbms-2004-cs-q73.png
+        - type: text
+          data: The attributes of E1 are A11, A12 and A13 where A11 is the key attribute. 
+            The attributes of E2 are A21, A22 and A23 where A21 is the key attribute and 
+            A23 is a multi-valued attribute. Relation R does not have any attribute. 
+            A relational database containing minimum number of tables with each table 
+            satisfying the requirements of the third normal form (3NF) is designed from 
+            the above ERD. The number of tables in the database is
+      options:
+        - type: text
+          data: TCP, but not UDP
+        - type: text
+          data: TCP and UDP
+        - type: text
+          data: UDP, but not TCP
+        - type: text
+          data: Neither TCP, nor UDP
+      answer:
+        - type: text
+          data: B
+    - year: 2008-CS
+      serial: Q14
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Packets of the same session may be routed through different paths in:
+      options:
+        - type: text
+          data: Any size
+        - type: text
+          data: 2^16 bytes - size of TCP header
+        - type: text
+          data: 2^16 bytes
+        - type: text
+          data: 1500 bytes
+      answer:
+        - type: text
+          data: A
+        - type: text
+          data: Its transport layers responsibility to divide data in to fragments/ packets. Application layer need not worry about it.
+    - year: 2008-CS
+      serial: Q17
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Which of the following system calls results in the sending of SYN packets?
+      options:
+        - type: text
+          data: socket
+        - type: text
+          data: bind
+        - type: text
+          data: listen
+        - type: text
+          data: connect
+      answer:
+        - type: text
+          data: D
+        - type: text
+          data: "'socket' is common function for both client and server to create socket."
+        - type: text
+          data: "'bind' is used on server side to bind socket with port and IP."
+        - type: text
+          data: "'listen' is used on server side to listen for requests."
+        - type: text
+          data: "'connect' is the function used on client side to send request and hence it sends 'SYN'."
+    - year: 2012-CS
+      serial: Q22
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Which of the following transport layer protocols is used to support electronic mail?
+      options:
+        - type: text
+          data: SMTP
+        - type: text
+          data: IP
+        - type: text
+          data: TCP
+        - type: text
+          data: UDP
+      answer:
+        - type: text
+          data: C
+        - type: text
+          data: Email is send using SMTP protocol.
+        - type: text
+          data: Question is asked about 'supporting'. Out of two network layer protocols (TCP and UDP) SMTP uses TCP.
+    - year: 2013-CS
+      serial: Q12
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            The transport layer protocols used for real time multimedia, file transfer, DNS and email, respectively are:
+      options:
+        - type: text
+          data: TCP, UDP, UDP and TCP
+        - type: text
+          data: UDP, TCP, TCP and UDP
+        - type: text
+          data: UDP, TCP, UDP and TCP
+        - type: text
+          data: TCP, UDP, TCP and UDP
+      answer:
+        - type: text
+          data: C
+    - year: 2014-Set-2-CS
+      serial: Q24
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Which one of the following socket API functions converts an unconnected active TCP socket into a passive socket?
+      options:
+        - type: text
+          data: connect
+        - type: text
+          data: bind
+        - type: text
+          data: listen
+        - type: text
+          data: accept
+      answer:
+        - type: text
+          data: C
+        - type: text
+          data: >
+            Active sockets are connected to other active sockets. A passive socket is waiting for connection which is usually
+            a server socket.
+        - type: text
+          data: To create a listening socket or a passive socket we use listen() function.
+    - year: 2015-Set-1-CS
+      serial: Q19
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Suppose two hosts use a TCP connection to transfer a large file. Which 
+            of the following statements is/are FALSE with respect to the TCP connection?
+        - type: list
+          data:
+            - I) If the sequence number of a segment is m, then the sequence number of the subsequent segment is always m+1.
+            - II) If the estimated round trip time at any given point of time is t sec, the value of the retransmission timeout is always set to greater than or equal to t sec.
+            - III) The size of the advertised window never changes during the course of the TCP connection.
+            - IV) The number of unacknowledged bytes at the sender is always less than or equal to the advertised window
+      options:
+        - type: text
+          data: III only
+        - type: text
+          data: I and III only
+        - type: text
+          data: I and IV only
+        - type: text
+          data: II and IV only
+      answer:
+        - type: text
+          data: B
+    - year: 2015-Set-2-CS
+      serial: Q20
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Identify the correct order in which a server process must invoke 
+            the function calls accept, bind, listen, and recv according to UNIX socket APL
+      options:
+        - type: text
+          data: listen, accept, bind recv
+        - type: text
+          data: bind, listen, accept, recv
+        - type: text
+          data: bind, accept, listen, recv
+        - type: text
+          data: accept, listen, bind recv
+      answer:
+        - type: text
+          data: B
+    - year: 2015-Set-3-CS
+      serial: Q22
+      marks: 1
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Consider the following statements.
+        - type: list
+          data:
+            - I. TCP connections are full duplex
+            - II. TCP has no option for selective acknowledgement
+            - III. TCP connections are message streams
+      options:
+        - type: text
+          data: Only I is correct
+        - type: text
+          data: Only I and III are correct
+        - type: text
+          data: Only II and III are correct
+        - type: text
+          data: All of I, II and III are correct
+      answer:
+        - type: text
+          data: A
+        - type: text
+          data: >
+            TCP connections are full Duplex. TCP has options for selective ACKs (SACKs). 
+            TCP connections are byte streams; not message streams.
+    - year: 2004-CS
+      serial: Q56
+      marks: 2
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Consider three IP networks A, B and C. Host Ha in networks A sends 
+            messages each containing 180 bytes of application data to a host Hc in network C. 
+            The TCP layer prefixes a 20 byte header to the message. This passes through 
+            an intermediate network B. the maximum packet size, including 20 byte 
+            IP header, in each network is:
+        - type: list
+          data:
+            - "Network A: 1000 bytes"
+            - "Network B: 100 bytes"
+            - "Network C: 1000 bytes"
+        - type: image
+          data: cn-2004-cs-q56.png
+        - type: text
+          data: >
+            "The network A and B are connected through a 1 Mbps link, while B and C
+             are connected by a 512 Kbps link (bps = bits per second).        "
+      options:
+        - type: text
+          data: 200 
+        - type: text
+          data: 220 
+        - type: text
+          data: 240
+        - type: text
+          data: 260
+      answer:
+        - type: text
+          data: D
+    - year: 2004-IT
+      serial: Q87
+      marks: 2
+      type: mcq
+      question:
+        - type: text
+          data: >
+            A TCP message consisting of 2100  bytes is passed to IP 
+            for delivery across two networks. The first network can 
+            carry a maximum payload of 1200 bytes per frame and the 
+            second network can carry a maximum payload of 400 bytes 
+            per frame, excluding network overhead. Assume that IP 
+            overhead per packet is 20 bytes. What is the total IP 
+            overhead in the second network for this transmission?
+      options:
+        - type: text
+          data: 40 bytes
+        - type: text
+          data: 80 bytes
+        - type: text
+          data: 120 bytes
+        - type: text
+          data: 160 bytes
+      answer:
+        - type: text
+          data: C
+    - year: 2004-IT
+      serial: Q88
+      marks: 2
+      type: mcq
+      question:
+        - type: text
+          data: >
+            Suppose that the maximum transmit window size for a TCP 
+            connection is 12000 bytes. Each packet consists of 2000 
+            bytes. At some point in time, the connection is in slow-start 
+            phase with a current transmit window of 4000 bytes. Subsequently, 
+            the transmitter receives two acknowledgments. Assume that no 
+            packets are lost and there are no time-outs. What is the maximum 
+            possible value of the current transmit window?
+      options:
+        - type: text
+          data: 4000 bytes
+        - type: text
+          data: 8000 bytes
+        - type: text
+          data: 10000 bytes
+        - type: text
+          data: 12000 bytes
+      answer:
+        - type: text
+          data: B 
+    - year: 2008-CS
+      serial: Q56
+      marks: 2
+      type: mcq
+      question:
+        - type: text
+          data: >
+            In the slow start phase of the TCP congestion algorithm, the size of the congestion window:
+      options:
+        - type: text
+          data: does not increase
+        - type: text
+          data: increase linearly
+        - type: text
+          data: increases quadratically
+        - type: text
+          data: increases exponentially
+      answer:
+        - type: text
+          data: D

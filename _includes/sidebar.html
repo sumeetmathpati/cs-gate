@@ -1,0 +1,16 @@
+<div class="w3-sidebar w3-theme-l1 w3-bar-block w3-top w3-animate-left" style="display:none" id="sidebar">
+    <button onclick="sidebar_close()" class="w3-bar-item w3-button w3-large w3-hover-theme">Close &times;</button>
+
+    {% for collection in site.collections %}
+    {% if collection.label == page.collection %}
+
+    {% assign posts = site[collection.label] | sort: "serial" %}
+    {% for post in posts %}
+    <a href="{{ site.baseurl }}{{ post.url }}" class="w3-bar-item w3-button w3-hover-theme">{{ post.title }}</a>
+    {% endfor %}
+
+    {% endif %}
+    {% endfor %}
+
+   
+</div>

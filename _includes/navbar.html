@@ -1,0 +1,89 @@
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a href="{{ site.baseurl }}/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-theme">
+            {{ site.title }}
+        </a>
+        <a href="{{ site.baseurl }}/cn"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme"
+            title="Computer Networks">
+            <i class="fas fa-network-wired"></i> CN
+        </a>
+
+        <a href="{{ site.baseurl }}/os"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme"
+            title="Operating System"><i class="fab fa-linux"></i> OS</a>
+        <a href="{{ site.baseurl }}/coa"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme"
+            title="Computer Organizations and Architecture"><i class="fas fa-microchip"></i> COA</a>
+        <a href="{{ site.baseurl }}/dbms"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme" title="DBMS"><i
+                class="fas fa-database"></i> DBMS</a>
+        <a href="{{ site.baseurl }}/pl-and-ds"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme"
+            title="Data Structures"><i class="fab fa-stack-overflow"></i> PL & DS</a>
+        <a href="{{ site.baseurl }}/al"
+            class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-large w3-hover-theme"
+            title="Algorithms"><i class="fas fa-brain"></i> AL</a>
+        <a class="w3-bar-item w3-button w3-hide-large w3-padding-large w3-hover-white w3-large w3-theme-d2"
+            href="javascript:void(0);" onclick="openNav()">
+            Subjects <i class="fas fa-caret-down"></i>
+        </a>
+        {% if page.url != '/' %}
+        <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+            href="javascript:void(0);" onclick="sidebar_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+        {% endif %}
+        <div class="w3-dropdown-hover w3-hide-small w3-hide-medium">
+            <button class="w3-button w3-padding-large w3-hover-theme" title="More">More <i
+                    class="fas fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="{{ site.baseurl }}/cd" class="w3-bar-item w3-button" title="Compiler Design"><i
+                        class="fas fa-compact-disc"></i> CD</a>
+                <a href="{{ site.baseurl }}/dm" class="w3-bar-item w3-button" title="Discrete Mathematics"><i
+                        class="fas fa-chart-area"></i> DM</a>
+                <a href="{{ site.baseurl }}/toc" class="w3-bar-item w3-button" title="Theory of Computation"><i
+                        class="fas fa-chart-area"></i> TOC</a>
+                <a href="{{ site.baseurl }}/dl" class="w3-bar-item w3-button" title="Digital Logic"><i
+                        class="fas fa-chart-area"></i> DL</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small w3-hide-medium">
+            <button class="w3-button w3-padding-large w3-hover-theme" title="More">Questions <i
+                    class="fas fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="{{ site.baseurl }}/pl-and-ds-questions" class="w3-bar-item w3-button"
+                    title="Programming and Data Structures Questions">
+                    PLDS</a>
+                <a href="{{ site.baseurl }}/dm-questions" class="w3-bar-item w3-button"
+                    title="Discrete Maths Questions">
+                    DM</a>
+                <a href="{{ site.baseurl }}/coa-questions" class="w3-bar-item w3-button"
+                    title="Computer Organization and Architecture Questions">
+                    COA</a>
+                <a href="{{ site.baseurl }}/cn-questions" class="w3-bar-item w3-button"
+                    title="Computer Networks Questions">
+                    CN</a>
+                <a href="{{ site.baseurl }}/dbms-questions" class="w3-bar-item w3-button"
+                    title="DBMS Questions">
+                    DBMS</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-large w3-center">
+    <a href="#" class="w3-border w3-bar-item w3-button w3-padding-large">-</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Computer Network</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Operating Systems</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Computer Organization and Architecture</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">DBMS</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Theory of Computations</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Data Structures</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Algorithms</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Discrete Mathematics</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme">Programming Languages</a>
+</div>

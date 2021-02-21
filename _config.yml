@@ -1,0 +1,131 @@
+title: CS GATE
+tagline: "The One Place To Learn It All."
+description: >- # this means to ignore newlines until "baseurl:"
+  All the computer science study material for GATE.
+baseurl: "/cs-gate"
+url: "https://sumeetmathpati.github.io"
+author: sumeetmathpati
+favicon: "./logo.png" # relative path to site's favicon
+logo: "./logo.png"
+social:
+  name: Sumeet Mathpati
+  links:
+    - https://www.linkedin.com/in/sumeet221b
+    - https://github.com/sumeetmathpati
+
+# Google Analytics
+google_analytics: "G-ZGKNYXB78K"
+
+# webmaster_verifications:
+#   google: 1234
+#   bing: 1234
+#   alexa: 1234
+#   yandex: 1234
+#   baidu: 1234
+
+permalink: /:title/
+include: ["_pages"]
+
+# Collections
+collections:
+  cn:
+    output: true
+  os:
+    output: true
+  coa:
+    output: true
+  dbms:
+    output: true
+  toc:
+    output: true
+  al:
+    output: true
+  cd:
+    output: true
+  dm:
+    output: true
+  pl-and-ds:
+    output: true
+  dl:
+    output: true
+  test:
+    output: true
+
+# Default frontmatter
+defaults:
+  - scope:
+      path: ""
+      type: "cn"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "os"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "coa"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "dbms"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "toc"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pl-and-ds"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "dl"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "al"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "cd"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "dm"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "test"
+    values:
+      layout: "post"
+
+# Build settings
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Markdown
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  entity_output: :as_input
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="w3-theme-l5">
+
+    <!-- Go to top button -->
+    <button onclick="topFunction()" id="go-to-top-button" title="Go to top">Top</button>
+
+    {% if page.url != '/' %}
+    {% include sidebar.html %}
+    {% endif %}
+
+    {% include navbar.html %}
+
+    <!-- Page Container -->
+    {% if page.url == '/' %}
+    <div class="w3-container w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+        {% else %}
+        <div class=" w3-container w3-content" style="max-width:1400px;margin-top:80px">
+            {% endif %}
+
+            <!-- The Grid -->
+            <div class="w3-row">
+
+                {% if page.url != '/' %}
+                {% include left-column.html %}
+                {% include sidebar.html %}
+                {% endif %}
+
+                <!-- Middle Column -->
+                {% if page.url == '/' %}
+                <div id="main-content" class="w3-col">
+                    {% else %}
+                    <div id="main-content" class="w3-col l7 m9">
+                        {% endif %}
+
+                        <div class="w3-row-padding w3-margin-bottom">
+                            <div class="w3-col m12">
+                                <div class="w3-round w3-white"
+                                    style="box-shadow: 0 15px 35px rgba(50,50,93,0.1),0 5px 15px rgba(0,0,0,0.07) !important;">
+                                    <div class="w3-container w3-padding">
+                                        {{ content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- End Middle Column -->
+
+                    {% if page.url != '/' %}
+                    {% include right-column.html %}
+                    {% endif %}
+
+
+                </div>
+                <!-- End Grid -->
+
+            </div>
+            <!-- End Page Container -->
+            <br>
+
+            {% include footer.html %}
+
+            <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+            {% if page.mathjax %}
+            <script src="{{ site.baseurl }}/assets/js/load-mathjax.js" async></script>
+            {% endif %}
+
+</body>
+
+</html>
