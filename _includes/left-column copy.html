@@ -11,8 +11,8 @@
         {% if post.child_of == nil and post.parent == nil %}
         <div class="w3-block topic">
             <a href="{{ site.baseurl }}{{ post.url }}"
-                class="{% if page.url == post.url %} w3-theme {% else %} w3-theme-d1 {% endif %} w3-button w3-block w3-hover-theme w3-left-align" title="{{ post.title }}">{% if
-                post.sub %} ↳ {% endif %} <strong style="color: #F9AA33;">{{post.title }}</strong></a>
+                class="w3-button w3-block w3-theme-d1 w3-hover-theme w3-left-align"
+                title="{{ post.title }}">{% if post.sub %} ● {% endif %} {{post.title }}</a>
         </div>
         {% endif %}
 
@@ -20,19 +20,24 @@
 
         {% assign parent_id = post.title | remove: " "%}
 
-        <div class="w3-block topic">
+        <div class="w3-block topic w3-row">
             <a href="{{ site.baseurl }}{{ post.url }}"
-                class="{% if page.url == post.url %} w3-theme {% else %} w3-theme-d1 {% endif %} w3-block w3-button w3-hover-theme w3-left-align">
-                {% if post.sub %} ↳ {% endif %} <strong style="color: #F9AA33;">{{post.title }}</strong>
+                class="w3-col l10 w3-block w3-button w3-theme-d1 w3-hover-theme w3-left-align">
+                {% if post.sub %} ‒ {% endif %} {{post.title }}
             </a>
+            <div onclick="toggleAccordion('{{ parent_id }}')"
+                class="w3-col l2 w3-block w3-button w3-theme-d1 w3-hover-theme">
+                <i class="fa fa-caret-down"></i>
+            </div>
+
         </div>
-        <div id="{{ parent_id }}" class="">
+        <div id="{{ parent_id }}"
+            class="w3-hide {% if page.url == post.url or page.child_of == post.title %} w3-show{% endif %}">
             {% assign children_list = posts | where: "child_of", post.title %}
             {% assign children_list_sorted = children_list | sort: "nav_order" %}
             {% for child in children_list_sorted %}
             <a href="{{ site.baseurl }}{{ child.url }}"
-                class="{% if page.url == child.url %} w3-theme {% else %} w3-theme-d1 {% endif %} w3-button w3-block topic w3-hover-theme w3-left-align">{% if child.sub %}
-                &nbsp;&nbsp;‣ {% endif %}{{ child.title }}</a>
+                class="w3-button w3-block topic w3-theme-l1 w3-hover-theme w3-left-align">{% if child.sub %} ● {% endif %}{{ child.title }}</a>
             {% endfor %}
         </div>
         {% endif %}
