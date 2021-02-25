@@ -58,6 +58,8 @@ https://www.w3schools.com/charsets/ref_utf_math.asp
 &sigma;
 &pi;
 &cong;
+¬
+⇒
 
 # Heading 1
 ## Heading 2

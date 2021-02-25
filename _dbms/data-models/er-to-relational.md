@@ -74,3 +74,8 @@ child_of: Data Models
 
 We merge the relationship table with the table of entity set having cardinality *many*.<br>If both the tables have *many* cardinality then we create saperate table for relationship set.
 {: .note}
+
+***
+
+![ER Diagram to Relational Model]({{ site.baseurl }}/assets/images/dbms/er-to-tables.png)
+

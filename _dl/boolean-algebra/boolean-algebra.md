@@ -27,16 +27,43 @@ mathjax: true
 
 - We know that Boolean algebra has two operators which are $+$ and $\times$.
 - These operatos satisfy following properties:
-    - **Closure**
-    - **Identity**
-        - For $+$ 0 is an identity element.
-        - For $\times$ 1 is an identity element.
-    - **Commutative**
-        - $x + y = x + x$
-        - $x \times y = y \times x$
-    - **Distribituve**
-        - $x \times (y + z) = (x \times y) + (x \times z)$
-        - $x + (y \times z) = (x + y) \times (x + z)$
+
+## Idempotent
+
+- $x + x = a$
+- $x \times x = x$
+
+***
+
+## Associative
+
+- $a \times (b \times c) = (a \times b) \times c$
+- $a + (b + c) = (a + b) + c$
+
+***
+
+## Closure
+
+***
+
+## Identity
+
+- For $+$, 0 is an identity element.
+- For $\times$, 1 is an identity element.
+
+***
+
+## Commutative
+
+- $x + y = x + x$
+- $x \times y = y \times x$
+
+***
+
+## Distribitive
+
+- $x \times (y + z) = (x \times y) + (x \times z)$
+- $x + (y \times z) = (x + y) \times (x + z)$
 
 # Basic Theorems and Properties
 

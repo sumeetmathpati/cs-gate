@@ -8,7 +8,8 @@ mathjax: true
 
 # Project (π)
 
-- This operator prints the only attributes of table that we want. 
+- The project operator selects certain columns (attributes) from the relation.
+- It's a **cNOT a commutative** operation.
 - **Syntax:**
     - `π A1, A2 (r)`
     - Above statement selects/prints only *A1* and *A2* attributes of all rows in relation *r*.
@@ -22,6 +23,9 @@ mathjax: true
 # Select (σ)
 
 - The select operator selects rows/tuples that satisfy a given condition.
+- It's a unary operator, i.e. only takes single relation as a input.
+- It's a **commutative.**
+    - `σ P1 (σ P2 (R))` = `σ P2 (σ P2 (R))`
 - **Syntax:**
     - `σ p (r)`
     - Above statement selects rows from table *r* where condition *p* satisfies.
@@ -38,7 +42,10 @@ Note tath **SELECT** in relatioanal algebra is similar to **WHERE** in SQL, and 
 # Union (∪)
 
 - Union operation between two relations is union of rows of those two relations.
-- Similar to intersection in set theory, it do not print duplicate rows.
+- Similar to union in set theory, it do not print duplicate rows.
+- Two relations are **union-capable** if and only if (satisfy both the conditions):
+    - They have same number of fields, and
+    - Corresponding fields, taken order from left to right, have the same domain.
 - **Syntax:**
     - `A ∪ B`
     - Above statement gives new table (without name) consisting union of rows of relation *A* and *B*.

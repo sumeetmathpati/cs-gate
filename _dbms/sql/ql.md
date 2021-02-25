@@ -1,8 +1,8 @@
 ---
-heading: "QL"
 title: "Query Language"
 description: "Query Language tutorial."
-serial: 100
+child_of: Structured Quey Languages
+nav_order: 1
 ---
 
 - After designing the database, ER diagrams, normalization we successfully created.designed the structure of the database, and now we want to **fetch, store, and modify** the data into database.

@@ -1,7 +1,8 @@
 ---
-title: "Structured Quey Languages"
+title: Structured Quey Languages
 description: "Structured query language (SQL) tutorial."
-serial: 103
+nav_order: 15
+parent: true
 ---
 
 - SQL is a practicall used to store, manipulate and retrieve data in database.

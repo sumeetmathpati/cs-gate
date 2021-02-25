@@ -1,13 +1,36 @@
 ---
-title: Relational Algebra
+title: Relational Calculus
 description: "Relational algebra in DBMS"
 nav_order: 10
 ---
 
 - Relational algebra and relational calculus are two formal query languages accisiated with **relational model.**
-- Relational calculus is non procedural query language, i.e. the relational calculus tells what to do but never explains how to do.
+- Relational calculus is **non procedural** query language, i.e. the relational calculus tells what to do but never explains how to do.
 - **Relational calculus is more powerful thatn SQL and relational algebra.**
     - Tuple relational calculus and domain relational calculus are equal in power.
+- As it's based on set theory, relational algebra does not allow duplicate rows in output table.
+- Relational calculus has variables, constants, comparison operators, logical connectives and quantifiers.
+
+# Symbols Used:
+
+## Comparison Operators
+
+- Comparison operators like **<, <=, =, >= >** are used.
+
+## Connectives
+
+- **∧** for **AND**
+- **∨** for **OR**
+- **¬** for **NOT**
+
+## Implication
+
+- **==>** for **Implication**
+
+## Quantifiers
+
+- Existential quantifier: **∃**
+- Universal quantifier: **∀**
 
 # Types of Relational Calculus
 
@@ -16,25 +39,74 @@ nav_order: 10
 - Tuple relational calculus is used for selecting those tuples that satisfy the given condition.
 - The result of the relation can have one or more tuples.
 - **Syntax:**
-    - `{T | P1 (T)} or {T | P2 (T)}`
-        - T is resulting tuples/rows.
+    - `{t | P(t)}`
+        - The st of tuples *t* for which condition/predicate P is true for *t*.
         - P1 and P2 are conditions to select T.
+- We also use the notations:
+    - `t[a]` or `t.a`
+        - To indicate value of tuple *t* on attribute *a*.
+    - `t ∈ R`
+        - To show that tuple *t* is in relation *R*.
 - **Example:**
-    - `{ Branch.Assets | Branch(t) AND t.Branch_city = 'Pune'}`
+    - `{ t | t ∈ Employee}`
+        - We are selecting all the tuples from relation *Employee*.
+    - `{ t.name | t ∈ Student ^ t.roll_no = 101}`
+        - Selects name of a student whose roll number is 101.
+    - `{t | t ∈Employee ^ t.salary > 5000}`
+        - Finds details of employee whose salary is more than 5000.
+        
+
+### Examples
+
+- Use the following relations for examples.
+
+branch(<u>branch_name</u>, branch_city, assets)<br>
+customer(<u>customer_name</u>, customer_street, customer_city)<br>
+account(<u>acount_number</u>, branch_name, balance)<br>
+loan(<u>loan_number</u>, branch_name, amount)<br>
+depositor(<u>customer_name</u>, account_number)<br>
+borrower(<u>customer_name</u>, loan_number)<br>
+
+- **Find loan_number, branch_name, and amount for all loans over RS 1200.**
+    - `{ t | t ∈ loan ^ t.amount > 1200 }`
+- **Find loan_number for each loan of an amount greater than 1200.**
+    - `{ t | ∃s ∈ loan (t.loan_number = s.loan_number ^ s.amount > 12000) }`
+- **Find all customer names having loan at Pune branch.**
+    - `{ t | ∃s ∈ borrower (t.customer_name = s.customer_name ^ ∃s ∈ loan (u.branch_name = 'Pune' ^ u.loan_number = s.loan_number)) }`
+- **Find names of all customers having loan, an account or both.**
+    - `{ t | ∃s ∈ borrower (t.customer_name = s.customer_name) ∨ ∃u ∈ depositor (t.customer_name = u.customer_name) }`
+- **Find names of all customers having loan and account.**
+    - `{ t | ∃s ∈ borrower (t.customer_name = s.customer_name) ∧ ∃u ∈ depositor (t.customer_name = u.customer_name) }`
+
 ***
 
 ## Domain Relational Calculus
 
-### Operators in DRC
-
-- **∧** for **AND**
-- **∨** for **OR**
-- **┓** for **NOT**
-
-- In domain relational calculus the records are filtered based on the domains.
+- In domain relational calculus the records are filtered based on the **domains.**
+- Domain relational calculus uses **list of attributes** to be selected from relation based on **condition.**
+- Unlike TRC it **selets the attributes** rather than selecting whole tuple.
+- **Syntax:**
+    - `{ <a1, a2, a3, ..., an> | P(a1, a2, a3, ..., an)}`
+        - **a1, a2, a3, ... an** represents domain variables.
+        - **P** represents a **condition / predicate.**
+        - Result is set of all tuples **a1, a2, a3, ... an** suth that predicate  **P** true for **a1, a2, a3, ... an** tuples. 
 
 ### Examples
 
-- `{< Assets > | ∈ Branch ∧ Branch_city = 'Pune'}`
-    - Query to find the *Assets* of branch where *Branch_name* is *Pune*.
+- Use the following relations for examples.
 
+branch(<u>branch_name</u>, branch_city, assets)<br>
+customer(<u>customer_name</u>, customer_street, customer_city)<br>
+account(<u>acount_number</u>, branch_name, balance)<br>
+loan(<u>loan_number</u>, branch_name, amount)<br>
+depositor(<u>customer_name</u>, account_number)<br>
+borrower(<u>customer_name</u>, loan_number)<br>
+
+- **Find loan_number, branch_name, and amount for all loans over RS 1200.**
+    - `{ <l, b, a> | <l, b, a> ∈ ∧ a > 1200  }`
+- **Find loan_number for each loan of an amount greater than 1200.**
+    - `{ <l> | ∃b, a (<l, b, a> ∈ loan ∧ a > 1200) }`
+- **Find names of all customers who have loan of over RS 1200.**
+    - `{ <c> | ∃l, b, a ((<c, l> ∈ borrower ∧ (<l, b, a> ∈ loan ∧ a > 1200)) }`
+- **Find all customer names having loan at Pune branch. and find loan amount.**
+    - `{ <c, a> | ∃l (<c, l> ∈ borrower ∧ ∃b (<l, b, a> ∈ loan ∧ b = 'Pune')) }`
