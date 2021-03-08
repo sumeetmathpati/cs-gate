@@ -35,7 +35,7 @@ mathjax: true
 
 - $\sum^+$ is an set of all string over ∑ **Except an empty string.**.
     - Also known as **Kleen's closure.**
-    - $\sum^+ = \sum^* - \epsilon = \sum^* - \sum^0$
+    - $\sum^+ = \sum^* - \sum^0$
     - Infinite language
 
 # String
@@ -51,6 +51,19 @@ mathjax: true
 
 ## Operations On String
 
+### Concatenation
+
+- **Example,**
+    - If string *w1 = abb* and *w3 = babb*
+        - Then *w1w2 = abb.babb = abbbabb*
+        - Then *\|w1w2\| = \|w1\| + \|w2\|*
+
+### Reversal
+
+- **Example,**
+    - If *w = abb*, 
+        - Then *w<sup>r</sup> = bba*. 
+
 ### Length of String
 
 - **The number of symbols in a string is length of that string.**
@@ -63,10 +76,33 @@ mathjax: true
 - **A continuous sequence of symbols from any part of a string is called a subset of that string.**
 - **Example,**
     - Substrings of string *abba* are
+        - Substrings of length 0: *ε*
         - Substrings of length 1: *a*, *b*
         - Substrings of length 2: *ab*, *ba*, *bb*
         - Substrings of length 3: *abb*, *bba*
         - Substring of length 4: *abba* 
+
+### Prefix
+
+- **A substring with the sequence of beginning symbols of a given string is called prefix.**
+- **Example,**
+    - For string *abb*, the possible prefixes are:
+        - Prefix of length 0: *ε*
+        - Prefix of length 1: *a*
+        - Prefix of length 2: *ab*
+        - Prefix of length 3: *abb*
+- **Number of prefixes of string with size n = n+1.**
+
+### Suffix
+
+- **A substring with the sequence of trailing/ending symbols of a given string is called suffix.**
+- **Example,**
+    - For string *abb*, the possible prefixes are:
+        - Prefix of length 0: *ε*
+        - Prefix of length 1: *b*
+        - Prefix of length 2: *bb*
+        - Prefix of length 3: *abb*
+- **Number of prefixes of string with size n = n+1.**
 
 # Language
 

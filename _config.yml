@@ -44,7 +44,9 @@ collections:
     output: true
   dm:
     output: true
-  pl-and-ds:
+  ds:
+    output: true
+  pl:
     output: true
   dl:
     output: true
@@ -80,7 +82,12 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "pl-and-ds"
+      type: "ds"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pl"
     values:
       layout: "post"
   - scope:

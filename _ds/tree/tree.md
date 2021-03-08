@@ -2,7 +2,7 @@
 title: Trees
 heading: Trees
 description: "Tree data structure tutorial."
-nav_order: 4
+nav_order: 3
 parent: true
 ---
 

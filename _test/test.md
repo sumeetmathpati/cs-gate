@@ -60,6 +60,8 @@ https://www.w3schools.com/charsets/ref_utf_math.asp
 &cong;
 ¬
 ⇒
+&delta;
+&lambda;
 
 # Heading 1
 ## Heading 2

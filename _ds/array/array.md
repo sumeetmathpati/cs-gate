@@ -1,7 +1,7 @@
 ---
 title: Array
 parent: true
-nav_order: 3
+nav_order: 2
 description: "Array data structure tutorial."
 ---
 

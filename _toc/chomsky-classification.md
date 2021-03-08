@@ -8,8 +8,8 @@ child_of: Theory Of Computation
 
 
 - In Chomsky hierarchy, grammars are divided into 4 types.
-- Type 3 ⊆ Type 2 ⊆ Type 1 ⊆ Type 0
-- Regular langauges ⊆ Context free languages ⊆ Context sensitive languages ⊆ Recursive enumerable languages.
+- **Type 3 ⊆ Type 2 ⊆ Type 1 ⊆ Type 0**
+- **Regular langauges ⊆ Context free languages ⊆ Context sensitive languages ⊆ Recursive enumerable languages.**
 
 ![Chomsky Classification]({{ site.baseurl }}/assets/images/toc/chomsky-hierarchy.png)
 
