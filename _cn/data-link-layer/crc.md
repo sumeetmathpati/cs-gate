@@ -2,7 +2,8 @@
 title:  "CRC"
 description: "CRC in data link layer."
 child_of: Data Link Layer
-nav_order: 8
+nav_order: 10
+sub: true
 ---
 
 - This method used in **data link layer.**

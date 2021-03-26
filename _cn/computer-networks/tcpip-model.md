@@ -3,6 +3,7 @@ title:  "TCP/IP model"
 description: "TCP/IP model tutorial."
 child_of: Computer Networks
 nav_order: 3
+sub: true
 ---
 
 ![TCP/IP model]({{ site.baseurl }}/assets/images/cn-tcpip-model.jpg)

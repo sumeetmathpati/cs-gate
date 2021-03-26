@@ -3,6 +3,7 @@ title:  "OSI reference model"
 description: "OSI networking model tutorial."
 child_of: Computer Networks
 nav_order: 2
+sub: true
 ---
 
 ![OSI model]({{ site.baseurl }}/assets/images/cn-osi-model.jpg)

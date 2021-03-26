@@ -1,8 +1,9 @@
 ---
-title:  "‒ Go Back n Protocol"
+title:  "Go Back n Protocol"
 description: "Go back n protocol in data link layer."
 child_of: Data Link Layer
 nav_order: 7
+sub: true
 ---
 
 # Window size

@@ -2,5 +2,5 @@
 title:  "Network Topologies"
 description: "Network topologies."
 child_of: Computer Networks
-nav_order: 4
+nav_order: 5
 ---

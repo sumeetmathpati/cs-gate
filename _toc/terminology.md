@@ -116,12 +116,16 @@ mathjax: true
 
 # Grammar
 
-- Grammar is a set of rule to generate/scan/accept the strings present in the language.
+- Grammar is a set of rule to **generate/scan/accept** the strings present in the language.
 - Hence, we can say that:
     - The specific grammar generates specific language.
     - All strings in a language are accepted by its grammar.
     - Each language has associated grammar, and vice versa.
-- Grammar can be represented as 4 tuple (tuple of 4 elements):
+
+## Formal Grammar
+
+- Formal grammar is a grammar used to represent formal languages (such as RL, CFL etc.) is called formal grammar.
+- A formal grammar can be represented as 4 tuple (tuple of 4 elements):
     - **G = {V, T, P, S}**
         - **V** is a set of **variables** or **non-terminal** symbols.
         - **T** or ∑ is a set of **terminal** (symbols in *∑*).

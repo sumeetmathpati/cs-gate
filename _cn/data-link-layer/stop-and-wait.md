@@ -1,11 +1,11 @@
 ---
-title:  "‒ Stop And Wait"
+title:  "Stop And Wait"
 description: "Stop and wait protocol in data link layer."
 child_of: Data Link Layer
 nav_order: 3
+sub: true
 ---
 
-- It's simplest protocol
 - While using **this protocol we assume that:**
     - Communication channel is perfect.
     - No error occurs during transmission.

@@ -3,7 +3,7 @@ heading: "Misc"
 title:  "Delays in computer networks"
 description: "Various delays in computer networks explained."
 child_of: Computer Networks
-nav_order: 3
+nav_order: 4
 ---
 
 ## Transmission Delay

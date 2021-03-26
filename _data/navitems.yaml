@@ -1,0 +1,57 @@
+subjects:
+  - title: CN
+    link: "/cn"
+    title_tag: "Computer Networks"
+    fontawesome_class: "fas fa-network-wired"
+  - title: OS
+    link: "/os"
+    title_tag: "Operating System"
+    fontawesome_class: "fas fa-network-wired"
+  - title: COA
+    link: "/coa"
+    title_tag: "Computer Organization and Archiecture"
+    fontawesome_class: "fas fa-network-wired"
+  - title: DBMS
+    link: "/dbms"
+    title_tag: "DBMS"
+    fontawesome_class: "fas fa-network-wired"
+subjects_hidden:
+  - title: PL
+    link: "/pl"
+    title_tag: "Programming Languages"
+    fontawesome_class: "fas fa-network-wired"
+  - title: DS
+    link: "/ds"
+    title_tag: "Data Structures"
+    fontawesome_class: "fas fa-network-wired"
+  - title: AL
+    link: "/al"
+    title_tag: "Algorithms"
+    fontawesome_class: "fas fa-network-wired"
+  - title: CD
+    link: "/cd"
+    title_tag: "Compiler Design"
+    fontawesome_class: "fas fa-network-wired"
+  - title: DM
+    link: "/dm"
+    title_tag: "Discrete Maths"
+    fontawesome_class: "fas fa-network-wired"
+  - title: TOC
+    link: "/toc"
+    title_tag: "Theory of Computation"
+    fontawesome_class: "fas fa-network-wired"
+  - title: DL
+    link: "/dl"
+    title_tag: "Digital Logic"
+    fontawesome_class: "fas fa-network-wired"
+questions:
+  - name: "CN"
+    url: "cn-questions"
+  - name: "COA"
+    url: "coa-questions"
+  - name: "PL & DS"
+    url: "pl-and-ds-questions"
+  - name: "DM"
+    url: "dm-questions"
+  - name: "DBMS"
+    url: "dbms-questions"

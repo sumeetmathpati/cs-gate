@@ -28,12 +28,17 @@ In ER diagrams the rectagnles represent a *set of entities* and not the entity i
 <br/><br/>In real database or in relational model we have instance entities. But in ER diagram we can't represent instances of entities hence for the sake of simplicity we use *entity set* and **entity** interchangably.
 {: .note}
 
+
 ## Strong Entity Set
+
+- Strong entity sets have their own primary key.
+- It's represented using rectangle in ER diagram.
+
+## Weak Entity Set
 
 - Weak entity sets don't have primary key.
 - Weak entity can be identified uniquely only by considering some of its attributes in conjunction with the primary key of another entity.
-
-## Weak Entity Set
+- Represented using double rectable in ER diagram.
 
 # Attribute Types
 

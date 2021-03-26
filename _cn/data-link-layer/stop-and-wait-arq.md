@@ -1,8 +1,9 @@
 ---
-title:  "‒ Stop And Wait With ARQ"
+title:  "Stop And Wait With ARQ"
 description: "Stop and wait protocol with ARQ in data link layer."
 child_of: Data Link Layer
 nav_order: 4
+sub: true
 ---
 
 - It's an improved version of simple stop and wait protocol

@@ -1,7 +1,7 @@
 ---
-title: Array
+title: Algorithm Analysis
 parent: true
-nav_order: 4
+nav_order: 2
 description: "Array data structure tutorial."
 ---
 

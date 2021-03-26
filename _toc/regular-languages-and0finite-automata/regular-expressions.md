@@ -17,12 +17,37 @@ child_of: Regular Languages and Finite Automata
 
 # Properties of Regular Expresisons Using Operators
 
-- Union operators satisfy 
-    - **Commutative property,** and
-    - **Associative property.**
-- The concatenation operator satisfy 
-    - **Associative,**
-    - Concatenation **does NOT satisfy commutative property.**
+## Union
+
+### Does Satisfy
+
+- **Commutative property**
+    - r1+r2 = r2+r1
+- **Associative property**
+    - r1 + (r2 + r3) = (r1 + r2) + r3
+- **Idempotent**
+    - r1+r1 = r1
+
+### Does NOT Satisfy
+
+- **Distributive property**
+    - r1+(r2.r3) ≠ (r1+r2)(r1+r3)
+
+## Concatenation
+
+### Does Satisfy
+
+- **Associative**
+    - r1(r2.r3) = (r1.r2)r3
+- **Distributive**
+    - r1(r2+r3) = (r1r2)+(r1r3)
+
+### Does NOT Satisfy
+
+- **Commutative property**
+    - r1.r2 ≠ r2.r1
+- **Idempotent**
+    - r1.r1 ≠ r1
 
 # Equivalence Between FA and RE
 
@@ -57,7 +82,7 @@ child_of: Regular Languages and Finite Automata
 - R . R = RR
 
 
-**Concatenation of ∅ with any element is ∅.** ∅ dominator in concatenation operation.
+**Concatenation of ∅ with any element is ∅.** ∅ is dominator in concatenation operation.
 {: .info}
 
 ***
@@ -80,6 +105,19 @@ child_of: Regular Languages and Finite Automata
     - = ∅ + ∅ + ∅ ... 
     - = ∅
 
+
+***
+
+- R<sup>\*</sup>R<sup>\*</sup> = R<sup>\*</sup>
+- RR<sup>\*</sup> = R<sup>+</sup>
+- R<sup>+</sup>R<sup>\*</sup> = R<sup>+</sup>
+- R<sup>+</sup>R<sup></sup> = RR<sup>+</sup>
+- R<sup>+</sup>∪ R<sup>\*</sup> = R<sup>\*</sup>
+- R<sup>+</sup>∩ R<sup>\*</sup> = R<sup>+</sup>
+- R<sup>\*</sup>R<sup>\*</sup>=R<sup>\*</sup>
+- (R<sup>+</sup>)<sup>\*</sup> = R<sup>\*</sup>
+- (R<sup>\*</sup>)<sup>+</sup> = R<sup>\*</sup>
+
 ***
 
 - (P + Q)<sup>\*</sup> = (P<sup>\*</sup> + Q)<sup>\*</sup> = (P + Q<sup>\*</sup>)<sup>\*</sup> = (P<sup>\*</sup> + Q<sup>\*</sup>)<sup>\*</sup> = (Q<sup>\*</sup> P<sup>\*</sup>)<sup>\*</sup> = (P<sup>\*</sup>Q<sup>\*</sup>)<sup>\*</sup>
@@ -87,6 +125,5 @@ child_of: Regular Languages and Finite Automata
 - (P<sup>\*</sup>)<sup>\*</sup> = P<sup>\*</sup>
 - R.∅ = ∅.R = ∅
 - R<sup>\*</sup>+R<sup>+</sup> = R<sup>\*</sup>(ε+R)
-- R<sup>\*</sup>R<sup>\*</sup>=R<sup>\*</sup>
 - (PQ)<sup>\*</sup>P=P(QP)<sup>\*</sup>
 - ε+R<sup>\*</sup>R=R<sup>\*</sup>

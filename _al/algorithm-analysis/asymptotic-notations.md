@@ -1,8 +1,8 @@
 ---
-title: Strings
+title: Asympotic Notations
 description: "Strings tutorial."
-child_of: Array
-nav_order: 1
+child_of: Algorithm Analysis
+nav_order: 2
 ---
 
 - Character array is called string.

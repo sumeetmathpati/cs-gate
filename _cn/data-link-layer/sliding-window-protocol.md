@@ -1,8 +1,9 @@
 ---
-title:  "‒ Sliding Window Protocol"
+title:  "Sliding Window Protocol"
 description: "Sliding window protocol in data link layer."
 child_of: Data Link Layer
 nav_order: 5
+sub: true
 ---
 
 - Unlike stop and wait protocol; it has window size more than 1.

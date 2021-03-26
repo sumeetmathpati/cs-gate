@@ -139,9 +139,13 @@ sub: true
 - Also known as **type-1** grammar.
 - Language defined by context sensitive grammar are accepted by **Linear Bound automata**.
 - Restrictions on CSG **X --> Y** are:
-    - **X** is **( V ∪ T)<sup>*</sup>**
-    - **Y** is **( V ∪ T)<sup>*</sup>**
+    - **X** is **( V ∪ T)<sup>*</sup> V ( V ∪ T)<sup>*</sup>**
+    - **Y** is **( V ∪ T)<sup>+</sup>**
     - **\|X\| <= \|Y\|** i.e count of symbol in X is less than or equal to Y
+- As per the rule we can't have length of the RHS less then LHS, hence we can't produce the null string or epsilon.
+    - In order to solve that problem, the **production S --> ε is allowed** where,
+        - S is start symbol.
+        - S fo not appere on the right side.
 - **Examples,**
     - **{S --> aAb \| aA --> cd}** is CSG.
     - **{S --> aAb \| as, aAb --> cfed }** is CSG.
@@ -153,7 +157,7 @@ sub: true
 - Also known as **type-0** grammar.
 - Language defined by unrestricted grammar are accepted by **Turing machine**.
 - Restrictions on REG **X --> Y** are:
-    - **X** is **( V ∪ T)<sup>*</sup>**
+    - **X** is **( V ∪ T)<sup>*</sup> V ( V ∪ T)<sup>*</sup>**
     - **Y** is **( V ∪ T)<sup>*</sup>** 
     - **X must contain al least one variable.**
 - **Eample,**

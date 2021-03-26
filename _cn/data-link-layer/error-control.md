@@ -2,7 +2,7 @@
 title:  "Error Control"
 description: "Error control in data link layer."
 child_of: Data Link Layer
-nav_order: 8
+nav_order: 9
 ---
 
 - In data communication, data can be currupted during transmission. Hence we need to implement the methods to detect and correct errors.
@@ -14,5 +14,19 @@ nav_order: 8
     2. Burst Error
         - **A burst error means that 2 or more bits in the data unit have changed.**
 - TO be able to detect error, we need some redundant data added into the origional data.
+- Error handling methods:
+    - **Error Detection**
+        - This is a technique only used to check if there is any error in the recieved data.
+    - **Error Correction**
+        - Error correction is a technique used to correct the error occured during transmission.
+    
 
+# Single Parity Check
 
+- One extra bit called parity bit is sent along with origional data bits.
+- Parity bits helps if any error occurred in the data durigng the transmission.
+
+## Limitations
+
+- This technique cannot detect an even number bit errors.
+    - Hence if two, four, six... bits gets flipped, then this mechanism cannot detect the error.
