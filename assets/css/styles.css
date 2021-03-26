@@ -30,7 +30,7 @@ hr {
 
 /* Lists */
 ul, ol {
-    padding-left: 18px;
+    padding-left: 24px;
     overflow-x: auto;
 }
 li {
