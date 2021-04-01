@@ -27,7 +27,7 @@
                     class="fas fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                 {% for navitem in site.data.navitems.subjects_hidden %}
-                <a href="{{ site.baseurl }}{{ site.baseurl }}{{ navitem.link }}" class="w3-bar-item w3-button"
+                <a href="{{ site.baseurl }}{{ navitem.link }}" class="w3-bar-item w3-button"
                     title="{{ navitem.title_tag }}"><i class="{{ navitem.fontawesome_class }}"></i> {{ navitem.title
                     }}</a>
                 {% endfor %}
