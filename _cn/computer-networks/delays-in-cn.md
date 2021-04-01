@@ -4,6 +4,7 @@ title:  "Delays in computer networks"
 description: "Various delays in computer networks explained."
 child_of: Computer Networks
 nav_order: 4
+mathjax: true
 ---
 
 ## Transmission Delay
@@ -14,7 +15,7 @@ nav_order: 4
     - The capacity / bandwidth of the medium. Bigger the bandwidth, smalled the time.
 
 
-<p class="w3-xlarge w3-center w3-padding info">$Transmission \ Delay = \frac{Length \ Of \ Data}{Bandwidth \ Of \ Medium}$</p>
+<p class="w3-center w3-padding info">$Transmission \ Delay = \frac{Length \ Of \ Data}{Bandwidth \ Of \ Medium}$</p>
 
 ***
 
@@ -25,4 +26,5 @@ nav_order: 4
     - Lenght/distance to travel.
     - Propogation speec / velocity.
 
-<p class="w3-xlarge w3-center w3-padding info">$Propogation \ Delay = \frac{Distance}{Transmission \ Speed}$</p>
+<p class="w3-center w3-padding info">$Propogation \ Delay = \frac{Distance}{Transmission \ Speed}$</p>
+
