@@ -14,3 +14,4 @@ mathjax: true
     - **Two phase locking protocol**
     - **Graph / tree based protocol**
     - **Time staming protocol**
+- These protocols ensure that only serializable, recoverable schedules are allowed to execute and no operation performed by committed transactions are get lost while undoing the aborted transactions.

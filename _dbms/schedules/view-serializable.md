@@ -31,14 +31,14 @@ sub: true
 
 ![Conflicting operations]({{ site.baseurl }}/assets/images/dbms/view-serializable-example.png)
 
-There could be n! possible serial schedule with n transactions and 3! in this case. We have to check for all of them, if it's view quivalent to any one of them; it's view serializable.
+I said *one of the possible serial schedule* because there could be more than one possible serial schedules for a single non serial schedule. There could be n! possible serial schedule with n transactions and 3! in this case. We have to check for all of them, if it's view quivalent to any one of them; it's view serializable.
 {: .note}
 
 # Shortcut Technique to Find View Serializability
 
 - All conflict schedules are view serializable.
 - A non-conflict schedule must have at least one bling write operation to be eligible for view serializability.
-    - I.e. If a schedule is not conflict serializable and does not contain any blind write oepration, then it can never be view serializable, but if a schedule is not conflict serializable and have blind write then it may or may not be view serializable.
+    - I.e. If a schedule is not conflict serializable and does not contain any blind write operation, then it can never be view serializable, but if a schedule is not conflict serializable and have blind write then it may or may not be view serializable.
 
 ![Conflicting operations]({{ site.baseurl }}/assets/images/dbms/before-checking-view-serializability.png)
 

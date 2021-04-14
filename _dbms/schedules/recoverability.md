@@ -5,6 +5,7 @@ nav_order: 6
 child_of: Schedules
 ---
 
+- In previous lessons (serializability) we checked consistency property of transactions.
 - We check recoverability of a schedule to see if it satisfy the **automicity** and **durability** properties (two of the ACID properties).
 - A concurrent schedule can be:
     - **Irrecoverable schedule**

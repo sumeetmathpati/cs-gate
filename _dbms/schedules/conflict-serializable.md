@@ -58,15 +58,23 @@ If schedule if NOT conflict serializable, then it **may or may not** be serializ
 
 ## How To Design Precedence Graph?
 
-- Note all the conflicting operations between processes.
-- Draw an edge between nodes having conflicting oprations.
+- Create nodes for each transition.
+- If Ti executes operation Ti_read(X) and after that Tj executes Tj_write(X) operation (RW problem), create an edge in graph from Ti to Tj.
+- If Ti executes operation Ti_write(X) and after that Tj executes Tj_read(X) operation (WR problem), create an edge in graph from Ti to Tj.
+- If Ti executes operation Ti_write(X) and after that Tj executes Tj_write(X) operation (WW problem), create an edge in graph from Ti to Tj.
 
-# Order of Equivalent Serial Schedule
-
-- If schedule is conflict serializable, then the order of equivalent serial schedule is the topological order of precedence graph.
+If there is a cycle in this grpah then the schedule is not conflict serializable.
 
 ## Example
 
-***
+- Consider schedule S gives as:
+    - r1(X); r3(X); r3(X); r2(Y); r2(Z); w3(Y); w2(Z); r1(Z); w1(X), w1(Z)
+    - It's precedence graph will be:
 
-- Schedule S1 and S2 will be **conflict equivalent** if the precedence of both the graph is same.
+![Precedence Graph]({{ site.baseurl }}/assets/images/dbms/precedence-graph-example.png)
+
+- As above graph has no cycles; the schedule S is conflict serializable.
+
+## Order of Equivalent Serial Schedule
+
+- If schedule is conflict serializable, then the order of equivalent serial schedule is the topological order of precedence graph.
