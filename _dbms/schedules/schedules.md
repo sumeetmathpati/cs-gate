@@ -6,7 +6,9 @@ parent: true
 mathjax: true
 ---
 
-- **The order in which we execute multiple transactions as they come into the system is called a achedule.**
+- **Schedule is a collection of operations from multiple transactions.**
+- So basically a schedule is just a collection of instructions in multiple transactions.
+
 
 # Types of Schedules
 
@@ -39,11 +41,21 @@ mathjax: true
 
 - Here multiple transaction execute in preemptive manner.
 - Instruction of transaction are interleaved to execute instruction of another transaction.
-- Serial transactions are **NOT always:**
+- Concurrent transactions are **NOT always:**
     - **Consistent**
     - **Recoverable**
     - **Cascadeless**
     - **Strict**
+
+- In a oncurrent schedule, instructios can preempt from one transaction to other but instruction of a sigle transactions must come in same sequence as it come in origional transactions.
+- **Example,** 
+    - Let transaction *T1 = {R(A), W(A), R(C), W(C)}*, *T2 = {R(B), W(B)}*
+    - Valid schedules on above transactions cab be:
+        - *S1 = {R1(A), W1(A), R2(B), W2(B), R1(C), W1(C)}*
+        - *S1 = {R1(A), W1(A), R2(B), R1(C), W2(B), W1(C)}*
+    - But the following schedule is not correct.
+        - *S1 = {R1(A), W1(A), R2(B), W2(B), W1(C), R1(C)}*
+            - Above schedule is not valid because the R(C) and W(C) of first transaction are not present in same order as they are in the T1.
 
 The instructions are interleaved between two transactions, but the order of execution of instructions of a transactions is maintained, i.e. I2 of a transaction T can't be executed before I1 of a transaction T.
 {: .note}
@@ -67,7 +79,7 @@ The instructions are interleaved between two transactions, but the order of exec
 
 $$\frac{(K1 + K2 + K3 + ..... + Kn)!}{ (K1! * K2! * K3! * ... * Kn!)}$$
 
-We are dividing with $(K1! * K2! * K3! * ... * Kn!)$ because we dont want permutation between a instructions of a transaction, we want the instructions of a transaction to execute in serial order.
+We are dividing with $(K1! * K2! * K3! * ... * Kn!)$ because we dont want permutation between a instructions of a transaction, we want the instructions of a transaction to execute in same order.
 {: .info}
 
 ## Total Number of Serial Schedule

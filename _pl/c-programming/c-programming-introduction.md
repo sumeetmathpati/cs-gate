@@ -5,6 +5,17 @@ nav_order: 2
 parent: true
 ---
 
+# GATE Important Topics
+
+*The list below does not follow any precedence order.*
+
+- Switch case
+- Loop
+- Recursion
+- Storage classes
+- Structures
+- Pointers and arrays
+
 # C Program Structures
 
 - All the different programming languages has some structure in which they can be written. C language is no exception.
@@ -64,22 +75,7 @@ int main()              // Main function definition. (Mandatory)
 - Token is a smallest part of a program which can be understood by the compiler.
 - Token can be any of the following type:
 
-## Keywords:
 
-- There are 32 keywords reserved in C which has some fixed meaning to the compiler. 
-- They are building blocks of a C program.
-- The 32 keywords are as follows.
-
-
-
-|auto         |double      |int        |struct|
-|break        |else        |long       |switch|
-|case         |enum        |register   |typedef|
-|char         |extern      |return     |union|
-|const        |float       |short      |unsigned|
-|continue     |for         |signed     |void|
-|default      |goto        |sizeof     |volatile|
-|do           |if          |static     |while|
 
 ## Identifiers
 

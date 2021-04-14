@@ -35,7 +35,7 @@ mathjax: true
 
 # Slotted Aloha
 
-- Slotted aloha divides the time ofshared channel into discrete intervals called as **time slots.**
+- Slotted aloha divides the time of shared channel into discrete intervals called as **time slots.**
 - Any station can transmit the data in any time slot.
 - The only condition is that station must start transmittin from the beginning of the time slot.
 - A collision may occur if two or more stations try to transmit data at the beginning of the same time slot.

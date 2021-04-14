@@ -1,9 +1,8 @@
 ---
 title: Recoverability
 description: "Recoverability"
-nav_order: 5
+nav_order: 6
 child_of: Schedules
-sub: true
 ---
 
 - We check recoverability of a schedule to see if it satisfy the **automicity** and **durability** properties (two of the ACID properties).

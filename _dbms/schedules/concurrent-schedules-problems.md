@@ -7,6 +7,7 @@ child_of: Schedules
 
 - We've seen that concurrent schedule can execute instructions of all transactions in interleaving manner.
 - This flexibiliy comes at a cost and we have some problems.
+- **Two operations on the same data objects conflict if at least one of them is a *write* and both operations are from different transactions.**
 
 # Dirty Read Problem (WR)
 
@@ -17,9 +18,8 @@ child_of: Schedules
     - Uncommited transaction may fail and rollback.
     - Hence, the value read by other new transaction will not be correct.
     - This leads to inconsistency of the database.
-
-Dirty read leads to inconsistency only when the transaction which has written the data has been rollbacked.
-{: .note}
+- **Why dirty read is a problem?**
+    - Dirty read leads to inconsistency only when the transaction which has written the data has been rollbacked.
 
 ## Example
 

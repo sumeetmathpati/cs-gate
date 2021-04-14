@@ -10,20 +10,18 @@ nav_order: 2
 
 # TCP Services
 
-## Stream Delivery Service
+### Stream Delivery Service
 
 - TCP allows the sending process to **deliver data as a stream of bytes** and allows the receiving process to **obtain data as a stream of bytes.**
 - TCP creates an environment in which the **two processes seem to be connected by an imaginary "tube" that carries their data** across the Internet.
 
-***
 
-## Full-Duplex Communication
+### Full-Duplex Communication
 
 - TCP offers full-duplex service, in which **data can flow in both directions at the same time.**
 
-***
 
-## Connection-Oriented Service
+### Connection-Oriented Service
 
 - When a process at site A wants to send and receive data from another process at site B, the following occurs:
     - **The two TCPs establish a connection between them.**
@@ -31,11 +29,21 @@ nav_order: 2
     - **The connection is terminated.**
 - Note that this is a **virtual connection, not a physical** connection. 
 
-***
+### Error Detection
 
-## Reliable Service
+- TCP protocol detects error using checksums in TCP packets.
+
+### Error Control
+
+- If error happens TCP uses **Go-back-n** method to solve the errors.
+
+### Reliable Service
 
 - TCP is a reliable transport protocol. It uses an **acknowledgment mechanism** to check the safe and sound arrival of data.
+
+## Congestion Avoidance Algorithm
+
+- TCP uses **multiplicative decrease and slow start** technique to avoid congestion.
 
 
 # Well Knwon UDP Ports And Applications

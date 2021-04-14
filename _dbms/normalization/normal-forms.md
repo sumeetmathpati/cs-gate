@@ -68,9 +68,9 @@ child_of: Normalization
     - **Relation already exists in 2NF.**
     - **No transitive dependency exists for non-prime attributes**, i.e. non-prime attribute --> non-prime attribute.
 - **Transitive dependency:**
-    - X --> Y is said to be a transitive dependency iff
-        - X is NOT a super key.
-        - Y is a non-prime attribute.
+    - X --> Y is third NF if **ANY ONE** of following satisfy:
+        - X is a super key.
+        - Y is a prime attribute.
 - If all the attributes are prime attributes then there will be no transitive dependency, and hence relation will be in 3rd NF.
 
 ## 3rd NF Decomposition

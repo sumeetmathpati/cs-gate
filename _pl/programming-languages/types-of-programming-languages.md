@@ -1,5 +1,5 @@
 ---
-title: Programming Languages
+title: Types of Programming Languages
 description: "Tree data structure tutorial."
 nav_order: 5
 parent: true

@@ -10,6 +10,17 @@ parent: true
 - Index is also stored in a secondary storage and hence it's also stored in blocks.
 - Index has two columns **<Search key, Block pointer>**
 
+# Notes
+
+- Operations like search, insert, and delete will depend on the order in which elements are stored.
+- If the data is ordered/sorted, then it must be on some key field.
+    - Hence the data can be sorted according to one attribute and can be unsorted according to other attribute.
+- On sorted/ordered data insertion and deletion is costly.
+- The database content don't get affected or change in any way because of indexing.
+- Index will be always sorted, data may or may not be sorted.
+- Index file can be created for any field/attribute (like primary key, non-key).
+- There could be more than one index files for an single data file.
+
 # Types of Indexing
 
 ## Based on Entries in Index
@@ -71,7 +82,13 @@ There is an entry in clustered index for each unique record and we just not crea
 
 ### Single Level Indexing
 
+- Here we create index file from the main file, and then we stop the proess.
+- Primary, clustered, and secondary are single level indexing.
+
 ### Multi Level Indexing
+
+- In multilevel indexing, we further index the index file and keep repeating the procee until we get one block.
+- Simple multilevel, B and B+ are multilevel indexing types.
 
 ***
 
