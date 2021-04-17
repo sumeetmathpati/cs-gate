@@ -1,7 +1,7 @@
 ---
 title: Collision Resolving
 description: "Hashing in DBMS"
-nav_order: 2
+nav_order: 10
 child_of: File Organization
 sub: true
 ---

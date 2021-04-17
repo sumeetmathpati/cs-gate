@@ -1,7 +1,7 @@
 ---
 title: Regular Languages and Finite Automata
 description: "Regular Languages and Finite Automata."
-nav_order: 2
+nav_order: 3
 parent: true
 ---
 

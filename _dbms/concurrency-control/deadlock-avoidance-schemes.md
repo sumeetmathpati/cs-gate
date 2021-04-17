@@ -1,7 +1,7 @@
 ---
 title: Deadlock avoidance schemes
 description: "Deadlock avoidance schemes, wound wait scheme, waid die scheme."
-nav_order: 3
+nav_order: 5
 child_of: Concurrency Control
 ---
 

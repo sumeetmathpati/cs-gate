@@ -9,18 +9,37 @@ parent: true
     - Data is stored as: **Database >> Files >> Records >> Fields.**
 - Records usually describe entities and their attributes.
     - For example, an *Student* record represent student entity and each field *name*, *roll_no*, *age*, etc in records specify its attributs.
-- Records are stored on disk blocks.
-    - A record of a file must be allocated to a disk block because block is a unit of tranfer between disk and memory.
 
-# Spanned and Unspanned Reocrds
+# Blocks
+
+- The secondary storage is logically divided into blocks.
+- Records are stored on these blocks.
+- Block is a unit of tranfer between disk and memory.
+    - I.e. no matter how small data we have to transfer to the memory from secondary storae, we have to transfer data at least size of the block.
+
+## Blocking Factor
+
+- **The number of records can be stored in a block is called blocking factor.**
+
+Block Size / Record size
+{: .w3-xlarge .w3-center}
+
+## Number of Blocks Required
+
+- The number of blocks required by file =
+
+Number of records / Blockig Factor
+{: .w3-xlarge .w3-center}
+
+# Spanned and Unspanned Organization
+
+We store records in blocks in two ways:
 
 ## Spanned Records
 
-- In a situation,
-    - We've stored multiple records in a block, ans suppose there is space left in a block which is not capable to store complete one record.
+- In a situation whewew we've stored multiple records in a block, and suppose there is space left in a block which is not capable to store complete one record.
 - In situation like this we can store a small part of record in the remaining space and the other part of record in next block.
 - **Organization where we can store the records partially in different blocks is called spanned organization.**
-
 
 ### Advantages
 
@@ -69,16 +88,4 @@ parent: true
 
 If records are of fixed length then unspanned organization is preferred. For variable sized records, unspanned organization is preferred.
 {: .info}
-
-# Blocking Factor
-
-- **The number of records can be stored in a block is called blocking factor.**
-
-# Access Time
-
-- When we want to access the record we need to accress it's complete block, and then in block we find the record.
-- **Time required for finding record in a block is negligible.**
-- Suppose we have *N* blocks and we want to search for record, 
-    - Time complexity is O(N) when records are unsorted/unordered.
-    - Time complexity is Log(N) when records are sorted/ordered.
 

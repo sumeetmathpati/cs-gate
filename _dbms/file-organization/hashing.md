@@ -1,7 +1,7 @@
 ---
 title: Hashing
 description: "Hashing in DBMS"
-nav_order: 1
+nav_order: 9
 child_of: File Organization
 ---
 
