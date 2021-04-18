@@ -21,20 +21,35 @@ sub: true
     - m is the order of a tree.
     - n is the number of nodes in a tree.
 
-# Observation
-
-- In B tree we grow our tree from bottom to top.
-- Hence we get new parent nodes but not the leaf nodes.
-- Once we create a leaf node, it will be forever a leaf node.
-    - It's values may change.
-- Hence in B-tree, we don't have node pointers in a leaf node.
-
 # Indexing and B-Tree
 
-- We have two fields in a index record, *<key, block pointer>*.
-- We store that pair into the data field of the node in a B-tree.
+- We have two fields in a index record, *<key, data pointer>*.
+    - The *data pointer* may be a block pointer or a *record pointer*.
+- We store that pair into the data field of the node of a B-tree.
+- And hence now the node of m-ary B-tree can contain 
+    - m child pointers
+    - (m-1) pairs of *<key, block pointer>*
 - Hence using this technique, the index in a tree will be sorted and it will manage itself after inserting new records (or data in the nodes).
 - This will be autimatically multilevel indexing.
+
+## Note
+
+- Every Node in m-ary B-tree should satisfy the following condition.
+
+m * P + (m-1) (k + Pr) < B
+{: .w3-xlarge .w3-center}
+
+- **m** is degree of a tree
+- **P** is a block pointer size
+- **k** is key size
+- **Pr** is data or record pointer
+
+## Example
+
+- Suppose we have database and we want to create index on non an atribute which is not sorted.
+
+![B Tree Indexing]({{ site.baseurl }}/assets/images/dbms/btree-index-example.png)
+
 
 # Problem With B-Tree
 
@@ -42,6 +57,9 @@ sub: true
 - While we could really go to next node to get that element.
     - Example to seach a page in a book, we go to that page by log(n). But to go to the next page of that current page we just flip the page and do not search by log(n).
         - But that's not possible in B-tree.
+- In B-tree we don't need pointers in the leaf nodes.
+    - Because in B-tree a leaf node will always be a leaf node, it will never be the internal node (its data can change).
+    - Hence it's a wastage of memory.
 
 # B+ Tree
 
@@ -50,6 +68,43 @@ sub: true
 - **We made two changes in B+ tree:**
     - Here we use pointer from each leaf node to next right leaf node.
     - Copy of data of all the internal nodes are stored in the leaf nodes.
+
+## Note
+
+- Every Node in m-ary B+ tree should satisfy the following condition.
+
+### For Internal Nodes
+
+m * P + (m-1) * k <= B
+{: .w3-xlarge .w3-center}
+
+- **m** is degree of a tree
+- **P** is a block pointer size
+- **k** is key size
+- **B** is block size
+
+### For Leaf Nodes
+
+m * P + (m-1) * (k + Pr) + P <= B
+{: .w3-xlarge .w3-center}
+
+- **m** is degree of a leaf, i.e. maximum numer of <key, ptr> pairs a leaf node can have.
+- **P** is a block pointer size
+- **k** is key size
+- **B** is block size
+
+
+## Example
+
+Here is a B+ tee indexing for database in above example
+
+![B Tree Indexing]({{ site.baseurl }}/assets/images/dbms/b-plus-tree-indexing-example.png)
+
+- In above example note that
+    - We have copy of all the internal nodes in leaf nodes.
+    - We only have data pinters in the leaf nodes.
+    - Each leaf node is connected to the next leaf node.
+
 
 # Difference Between B and B+ tree
 
