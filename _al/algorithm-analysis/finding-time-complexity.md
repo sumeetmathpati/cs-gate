@@ -341,7 +341,7 @@ main () {
 {% endhighlight %}
 
 - The time complexity of above program is $n^2 \times \frac{n}{2} \times (log_{3}log_5n^7)$.
-- Hence the absolute time complexity is $n^3 \times (log_{3}log_5n)$.
+- Hence the  time complexity is $n^3 \times (log_{3}log_5n)$.
 
 ## 17
 
@@ -350,7 +350,7 @@ main () {
 main () {
     i = 2;
     for (i = 1; i <= n; i++) {
-        for (j = 1; j <= i 1; j++) {
+        for (j = 1; j <= i ; j++) {
             x = y+z;
         }
     }
@@ -367,8 +367,121 @@ main () {
     - .
     - .
     - .
-    1, 2, 4, ... n (i = n)
+    - 1, 2, 4, ... n (i = n)
 - The time complexity of above program is $\frac{n \times (n + 1)}{2}$.
-- Hence the absolute time complexity is $O(n^2)$.
+- Hence the time complexity is $O(n^2)$.
 
 
+## 18
+
+{% highlight c linenos %}
+
+main () {
+    i = 2;
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n 1; j = j + i) {
+            x = y+z;
+        }
+    }
+}
+{% endhighlight %}
+
+- In this example the values in condition are dependent.
+- The time complexity of above program is $\frac{n}{1} + \frac{n}{2} + \frac{n}{3} ... \frac{n}{n}$
+- Hence the time complexity is $O(n log(n))$.
+
+## 19
+
+{% highlight c linenos %}
+
+main () {
+    p = 0;
+    for (i = 1; i <= n; i *= 2)
+        for (j = 1; j <= p; j *= 2)
+            q++
+}
+{% endhighlight %}
+
+- p = $log_2n$
+- Second loop will run for $log_2p$
+    - $= log_2log_2n$
+- Hence the time complexity is $O(log_2log_2n)$.
+
+## 20
+
+{% highlight c linenos %}
+
+main () {
+    int i;
+    for (i = 1; i <= n; i++)
+        for (i = 1; i <= n^2; i++)
+            for (i = 1; i <= n^3; i++)
+                x = y+z
+}
+{% endhighlight %}
+
+- Only third loop will run completely, all the other loops will execute once.
+- Hence the time complexity is $O(n^3)$.
+
+## 21
+
+{% highlight c linenos %}
+
+main () {
+    int i;
+    int j = 1
+    while(i <= n) {
+        j++;
+        i = i + j;
+    }
+}
+{% endhighlight %}
+
+- i will run as follows
+    - 1 
+    - 1 + 2
+    - 1 + 2 + 3
+    - .
+    - .
+    - .
+    - 1, 2, 4, ... k
+- The loop will run until k where $\frac{k \times (k + 1)}{2}$ = n.
+    - $= K^2 = N$
+- Hence the time complexity is $O(\sqrt{n})$.
+
+## 22
+
+Given that **n is prime** number.
+
+{% highlight c linenos %}
+main () {
+    int i;
+    for (i = 1; i <= n; i++)
+        for (j = 1; j <= n; j++)
+            x = y+z
+}
+{% endhighlight %}
+
+- Hence the time complexity is $O(n)$.
+
+## 23
+
+{% highlight c linenos %}
+main () {
+    for (i = 1; i <= n; i++)
+        for (j = 1; j <= i; j++)
+            for (k = 1; k <= j; k++)
+            x = y+z
+}
+{% endhighlight %}
+
+- The time complexity is $O(n^3)$.
+
+## 24
+
+{% highlight c linenos %}
+main () {
+    int i;
+    for (i = n, j = 1; i > 1; i /= 2, j++);
+}
+{% endhighlight %}

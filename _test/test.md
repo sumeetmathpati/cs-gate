@@ -14,6 +14,7 @@ permalink: /test/
 
 https://www.w3schools.com/charsets/ref_utf_math.asp
 
+Ώ
 &forall;
 &part;
 &exist;

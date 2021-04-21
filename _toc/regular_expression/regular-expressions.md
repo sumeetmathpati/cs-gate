@@ -1,10 +1,11 @@
 ---
 title: Regular Expressions
-description: "Regular Expressions."
-nav_order: 5
-child_of: Regular Languages and Finite Automata
+description: "Regular Expressions tutorial."
+nav_order: 3
+parent: true
+mathjax: true
 ---
-
+ 
 - **Regular expression is an expression that can generate exactly those strings which are in regular language.**
 - It's an declarative way of representation of regular language.
 

@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   All the computer science study material for GATE.
 baseurl: "/cs-gate"
 url: "https://sumeetmathpati.github.io"
-author: sumeetmathpati
+author: Sumeet Mathati
 favicon: "./logo.png" # relative path to site's favicon
 logo: "./logo.png"
 social:
