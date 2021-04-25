@@ -4,22 +4,8 @@ description: "Introduction to compiler design."
 serial: 2
 ---
 
-**Compiler** is a **software** which translates one language to another (usualy higher level langauge to lower level language). For example we use GCC to convert C source code into assembly code and then assembler converts a assembly code into machine code which is understandable by the computer hardware.
 
 
-## Phases of compiler
-
-![Phases of compiler]({{ site.baseurl }}/assets/images/cd-phases-of-compiler.jpg)
-
-- Phases of compilers are generally devided into type categories:
-    - **Analysis phase**
-        - Lexical analysis
-        - Syntax analysis
-        - Semantic analysis
-        - Intermediate code generation
-    - **Synthesis phase**
-        - Code optimization
-        - Code generation
 
 ## What is symbol table?
 
