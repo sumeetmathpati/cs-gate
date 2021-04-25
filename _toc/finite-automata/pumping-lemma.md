@@ -1,8 +1,8 @@
 ---
 title: Pumping Lemma
 description: "Mealy and Moore Machines."
-nav_order: 9
-child_of: Regular Languages and Finite Automata
+nav_order: 11
+child_of: Finite Automata
 mathjax: true
 ---
 

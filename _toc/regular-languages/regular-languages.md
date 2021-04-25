@@ -1,6 +1,6 @@
 ---
-title: Regular Languages and Finite Automata
-description: "Regular Languages and Finite Automata."
+title: Regular Languages
+description: "Regular Languages tutorial."
 nav_order: 4
 parent: true
 ---

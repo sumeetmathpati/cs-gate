@@ -2,7 +2,7 @@
 title: Closure Properties of Regular Grammar
 description: "Closure Properties of Regular Grammar."
 nav_order: 7
-child_of: Regular Languages and Finite Automata
+child_of: Regular Languages
 ---
 
 # Union

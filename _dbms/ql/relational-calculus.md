@@ -1,13 +1,16 @@
 ---
-title: Relational Calculus
-description: "Relational algebra in DBMS"
-nav_order: 10
+title: "Relational Calculus"
+description: "Relational calculus tutorial."
+child_of: Query Languages
+nav_order: 3
 ---
 
-- Relational algebra and relational calculus are two formal query languages accisiated with **relational model.**
-- Relational calculus is **non procedural** query language, i.e. the relational calculus tells what to do but never explains how to do.
+- Relational calculus is **non procedural** query language, i.e. the relational calculus tells what to do, but never explains how to do.
 - **Relational calculus is more powerful thatn SQL and relational algebra.**
-    - Tuple relational calculus and domain relational calculus are equal in power.
+- RC is divided into two categories
+    - **Tuple relational calculus** and 
+    - **Domain relational calculus** 
+- Both TRC and DRC are equal in power.
 - As it's based on set theory, relational algebra does not allow duplicate rows in output table.
 - Relational calculus has variables, constants, comparison operators, logical connectives and quantifiers.
 
@@ -36,12 +39,12 @@ nav_order: 10
 
 ## Tuple Relational Calculus
 
-- Tuple relational calculus is used for selecting those tuples that satisfy the given condition.
+- Tuple relational calculus is used for **selecting those tuples that satisfy the given condition.**
 - The result of the relation can have one or more tuples.
+- The syntax is similar to the *set builder form* in *set theory.*
 - **Syntax:**
     - `{t | P(t)}`
-        - The st of tuples *t* for which condition/predicate P is true for *t*.
-        - P1 and P2 are conditions to select T.
+        - The set of tuples *t* for which condition/predicate P is true.
 - We also use the notations:
     - `t[a]` or `t.a`
         - To indicate value of tuple *t* on attribute *a*.
@@ -50,9 +53,9 @@ nav_order: 10
 - **Example:**
     - `{ t | t ∈ Employee}`
         - We are selecting all the tuples from relation *Employee*.
-    - `{ t.name | t ∈ Student ^ t.roll_no = 101}`
+    - `{ t.name | t ∈ Student ∧ t.roll_no = 101}`
         - Selects name of a student whose roll number is 101.
-    - `{t | t ∈Employee ^ t.salary > 5000}`
+    - `{t | t ∈Employee ∧ t.salary > 5000}`
         - Finds details of employee whose salary is more than 5000.
         
 

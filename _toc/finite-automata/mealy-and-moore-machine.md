@@ -1,8 +1,8 @@
 ---
 title: Mealy and Moore Machines
 description: "Mealy and Moore Machines."
-nav_order: 8
-child_of: Regular Languages and Finite Automata
+nav_order: 10
+child_of: Finite Automata
 ---
 - Mealy and Moore machines are output generators.
 - There are no final states in Mealy and Moore machines as these machines are not used for accepting/recognizing languages.

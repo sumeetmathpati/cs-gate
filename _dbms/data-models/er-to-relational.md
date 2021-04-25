@@ -79,3 +79,27 @@ We merge the relationship table with the table of entity set having cardinality 
 
 ![ER Diagram to Relational Model]({{ site.baseurl }}/assets/images/dbms/er-to-tables.png)
 
+***
+
+# Summary
+
+
+### Only Partial Participation
+
+- **1:1**
+    - 2 Tables required.
+- **1:m** or **m:1**
+    - 2 tables are requires.
+- **m:m**
+    - 3 tables are required.
+
+### Total Participation at Only One Side
+
+- **Total participation at many's side**
+    - 2 tables requires.
+- **Total participation on one's site**
+    - 1 table required.
+
+### Total Participation on Both The Sides
+
+- 1 table is requried.

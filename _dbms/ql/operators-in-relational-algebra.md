@@ -1,34 +1,47 @@
 ---
-title: Operators in Relational Algebra
-description: "Operators in Relational Algebra. Join, Semi join, natural join, cartesian product, union, intersection, select, project"
-nav_order: 1
-child_of: Relational Algebra
-mathjax: true
+title: "Operators"
+description: "Operators in relational algebra."
+child_of: Query Languages
+nav_order: 2
+sub: true
 ---
 
-# Project (π)
+# Fundamental Operators
+
+- These fundamental operators are functionally complete i.e. all the operations can be performed using these operations.
+
+## Project (π)
 
 - The project operator selects certain columns (attributes) from the relation.
-- It's a **cNOT a commutative** operation.
+- Hence it's also called as **verticle selection.**
+- It's a **NOT a commutative** operation.
+- It's a **unary operation** i.e. takes only one table as input.
 - **Syntax:**
-    - `π A1, A2 (r)`
-    - Above statement selects/prints only *A1* and *A2* attributes of all rows in relation *r*.
-- It's similar to the `SE:ECT` clause in SQL.
+    - `π col1, col2 (table_name)`
+    - Above statement selects/prints only *col1* and *col2* attributes of all rows in relation *table_name*.
+- It's similar to the `SELECT` clause in SQL.
 - **Example:**
     - `π NAME, CITY (CUSTOMER)`
-    - Prints *name* and *city* attributes of all rows in customer relation.
+        - Prints *name* and *city* attributes of all rows in customer relation.
+    - `(CUSTOMER)`
+        - Prints all the attributes of the *CUSTOMER* table.
 
 
+## Select (σ)
 
-# Select (σ)
-
-- The select operator selects rows/tuples that satisfy a given condition.
-- It's a unary operator, i.e. only takes single relation as a input.
+- The project operator selects certain rows from the relation.
+- Unlike columns, rows don't have any unique names, and hence we have to give specific conditions (which is satisfied by the rows) to select rows.
+    - Like selecting row(s) having salary < 10000.
+- **The select operator selects rows/tuples that satisfy a given condition.**
+- Hence it's also called as **horizontal selection.**
+- It's a **unary operation** i.e. takes only one table as input.
 - It's a **commutative.**
     - `σ P1 (σ P2 (R))` = `σ P2 (σ P2 (R))`
 - **Syntax:**
-    - `σ p (r)`
-    - Above statement selects rows from table *r* where condition *p* satisfies.
+    - `σ p (table_name)`
+    - Above statement selects rows from table *table_name* where condition *p* satisfies.
+- We can add conditions using these comparison operators: `=`, `!=`, `<`, `>`, `<=`, `>=`.
+- We can also use connective to combine multiple conditions: `∧`, `∨`, `¬`.
 - It's similar to the `WHERE` clause in SQL.
 - **Example:**
     - `π NAME, CITY σ CITY='Pune' (CUSTOMER)`
@@ -39,7 +52,7 @@ mathjax: true
 Note tath **SELECT** in relatioanal algebra is similar to **WHERE** in SQL, and **PROJECT** in relational algebra is similar to the **SELCT** in SQL.
 {: .note}
 
-# Union (∪)
+## Union (∪)
 
 - Union operation between two relations is union of rows of those two relations.
 - Similar to union in set theory, it do not print duplicate rows.
@@ -53,18 +66,7 @@ Note tath **SELECT** in relatioanal algebra is similar to **WHERE** in SQL, and 
     - `π CUSTOMER_NAME (BORROW) ∪ π CUSTOMER_NAME (DEPOSITOR)`
     - Above table prints the customer (attribute in both the tables) it its in either relation *BORROW* **OR** *DEPOSITOR*.
 
-# Intersection (∩)
-
-- Inersection operation between two relations is intersection of rows of those two relations.
-- Similar to intersection in set theory.
-- **Syntax:**
-    - `A ∩ B`
-    - Above statement gives new table (without name) consisting intersection of rows of relation *A* and *B*.
-- **Example:**
-    - `π CUSTOMER_NAME (BORROW) ∩ π CUSTOMER_NAME (DEPOSITOR)`
-    - Above table prints the customer (attribute in both the tables) it its present in **BOTH** the relations *BORROW* and *DEPOSITOR*.
-
-# Set Difference
+## Set Difference
 
 -  The set intersection operation `A - B` contains all tuples that are in A but not in B.
 - This operation is similar to the *set difference* in set theory.
@@ -74,12 +76,13 @@ Note tath **SELECT** in relatioanal algebra is similar to **WHERE** in SQL, and 
     - `π CUSTOMER_NAME (BORROW) - π CUSTOMER_NAME (DEPOSITOR)`
     - Prints all hte customer names who are in *borrower* relation but not in *depositor* relation.
 
-# Cartesian Produt (X)
+## Cartesian Produt (X)
 
 - The Cartesian product is used to combine each row in one table with each row in the other table. It is also known as a cross product.
 - It's similar to *cartesian product* operation in set theory.
+- It's a binary operator.
 
-## Example
+### Example
 
 - Suppose we have two relations **A** and **B**.
 
@@ -106,11 +109,25 @@ AXB
 |2|q|3|r|
 |2|q|4|s|
 
-# Inner Joins
+# Derived Operators
+
+## Intersection (∩)
+
+- Inersection operation between two relations is intersection of rows of those two relations.
+- Similar to intersection in set theory.
+- A ∩ B = A - (A - B)
+- **Syntax:**
+    - `A ∩ B`
+    - Above statement gives new table (without name) consisting intersection of rows of relation *A* and *B*.
+- **Example:**
+    - `π CUSTOMER_NAME (BORROW) ∩ π CUSTOMER_NAME (DEPOSITOR)`
+    - Above table prints the customer (attribute in both the tables) it its present in **BOTH** the relations *BORROW* and *DEPOSITOR*.
+
+## Inner Joins
 
 - An inner join includes only those tuples with matching attributes and the rest are discarded in the resulting relation.
 
-## Natural Join (⋈)
+### Natural Join (⋈)
 
 - Natural join solves the problem of cartesian prodct, that we were getting extra data.
 - It does not concatenate the way a Cartesian product does. 
@@ -118,7 +135,7 @@ AXB
 - In addition, the attributes must have the same name and domain.
 - **Natural join works on those matching attributes where the values of attributes in both the relations are same.**
 
-### Example
+#### Example
 
 - Suppose we have two relations *Courses* and *HoD*
 
@@ -148,19 +165,19 @@ AXB
 
 ***
 
-## Equi join (=)
+### Equi join (=)
 
-# Outer Join
+## Outer Join
 
 - An inner join includes only those tuples with matching attributes and the rest are discarded in the resulting relation.
 - If we want to use those tuples which are not mathiching, we need outer join.
 
-## Left Outer Join (⟕)
+### Left Outer Join (⟕)
 
 - Similar to natural join, but **all the tuples from the right relation, are included in the resulting relation.**
 - If there are tuples in left relation without any matching tuple in the right relation, then the those attributes of the resulting relation are made NULL.
 
-### Example
+#### Example
 
 **Courses**
 
@@ -187,12 +204,12 @@ AXB
 
 ***
 
-## Right Outer Join (⟖)
+### Right Outer Join (⟖)
 
 - Similar to natural join, but **all the tuples from the right relation, are included in the resulting relation.**
 - If there are tuples in right relation without any matching tuple in the left relation, then the those attributes of the resulting relation are made NULL.
 
-### Example
+#### Example
 
 **Courses**
 
@@ -219,12 +236,12 @@ AXB
 
 ***
 
-## Full outer join (⟗)
+### Full outer join (⟗)
 
 - All the tuples from both participating relations are included in the resulting relation. 
 - If there are no matching tuples for both relations, their respective unmatched attributes are made NULL.
 
-### Example
+#### Example
 
 **Courses**
 

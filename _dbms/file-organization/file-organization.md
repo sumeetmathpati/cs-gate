@@ -1,7 +1,7 @@
 ---
 title: File Organization
 description: "File organization in DBMS"
-nav_order: 12
+nav_order: 9
 parent: true
 ---
 
