@@ -1,80 +1,79 @@
 ---
 title: Chomsky Hierarchy
-description: "Closure Properties of Regular Grammar."
-nav_order: 7
-child_of: Regular Languages
+description: "Chomsky Hierarchy."
+nav_order: 2
+child_of: Grammars
+mathjax: true
 ---
 
-# Union
+- All the grammars are composed of production rules.
+- Production rules are in the form of *X --> Y*.
+    - *X* should contain at least single variable.
 
-- Regualr languages are **closed under union** operation. 
-- Union of two regular languages is always a regular language.
-- **Example,**
-    - **L1 = a(a+b)<sup>*</sup>** and **L2 = b(a+b)<sup>*</sup>**
-        - L1 ∪ L2 = a(a+b)<sup>\*</sup> + b(a+b) = (a+b)(a+b)<sup>\*</sup> = (a+b)<sup>*</sup> is a regular languagage.
+# Type 0 
 
-## Infinite Union
+- Also called **unrestricted grammar.**
+- $X \to Y$
+    - $X$ is $(V \cup T)^* V (V \cup T)^*$
+    - $Y$ is $(V \cup T)^*$
+- As we can see there is no restriction on the left and right hans side of the production (except that LHS should contain at least single variable which is for all grammars).
 
-- Regualr languages are **NOT CLOSED under infinite union** operation.
-- Infinite union of two regular languages may or may not be regular.
-- **Examples,**
-    - **L1 = a(a+b)<sup>*</sup>** and **L2 = b(a+b)<sup>*</sup>**
-        - **(a+b)<sup>\*</sup> ∪ L1 ∪ L2**
+# Type 1
 
-# Intersection
+- Also called **context sensitive grammar.**
+- Its also a *type-0* grammar.
+- $X \to Y$
+    - $\|X\| \le \|Y\|$
+- As we can see that there is a restriction on the LHS.
 
-- Regualr languages are **closed under intersection** operation.
+# Type 2
+
+- Also called **context free grammar.**
+- It's also a *type-1* grammar.
+- $X \to Y$
+    - $\|X\| = 1$
+- As we can see there is a stronger condition on the LHS that *type-2* grammar.
+
+# Type 3
+
+- It's also called **regular grammars.**
+- It's also a *type-2* grammar.
+- $X \to Y$
+    - $\|X\| = V$
+    - $\|Y\| = VT \| T$ (left linear grammar) **OR** $\|Y\| = TV \| T$ (right linear grammar).
+
+***
+
+# Linear Grammar
+
+*It's not a type of chomsky hierarchy, it's just a type of grammar which some specific tyep of productions.*
+
+- Class of linear grammar are subset of context free grammars and superset of regular grammar.
+- Each production of linear grammar appears as: V --> **T<sup>*</sup>VT<sup>*</sup> \| T<sup>*</sup>**
+- Left hand side contains single variable or non-terminal.
+- Right hand side contains at most one variable.
+- **S --> aSb \| aS \| Sb \| a \| b** is linear grammar.
 
 
+## Left Linear Grammar
 
-## Inifite Intersection
+- Class of left linear grammars are subset of linear grammars.
+- Each production of left linear grammar appears as: **V --> VT<sup>*</sup> \| T<sup>*</sup>**, where V is a variable and T is terminal.
+- **S --> Sa \| Sb \| a \| b** is left linear grammar and hence **also a regular grammar.**
 
-- Regualr languages are **NOT CLOSED under infinite intersection** operation
+***
 
-# Concatenation
+## Middle Linear Grammar
 
-- Regualt languages are **closed** under concatenation operation.
+- Class of left linear grammars are subset of linear grammars.
+- Each production of left linear grammar appears as: **V --> T<sup>*</sup>V T<sup>*</sup>\| T<sup>*</sup>**, where V is a variable and T is terminal.
+- **S --> aSb \| a \| b** is middle linear grammar but **NOT a regular grammar.**
 
-# Complement
+## Right Linear Grammar
 
-- Complement of regular language is **always regular.**
+- Class of right linear grammars are subset of linear grammars.
+- Each production of right linear grammar appears as: **V --> T<sup>*</sup>V \| T<sup>*</sup>**, where V is a variable and T is terminal.
+- **S --> aS \| bS \| a \| b** is left linear grammar and hence **also a regular grammar.**
 
-# Kleene closure
-
-- Regular languages are **closed under Kleene's closure.**
-
-# Kleene plus
-
-- Regular languages are **closed under Kleene plus operation.**
-
-# Subset
-
-- Regular languages are **not closed under subset operation.**
-
-# Reverse
-
-- Regular languages are **closed under reverser operation.**
-
-# Prefix
-
-- Regular langugaes are **closed under prefix operation.**
-
-# Suffix
-
-- Regular languages are **closed under suffix operation.**
-
-# Right quotient
-
-- Regualr languages are **closed under right quotient operation.**
-
-# Homomorphism
-
-- Regular languages are **closed under homomorphism operation.**
-
-# Invserse homomrphism
-
-- Regular languages are **closed under inverse homomorphism.**
-
-# Set difference
-
-- Regular languages are **closed under the set differene operation.**
+Regular grammars are only generate left or right linear grammar and not middle linear grammar.
+{: .note}
