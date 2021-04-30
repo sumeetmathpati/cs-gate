@@ -1,7 +1,7 @@
 ---
 title: Regular Grammar From FA
 description: "Regular grammar from finite automata."
-nav_order: 5
+nav_order: 6
 child_of: Grammars
 mathjax: true
 sub: true

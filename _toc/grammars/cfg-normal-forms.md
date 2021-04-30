@@ -1,7 +1,7 @@
 ---
 title: CFG Normal Forms
 description: "Context free grammar, normal forms, CNF, GND, chomsky normal form, greibach normal form."
-nav_order: 9
+nav_order: 11
 child_of: Grammars
 mathjax: true
 sub: true

@@ -157,6 +157,28 @@ ul.warning {
 }
 /* Table End */
 
+/* TOC */
+
+.toc {
+    list-style: none;
+    padding-left: 0;
+}
+.toc > li,
+.toc-submenu > li {
+    margin-bottom: 0;
+}
+.toc a {
+    text-decoration: none;
+}
+.toc a:hover {
+    text-decoration: underline;
+}
+.toc-submenu {
+    list-style: none;
+    margin-top: 0;
+}
+/* TOC End */
+
 /* Labels */
 .label,
 .label-blue {

@@ -63,6 +63,7 @@ https://www.w3schools.com/charsets/ref_utf_math.asp
 ⇒
 &delta;
 &lambda;
+Γ
 
 # Heading 1
 ## Heading 2

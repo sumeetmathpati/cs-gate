@@ -1,22 +1,27 @@
 ---
 title: CFG Decision Properties
 description: "Context free grammar, ambigous grammar, inherently ambigous grammar. CFG decision properties."
-nav_order: 7
+nav_order: 8
 child_of: Grammars
 mathjax: true
 sub: true
 ---
 
-# CFG Problems
+# Undecidable Problems of CFG
 
 ## Regularity Problem
 
 - In this probem we want to find whether the given CFG generated teh regular language or not.
 - This is **undecidable problem.**
 
+***
+
 ## Ambiguity Problem
 
-- A CFG is said to be ambigous if and only if more than one *left-most-derivation* parse tree or *right-most-derivation* parse tree can be generated.
+- A CFG is said to be ambigous if 
+    - At least one string has more than one *left-most derivation.*
+    - At least one string has more than one *right-most derivation.*
+    - At least one string has more than one *parse tree.*
 
 ### Example
 
@@ -35,7 +40,6 @@ sub: true
 
 - Hence the above grammar is ambigous.
 - Finding whether the grammar is ambigous or not is **undecidable problem.**
-- Knowing whether we can remove the ambiguity is also **undecidable problem.**
 
 ### Disadvantages of Ambigous Grammar
 
@@ -47,17 +51,40 @@ sub: true
 ### Inherently Ambigous Grammar
 
 - A context-free language having no unambigous grammar is called inherently ambigous language.
-
-# Undecidable Problems of CFG
-
-- Regularity problem
-- Ambiguity problem
-- Ambiguity elimination problem
 - Finding if the CFG generate complete language (∑*)
 - Equality problem
 
+## Ambibuity Removal Problem
+
+- Knowing whether we can remove the ambiguity is also **undecidable problem.**
+
+
 # Decidable Problems of CFG
 
-- Membership problem (using CYK algorithm) (require CNF)
-- Finiteness problem (requires CNF)
-- Emptiness problem
+## Membership problem (using CYK algorithm) (require CNF)
+
+***
+
+## Finiteness Problem
+
+- It's a decidable Problem.
+
+### Steps: Method 1
+
+- If the grammar contain recursions; then the grammar is infinite.
+
+### Steps: Method 2
+
+- Construct a CNF graph.
+- If graph contain cycle; then the grammar is infinite.
+
+***
+
+## Emptiness problem
+
+- It's a decidable Problem.
+
+### Steps
+
+- Remove all the useless productons.
+- If the starting symbol exists; then the language is not empty; else the language is empty.

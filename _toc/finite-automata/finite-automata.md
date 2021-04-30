@@ -18,3 +18,12 @@ parent: true
 	- Moore machine
 
 - If there is no common difference in the length of a strings accepted by DFA and the languge is infinite then FA can't accept the language.
+
+# PDA Structure
+
+- It'a a FA with infinite stack.
+- Symbols can be pushed or popped from the stack.
+
+![Finite automata]({{ site.baseurl }}/assets/images/toc/finite-automata.png)
+
+

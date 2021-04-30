@@ -1,7 +1,7 @@
 ---
 title: CFG Simplification
 description: "Context free grammar, grammar simplification, cfg simplification"
-nav_order: 8
+nav_order: 10
 child_of: Grammars
 mathjax: true
 sub: true

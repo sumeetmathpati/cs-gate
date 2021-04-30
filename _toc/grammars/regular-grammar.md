@@ -1,7 +1,7 @@
 ---
 title: Regular Grammar
 description: "Regular grammars. Regular grammar tutorial."
-nav_order: 3
+nav_order: 4
 child_of: Grammars
 mathjax: true
 ---

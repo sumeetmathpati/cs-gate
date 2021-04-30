@@ -1,8 +1,9 @@
 ---
-title:  "Equivalence of Languages, Grammars and Automata"
-description: "Chomsky Classification of Grammar. Unrestricted grammar, context sensitive grammar, context free grammar, regular grammar. Turing machine, linear bound automata, push down automata, finite state automata."
-nav_order: 4
-child_of: Theory Of Computation
+title: Equivalence of Languages, Grammars and automata
+description: "Chomsky Hierarchy."
+nav_order: 3
+child_of: Grammars
+mathjax: true
 sub: true
 ---
 
