@@ -2,7 +2,7 @@
 title:  "Powerful things you can do with the Markdown editor"
 description: "There are lots of powerful things you can do with the Markdown editor."
 serial: 1
-parent: true
+child_of: Powerful things you can do with the Markdown editor
 permalink: /test/
 ---
 

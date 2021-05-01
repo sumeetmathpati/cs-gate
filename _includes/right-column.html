@@ -1,5 +1,15 @@
 <div class="w3-col l2 m3">
 
+    <div class="w3-card w3-round w3-white w3-padding">
+        <h4 class="">Search</h4>
+        <div class="">
+            <input id="search-input" class="w3-input w3-border" type="text" placeholder="Search...">
+            <ul id="results-container" class="w3-ul">
+            </ul>
+        </div>
+    </div>
+    <br>
+
     <!-- <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
             <p>Upcoming Events:</p>
@@ -131,8 +141,9 @@
         <div class="w3-container">
             <h4 class="">Table Of Content</h4>
             <div>
-                {% include toc.html html=content class="toc" submenu_class="toc-submenu" item_class="toc-entry" h_min=1 h_max=2
-            skip_no_ids=true %}
+                {% include toc.html html=content class="toc" submenu_class="toc-submenu" item_class="toc-entry" h_min=1
+                h_max=2
+                skip_no_ids=true %}
             </div>
         </div>
     </div>

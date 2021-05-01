@@ -1,0 +1,16 @@
+---
+layout: null
+---
+[
+  {% for post in site.al %}
+    {
+      "title"       : "{{ post.title | escape }}",
+      "description" : "{{ post.description }}",
+      "date"        : "{{ post.date }}",
+      "categories"  : "{{ post.categories | array_to_sentence_string }}",
+      "tags"  : "{{ post.tags | array_to_sentence_string }}",
+      "url"         : "{{ site.baseurl }}{{ post.url }}"
+
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

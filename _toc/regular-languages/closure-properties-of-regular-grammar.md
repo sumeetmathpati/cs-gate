@@ -3,6 +3,7 @@ title: Closure Properties of Regular Grammar
 description: "Closure Properties of Regular Grammar."
 nav_order: 7
 child_of: Regular Languages
+mathjax: true
 ---
 
 # Union
@@ -24,12 +25,20 @@ child_of: Regular Languages
 # Intersection
 
 - Regualr languages are **closed under intersection** operation.
-
+- **Examples,**
+    - $L1 = (a+b)^\*$ and $L2 = b(a+b)^\*$
+        - $L1 \cap L2 = b(a+b)^\*$
 
 
 ## Inifite Intersection
 
-- Regualr languages are **NOT CLOSED under infinite intersection** operation
+- Regualr languages are **NOT CLOSED under infinite intersection** operation.
+- Infinite intersection of RLs is may or may not be regular.
+- **Examples,**
+    - $\\{\\} \cap L1 \cap L2... = \phi$
+        - It's regular
+    - $(\sum - a^0b^0) \cap (\sum - a^1b^1) \cap (\sum - a^2b^2) ... = (\sum - a^nb^n)$
+        - It's not regular.
 
 # Concatenation
 
@@ -65,7 +74,7 @@ child_of: Regular Languages
 
 # Right quotient
 
-- Regualr languages are **closed under right quotient operation.**
+- Regular languages are **closed under right quotient operation.**
 
 # Homomorphism
 

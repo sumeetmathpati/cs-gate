@@ -69,61 +69,73 @@ defaults:
       type: "cn"
     values:
       layout: "post"
+      subject: "Computer Networks"
   - scope:
       path: ""
       type: "os"
     values:
       layout: "post"
+      subject: "Operating System"
   - scope:
       path: ""
       type: "coa"
     values:
       layout: "post"
+      subject: "COA"
   - scope:
       path: ""
       type: "dbms"
     values:
       layout: "post"
+      subject: "DBMS"
   - scope:
       path: ""
       type: "toc"
     values:
       layout: "post"
+      subject: "Theory of Computation"
   - scope:
       path: ""
       type: "ds"
     values:
       layout: "post"
+      subject: "Data Structures"
   - scope:
       path: ""
       type: "pl"
     values:
       layout: "post"
+      subject: "Programming Languages"
   - scope:
       path: ""
       type: "dl"
     values:
       layout: "post"
+      subject: "Digital Logic"
   - scope:
       path: ""
       type: "al"
     values:
       layout: "post"
+      subject: "Algorithms"
   - scope:
       path: ""
       type: "cd"
     values:
       layout: "post"
+      subject: "Compiler Design"
   - scope:
       path: ""
       type: "dm"
     values:
       layout: "post"
+      subject: "Discrete Mathematics"
   - scope:
       path: ""
       type: "test"
     values:
       layout: "post"
+      subject: "Test"
 
 # Build settings
 theme: minima

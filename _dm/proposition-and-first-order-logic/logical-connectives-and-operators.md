@@ -2,7 +2,7 @@
 title: Connectives and Operators
 child_of: Proposition and First Order Logic
 nav_order: 2
-description: "Logical connectives, conjuntions, disjunction, not, and, implication, double implication."
+description: "Logical connectives, conjuntions, disjunction, not, and, implication, double implication, inverse, converse, contrapositive."
 sub: true
 mathjax: true
 ---
@@ -65,6 +65,14 @@ mathjax: true
 |F|T|T|
 |T|F|F|
 |T|T|T|
+
+
+### Inverse, Converse and Contrapositive.
+
+|Statement|$P \to Q$| If P; then Q|Truth value|
+|Converse|$Q \to P$| If Q; then P|False|
+|Inverse|$\neg P \to \neg Q$| If not P; then not Q|False|
+|Contrapositive|$\neg Q \to \neg P$| If not Q; then not P|True|
 
 ***
 
@@ -131,3 +139,17 @@ mathjax: true
 
 - $P \land \neg P = False$
 - $P \lor \neg P = True$
+
+## Absorption Law
+
+- $P \land (P \lor Q) = P$
+- $P \lor (P \land Q) = P$
+
+## Misc
+
+- $P \to Q = \neg P \lor Q$
+- $P \to Q = \neg P \to \neg Q$
+- $(P \to Q) \land (P \to R) = P \to (Q \land R)$ 
+- $(P \to R) \land (Q \to R) = (P \lor Q) \to R$ 
+- $(P \to Q) \lor (P \to R) = P \to (Q \lor R)$ 
+- $(P \to R) \lor (Q \to R) = (P \land Q) \to R$ 

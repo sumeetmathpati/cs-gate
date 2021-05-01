@@ -18,7 +18,7 @@
     {% if page.url == '/' %}
     <div class="w3-container w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
         {% else %}
-        <div class=" w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <div class=" w3-container w3-content" style="max-width:1600px;margin-top:80px">
             {% endif %}
 
             <!-- The Grid -->
@@ -69,6 +69,16 @@
             {% if page.mathjax %}
             <script src="{{ site.baseurl }}/assets/js/load-mathjax.js" async></script>
             {% endif %}
+            <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+            <script>
+                SimpleJekyllSearch({
+                    searchInput: document.getElementById('search-input'),
+                    resultsContainer: document.getElementById('results-container'),
+                    json: '{{ site.baseurl }}/search.json',
+                    // searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+                    searchResultTemplate: '<a href="{{ site.url }}{url}"><li><div class="w3-bar-item"> <span><strong>{title}</strong></span><br><span><em>{subject}</em></span></div></li></a>'
+                })
+            </script>
 
 </body>
 

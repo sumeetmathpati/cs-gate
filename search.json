@@ -1,0 +1,22 @@
+---
+layout: null
+---
+[
+  {% for collection in site.collections %}
+
+  {% assign size = site[collection.label] | size %}
+  {% if size != 0 %} 
+  {% for post in site[collection.label] %}
+    {
+      "title"       : "{{ post.title | escape }}",
+      "description" : "{{ post.description }}",
+      "url"         : "{{ site.baseurl }}{{ post.url }}",
+      "subject"     : "{{ post.subject }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  {% unless forloop.last %},{% endunless %}
+  {% endif %}
+  
+  
+  {% endfor %}
+]
