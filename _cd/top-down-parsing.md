@@ -1,7 +1,7 @@
 ---
 title:  "Top Down Parsing"
 description: "Top down parting, LL(1) parsing"
-serial: 6
+nav_order: 6
 ---
 
 - In top down parsing we start parse tree from root node and go down to the leaf node.

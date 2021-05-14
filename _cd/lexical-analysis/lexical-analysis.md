@@ -2,7 +2,8 @@
 heading: "Lexical Analysis"
 title:  "Lexical Analysis"
 description: "Lexical analysis in compiler design tutorial."
-serial: 2
+nav_order: 2
+parent: true
 ---
 
 - It's a first phase of a compiler.
@@ -11,9 +12,11 @@ serial: 2
     - In some programming languages like C/C++ it comes from preprocessor.
 - To design lexical analyzer **Regular Grammar** and **Finite State Automata** are used.
 
+![Lexical Analyzer]({{ site.baseurl }}/assets/images/cd/lexical-analyzer.png)
+
 ***
 
-## Example
+# Example
 
 - The C language code `int foo = 10;` contains following tokens:
     - int (keyword)
@@ -23,12 +26,12 @@ serial: 2
 
 ***
 
-## Functions of lexical analyzer
+# Functions of lexical analyzer
 
 - Gives errors
 - Eliminate comments and whitespaces.
 
-### Errors detected by Lexical Analyzer
+# Errors detected by Lexical Analyzer
 
 - Numerical literals that are too long.
 - Long identifiers.
@@ -37,7 +40,7 @@ serial: 2
 
 ***
 
-## Types of Tokens
+# Types of Tokens
 
 - **Identifiers**
     - Example `var1`, `i`, `j`

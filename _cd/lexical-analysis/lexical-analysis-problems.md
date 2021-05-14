@@ -1,7 +1,8 @@
 ---
 title:  "Problems on Lexical Analysis"
 description: "Questions, problems, examples on lexical analysis."
-serial: 3
+nav_order: 1
+child_of: Lexical Analysis
 ---
 
 - The starting and ending double quotes and the content inside it is considered as single token.

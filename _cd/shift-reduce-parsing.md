@@ -1,7 +1,7 @@
 ---
 title:  "Shift Reduce Parsing"
 description: "Shift reduce parsing."
-serial: 7
+nav_order: 7
 ---
 
 - It's one of the type of **bottom-up parsing**.

@@ -1,10 +1,29 @@
 ---
-title: Closure Properties of Regular Grammar
-description: "Closure Properties of Regular Grammar."
-nav_order: 7
+title: Closure Properties of Regular Languages
+description: "Closure Properties of Regular Languages."
+nav_order: 1
 child_of: Regular Languages
 mathjax: true
 ---
+
+
+|Operation|Clossed ?|
+|-|-|
+|Union|Yes|
+|Infinite Union|No|
+|Intersection|Yes|
+|Infinite Intersection|Yes|
+|Concatenation|Yes|
+|Kleene Closure|Yes|
+|Positive Closure|Yes|
+|Subset|No|
+|Reverse|Yes|
+|Prefix|Yes|
+|Suffix|Yes|
+|Quotient|Yes|
+|Homomorphism|Yes|
+|Inverse Homomorphism|Yes|
+|Set Difference|Yes|
 
 # Union
 
@@ -72,9 +91,10 @@ mathjax: true
 
 - Regular languages are **closed under suffix operation.**
 
-# Right quotient
+# quotient
 
-- Regular languages are **closed under right quotient operation.**
+- Regular languages are **closed under quotient operation.**
+- Automata of L1 \ L2 is L1 automata but there may be changes in final state.
 
 # Homomorphism
 

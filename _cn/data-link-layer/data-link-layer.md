@@ -34,3 +34,14 @@ nav_order: 3
 
     - Identifies all the devices in the network with MAC address.
 
+
+# Two Sublayers
+
+- The IEEE has divided the DLL into two sublayers.
+    - **Logical link control**, (TOP)
+    - **Media access control**, (Bottom)
+- Media access control,
+    - Defines the protocols and access methods (like CSMA/CD) for LAN, because the LAN is shared between multiple devices.
+    - Implement the addressing mechanism (MAC address).
+- Flow control, and error control are responsibilities of the *logical link control.*
+- Framing is handled in both the sublayers.
