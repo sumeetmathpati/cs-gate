@@ -2,7 +2,7 @@
 title: "Enum, Struct and Union"
 description: "Pointers in C programming language."
 child_of: "C Programming"
-nav_order: 12
+nav_order: 13
 ---
 
 # Enums

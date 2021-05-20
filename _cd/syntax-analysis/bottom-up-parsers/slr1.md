@@ -7,11 +7,15 @@ sub: true
 mathjax: true
 ---
 
-- It's also called simple LR(1).
+- It's also called **simple LR(1).**
 - The construction is same as LR(0), the only difference is, here we use *first* and *follow* set values to place reduce actions.
 - SLR(1) supports more grammars than LR(0).
+- Extends LR(0) parser to eliminate a few conflicts.
+    - Like LR(0), it also uses LR(0) items to build DFA.
+- For each reduction A --> B, look at the next symbol c.
+    - Applyreduction only if $c \in FOLLOW(A)$ or $c = \epsilon$ and $S^* \to qA$
 
-# SLR(1) Prasing Table Construction
+# Table Construction
 
 - Create augmented grammar.
 - Construct LR(0) items.

@@ -1,6 +1,6 @@
 ---
 title:  "Basic Logic Gates"
-description: "Logic Gates tutorial."
+description: "Logic Gates tutorial basic gates, and gate, or gate, not gate, xor gate, xnor gate, nor gate, nand gate"
 child_of: Logic Gates
 nav_order: 1
 mathjax: true
@@ -63,6 +63,10 @@ Following are all the logic gates.
     - a NOR a' = 0
 - **NOR with 1:**
     - a NOR 1 = 0
+- **Associative**
+    - It does not satisfy associative law
+- **Commutative**
+    - A NOR B = B NOR A
 
 ***
 
@@ -81,6 +85,10 @@ Following are all the logic gates.
     - a NAND a' = 1
 - **NOR with 1:**
     - a NAND 1 = a'
+- **Associative**
+    - It does not satisfy associative law
+- **Commutative**
+    - A NAND B = B NOR A
 
 # Special Purpose Gates
 
@@ -108,7 +116,10 @@ Following are all the logic gates.
     - a XOR a' = 1
 - **XOR with 1:**
     - a XOR 1 = a'
-
+- **Associative**
+    - (A XOR (B XOR C)) = ((A XOR B) XOR C)
+- **Commutative**
+    - A XOR B = B XOR A 
 ***
 
 ## XNOR Gates
@@ -129,6 +140,10 @@ Following are all the logic gates.
     - a XNOR a' = 0
 - **XNOR with 1:**
     - a XNOR 1 = a 
+- **Associative**
+    - (A XOR (B XOR C)) = ((A XOR B) XOR C)
+- **Commutative**
+    - A XOR B = B XOR A 
 
 ***
 
@@ -160,5 +175,4 @@ Following are all the logic gates.
 
 ![XOR And XNOR Gate Relation]({{ site.baseurl }}/assets/images/dl-xor-xnor-relation.png)
 
-***
 

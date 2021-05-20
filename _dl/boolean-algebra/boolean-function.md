@@ -130,6 +130,7 @@ Example (a+b')(a'+b'), means value of 01 and 10 is equal to 0 in truth table. Wh
 
 - Complement of a function $f$ can be obtained by changing **0 to 1** and **1 to 0** in the truth table.
     - $f'$ will return opposite of value returned by $f$.
+    - The complement of $f(a, b, c, ..., 0, 1, +, \times)$ is $f(a', b', c', ..., 1, 0, \times, +)$
 - Example
     - In table above function $f$ and $f'$ is shown. $f'$ has opposite value of $f$.
 
@@ -141,7 +142,22 @@ Example (a+b')(a'+b'), means value of 01 and 10 is equal to 0 in truth table. Wh
 |1|1|1|0|
 
 ## How to Find Complement
- 
+
+### Method 1
+
+- Add bar to the expression and solve
+
+### Method 2
+
+- If we know the minterms, complement the minterms
+- Example
+    - If $f(a, b, c) = \\{1, 2, 3\\}$ then $f'(a, b, c) = \\{0, 4, 5, 6, 7\\}$
+
+### Method 3
+
+- Complement all the elements i,e, (change 1s with 0s, ANDs with ORs) and then solve.
+
+***
 - In a expression replace
     - Normal variables with complements, 
     - Complemented variables with normals,

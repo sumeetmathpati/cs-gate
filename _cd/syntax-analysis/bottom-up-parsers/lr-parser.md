@@ -6,10 +6,18 @@ child_of: Syntax Analysis
 sub: true
 ---
 
-- It's a type of shift-reduce parser.
+# Key Ideas
+
+- LR parsers can parse a strictly larger class of grammars than (top-down) predictive parsers.
+- LR parsers can usually recognize all programming language construct that can be specified by context-free grammars.
+- LR parsers detect errors fast.
+- We can use an LR parser generator such as YACC.
+
+***
+
+- In the name LR,
     - **L** indicates that it scans string from **l**eft to right.
     - **R** indicated that it generated right-most derivation.
-- LR parsers read the string from left-to-right and produce right-most-derivation.
 - The term LR(k) is also very common.
   - The k refers to the unconsumed lookahead symbols.
 - A context free grammar is called LR(k) grammar, if there exist a LR(k) parser for it.
@@ -26,8 +34,10 @@ sub: true
 
 - We've seen that there may be more that one variable in grammar which we can replace our handle with. So we need to know what to do in that situation.
 - To know what to do in that situation, LR parser uses LR table.    
-- This table has two columns: *Action*, and *Goto*.
-- This table can be represented using **DFA.**
+- An LR-Parser uses
+    - **DFA** states to memorize information during the parsing process,
+    - an *action table* to make decision (such as shift or reduce) and to compute states
+    - a *goto table* to compute states
 
 ![LR Table]({{ site.baseurl }}/assets/images/cd/lr-table.png)
 
@@ -108,3 +118,12 @@ sub: true
     - **LALR(1)** (LR(1) items)
     - **CLR(1)** (LR(1) items)
 - Powers: **LR(0) < SLR(0) < LaLR(1) < CLR(1)**
+- Number of states relation:
+    - CLR >= LALR(1) = SLR(1) = LR(0)
+
+# Grammar Relations
+
+- You may not understand this diagram now, see this diagram after learning all the LR parsing algorithms.
+
+![LR Grammar Relations]({{ site.baseurl }}/assets/images/cd/lr-grammar-relations.png)
+

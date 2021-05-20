@@ -28,10 +28,31 @@ mathjax: true
 
 - To store multidimentional arrays as one dimentional arrays, in row major order, we start storing rows in the array contiguously.
 - Generally we follow this method.
+- $Loc(a[i][j])$ = $BASE + [(i - RLB) \times NumberOfColumns + (j - CLB)] * ElementSize$
+    - Where *RLB* is row lower bound and *CLB* is column lower bound.
+- Example
+    - Let's say we have an array[25..300, 93..175]
+    - Each element is of size 5.
+    - Base address is 0.
+    - Loc(A[175][170]) = 0 + [(175 - 25) * 83 + (170 - 93)] * 5 = 62625
+
+***
 
 ## Column Major Order
 
 - To store multidimentional arrays as one dimentional arrays, in row major order, we start storing columns in the array contiguously.
+
+- $Loc(a[i][j])$ = $BASE + [(j - CLB) \times NumberOfRows + (i - RLB)] * ElementSize$
+- Example
+    - Let's say we have an array[25..300, 93..175] sotred in column major order.
+    - Each element is of size 5.
+    - Base address is 0.
+    - Loc(A[175][170]) = 0 + [(170 - 93) * 176 + (175 - 25)] * 5 = 68510
+
+For 3D array, a[lb1 .. ub1, lb2 .. ub2, lb3 .. ub3], <br><br>in RMO, <br> $Loc(a[i][j][k])$ = $BASE + [(i - lb_1) \times nr \times nc + (j - lb_2) \times nc + (k - lb_3)] \times c$ <br><br> in CMO, <br>$Loc(a[i][j][k])$ = $BASE + [(i - lb_1) \times nr \times nc + (k - lb_3) \times nr + (j - lb_2)] \times c$
+{: .note}
+
+***
 
 ![Row and Column Major]({{ site.baseurl }}/assets/images/ds/row-and-column-major.png)
 

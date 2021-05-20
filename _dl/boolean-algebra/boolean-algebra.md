@@ -42,14 +42,13 @@ mathjax: true
 
 ***
 
-## Closure
-
-***
-
 ## Identity
 
-- For $+$, 0 is an identity element.
-- For $\times$, 1 is an identity element.
+- $a + 0 = a$
+    - For $+$, 0 is an identity element.
+- $a \times 1 = a$
+    - For $\times$, 1 is an identity element.
+
 
 ***
 
@@ -64,6 +63,11 @@ mathjax: true
 
 - $x \times (y + z) = (x \times y) + (x \times z)$
 - $x + (y \times z) = (x + y) \times (x + z)$
+
+## De Morgan's Law
+
+- $(a+b)' = a' \times b'$
+- $(a \times b)' = a' + b'$
 
 # Basic Theorems and Properties
 

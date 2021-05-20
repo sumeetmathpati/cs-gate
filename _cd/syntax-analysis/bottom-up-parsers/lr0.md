@@ -36,7 +36,9 @@ Augmented Grammar
     - `A --> B . + E`
     - `A --> B + . E`
     - `A --> B + E .`
-- These dots represent the state of the parser.
+- An item indicates how much of a production we have seen.
+    - Symbols on the left of “•” are already on the stack.
+    - Symbols on the right of “•” are expected in the input.
 - Example the item `A --> B . + E` represents:
     - Parser has read the string corresponding with B and now it expects the `+` followed by `E`.
 
@@ -120,5 +122,12 @@ closure of above item:
 # LR(0) Drawbacks
 
 - LR(0) parsing table contains unnecessary reduce actions.
-- In LR(0) reduce actions are placed without considering lookahead symbols.
 - Therefore LR(0) supports less number of grammars than SLR(1).
+- An LR(0) parser works only if each state with a reduce action has only one possible reduce action and no shift action.
+
+|`{𝐿 → 𝐿 𝑆•}`|OK|
+|`{𝐿 → 𝐿 𝑆•, 𝑆 → 𝑆• 𝐿}`|SR Conflict|
+|`{𝐿 → 𝑆 𝐿•, 𝐿 → 𝑆• }`|RR Conflict|
+
+- Takes shift/reduce decisions without any lookahead token.
+    - Lacks the power to parse programming language grammars

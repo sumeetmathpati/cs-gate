@@ -2,7 +2,7 @@
 title: Pointers
 description: "Pointers in C programming language."
 child_of: "C Programming"
-nav_order: 11
+nav_order: 12
 ---
 
 - Variables of specific data type are used to store the data of that type, like them **pointers of specific type are used to store memory address of variables of that type.**

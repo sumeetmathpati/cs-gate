@@ -18,8 +18,6 @@ nav_order: 3
     - Accessing variable which is not declared in our scope.
 - In those kinds of cases, scoping methods decides which variables to use and which are not.
 
-***
-
 # Scoping Methods
 
 - We have two types of scopings, they are **Static scoping** and **Dynamic scoping**. 
@@ -33,6 +31,9 @@ nav_order: 3
 - Easy to find the scope.
 - Most modern languages use static scoping
     - Static scoping used in languages like **C**, **C++**, **Java**.
+- Static scoping is done at compile time by comiler.
+- If not mentioned, the **default** method is static scoping.
+
 ### Example
 
 {% highlight c linenos %}
@@ -72,15 +73,83 @@ OUTPUT:
 All the calling functions recursivly cheked for variable declaration, it not found; then only we use global variable.
 {: .note}
 
-***
+### Working
+
+- To perform dynamic scoping; we have to do som extra tasks.
+- If the variable is not declared in scope, we have to go the caller function to see if the variable is declared there.
+- to do so, we first pop the function, use the variable in caller function and use the variable and after that, we again push the function.
+- Hence, in worst case we might end up popping all the functions from stack.
+- Therefore, the dynamic scoping is very expensive operation.
+    - Hence most programming languages use static scoping.
 
 # Examples
 
 *The programs below are general instruction and do not represent syntax of any programming language.*
 
-## 1st example
+## Q1
 
-{% highlight python linenos %}
+{% highlight c %}
+int a = 55;
+
+main() {
+    int a = 5;
+    B();
+}
+
+B() {
+    int a = 10;
+    C();
+}
+
+C() {
+    int a = 20;
+    D();
+}
+
+D() {
+    printf(a);
+}
+# OUTPUT:
+# Static scoping: 55
+# Dynamic scoping: 20
+{% endhighlight %}
+
+## Q2
+
+{% highlight c %}
+int a = 1;
+int b = 2;
+
+main() {
+    int a = 5;
+    C();
+    pf(a, b);
+    D();
+}
+
+C() {
+    pf(a, b);
+    a = b + 5;
+    D();
+    pf(a, b)
+}
+
+D() {
+    int b;
+    b = a + b
+    pf(a, b)
+}
+# OUTPUT:
+# Static scoping: 1 2 7 garbage 5 2 7 garbage
+# Dynamic scoping: 5 2 7 Garbage 7 2 7 2 7 Garbage
+{% endhighlight %}
+
+Any vlaue plus garbage value is garbage value.
+{: .note}
+
+## Q3
+
+{% highlight python %}
 b = True
 
 def p():
@@ -97,9 +166,9 @@ main()
 # Dynamic scoping: False
 {% endhighlight %}
 
-### 2nd eaxample
+## Q2
 
-{% highlight c linenos %}
+{% highlight c %}
 int x;
 
 void A() {
@@ -126,9 +195,9 @@ Dynamic scoping: 0.25 0125
 
 {% endhighlight %}
 
-### 3rd example
+## Q3
 
-{% highlight c linenos %}
+{% highlight c %}
 int x;
 
 void two() {
@@ -155,9 +224,9 @@ Dynamic scoping: 2 5 2
 */
 {% endhighlight %}
 
-### 4th example
+## Q4
 
-{% highlight c linenos %}
+{% highlight c %}
 int x, y;
 
 void P(int n) {

@@ -1,16 +1,22 @@
 ---
 title:  "Top Down Parsing"
 description: "Top down parting, LL(1) parsing"
-nav_order: 6
+nav_order: 3
+parent: true
 ---
 
 - In top down parsing we start parse tree from root node and go down to the leaf node.
 - General representation of top down parser is LL(1) parser.
+- The top down parser has two types:
+    - **Backtracking**
+    - **Non-Backtracking**
+        - Recursive descent parser
+        - Non-recursive descent / LL(1) parser
+- Backtracking parsers are brute fore approach to parse a string, hence we won't be talking about the bacltracking parser.
 
 ## LL(1) Grammar
 
 - **Properties of LL(1) Grammar**
-    - Backtracking,
     - Left recursion,
     - Left factoring, and
     - Grammar is unambigious.

@@ -10,5 +10,5 @@ sub: true
 - Time slots are alloted to the devices in **Round Robbin** manner.
 - **Disadvantage:**
     - If in it's time slot station doesn't have anything to transfer, it's time slot goes wasted. 
-- Size of the each time slot = Tr + Tp
-- Efficiency = Tt/(Tt + Tp) = 1 / (1 + a) where a = Tt/Tp.
+- **Size of the each time slot = Tr + Tp**
+- **Efficiency** = Tt/(Tt + Tp) = **1 / (1 + a)** where a = Tt/Tp.

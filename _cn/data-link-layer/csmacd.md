@@ -39,7 +39,7 @@ mathjax: true
 ## Step 3: Releasing Jam Signal.
 
 - It is a 48 bit signal.
-- When any station setects the collision it sends the jam signal, so that other stations can know that collision has happened in the channel and they should not send the data.
+- When any station detects the collision, it sends the jam signal so that other stations can know that collision has happened in the channel and they should not send the data.
     - Otherwise there is huge possibility of the collision of their data also.
 - The jam signal is send on other frequency than the frequency for data signal hence, jam signal and data don't get collided.
 

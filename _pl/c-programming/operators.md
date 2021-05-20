@@ -2,7 +2,7 @@
 title: Operators
 description: "Operators in C programming language."
 child_of: "C Programming"
-nav_order: 7
+nav_order: 8
 ---
 
 # Operator Precedence and Accosiativity
