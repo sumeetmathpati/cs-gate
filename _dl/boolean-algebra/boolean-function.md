@@ -166,3 +166,34 @@ Example (a+b')(a'+b'), means value of 01 and 10 is equal to 0 in truth table. Wh
 - Example: $f = ac' + ab'c'$
     - $f' = (a'+c) (a'+b+c)$
 
+# Dual Functions
+
+- Example   
+    - We knwo that $1 + 0 = 1$ is true or correct statement.
+    - By the duality principle we can also say that, $0 \times 1 = 0$ this statement is also true.
+- **Duality Principle** says that:
+    - If we change
+        - constants, **0 with 1**,  
+        - constant, **1 with 0**, 
+        - **$\times$ with $+$**, and 
+        - **$+$ with $\times$** from a boolean equation which is true
+    - Then we will get new equation which will also be true.
+- **Example,**  
+    - f(X, Y, Z) = (XY + YZ + ZX) then its dual is, fd(X, Y, Z) = (X + Y).(Y + Z).(Z + X).
+
+## Self Dual Functions
+
+- A function is said to be self dual function, if the function is equal to it's dual function.
+- Example, 
+    - The function **F(A, B, C) = AB + BC + CA**
+    - Fd(A, B, C) = (A + B)(B + C)(C + A)
+    - = AB + BC + CA
+- A self dual function is **always neutral.**
+
+# Neutral Function
+
+- A function *f* is neutral, if it has equal number of minterms and maxterms.
+- Example,
+    - $F(a, b) = \sum_m(1, 2, 3)$ is NOT neutral.
+    - $F(a, b) = \sum_m(0, 3)$ is neutral.
+    - $F(a, b) = \sum_m(1)$ is NOT neutral.

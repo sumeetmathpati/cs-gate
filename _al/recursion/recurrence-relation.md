@@ -12,6 +12,11 @@ mathjax: true
     - Recurrence relation fot time complexity
     - Recurrence relation for number multiplications happening in the program.
     - etc.
+- Recurrence relation can be solved for different things in recursive program. For example,
+    - Recurrence relation for output.
+    - Recurrence relation for time complexity.
+    - Recurrence relation for number of comparisons done in the program.
+    - etc.
 
 # Example
 
@@ -37,3 +42,11 @@ $$
 Let time complexity of above recursive code is $T(n)$
 - The **recurrence relation for the time complexity** will be 
     - $T(n) = T(n-1) + c$
+
+# Solving Recurrence Relation
+
+We have different methods to solve the recurrence relations.
+
+1. **Subsitution**
+2. **Recurrence Tree**
+3. **Master theorem**

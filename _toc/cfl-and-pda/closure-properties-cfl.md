@@ -110,7 +110,7 @@ mathjax: true
 
  - DCFLs are **NOT closed under concatenation operation.**
  - **Example,**
-    - $L_1 = \\{ wcw^r \| w \in \\{a, b\\]^+ \\}$
+    - $L_1 = \\{ wcw^r \| w \in \\{a, b\\}^+ \\}$
     - $L_2 = (a + b)^+$
     - $L_1 . L_2 = \\{xwcw^R \| w, x \in \\{a, b \\}^+ \\} $
 

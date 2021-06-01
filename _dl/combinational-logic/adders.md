@@ -6,13 +6,8 @@ nav_order: 1
 mathjax: true
 ---
 
+- An adder is a digital combinational circuit that performs addition of numbers.
 - One of the application of combinational circuit is Arithmetic operations (arithmetic operations on two binary numbers example straight binary numbers, BCD numbers, Excess-three numbers etc.).
-- The simple addition operations are:
-    - **0 + 0 = 0**
-    - **1 + 0 = 1**
-    - **0 + 1 = 1**
-    - **1 + 1 = 10**
-        - 1 is **carry.**
 
 Note that arithmetic operations ane different from logic operations. Example in logic operation **1+1 = 1**; but in arithmetic operations **1+1 = 10.**
 {: .info}
@@ -20,12 +15,15 @@ Note that arithmetic operations ane different from logic operations. Example in 
 - The combination circuit that adds two single bits is called **half adder**; and the one that performs addition on three bits (two single bits and one carry) is called **full adder**.
     - Two half adders can be used to create full adder.
 
+Note that a single adder can add only two (or 3 in case of full adder) bits, so if we want to add a number with *n* binary digits, we have to use n adders. <br>We shall see how to do that in coming chapters.
+{: .info}
+
 # Why Two Different Adders?
 
 - We can add two bits at LSB with half adder.
 - But while adding two bits, we can have carry from lower significant digit to higher significant digit.
 - Hence in higher significant digit we need to add three bits: two bits at that position and one bit of carry from lower digit.
-- Therefore at higher significant we require full adder.
+- Therefore at higher significant we may require full adder.
 - Hence, we can't add complete number with half adders; to add complete binary number, we require full adders connected to each other.
 
 # Half Adder
@@ -39,7 +37,7 @@ Note that arithmetic operations ane different from logic operations. Example in 
 
 ![Half Adder Truth Table]({{ site.baseurl }}/assets/images/dl-half-adder-truth-table.png)
 
-- The simplifies boolean expression canbe obtained by looking at the truth table.
+- The simplified boolean expression can be obtained by looking at the truth table (or you can solve using K-map).
     - $S = x'y + y'x$
     - $C = xy$
 
@@ -51,12 +49,14 @@ Note that arithmetic operations ane different from logic operations. Example in 
 
 # Full Adder
 
+- The problem in half adder is; if we get carry bit from lower digit, we can't add because then there will be 3 bits to add.
+    - I.e. if we are adding two nth order bits, a full adder can also add carry from the addition of the digits at (n-1)th place.
 - Full adder **adds three bits.**
 - The circuit has **three inputs** and **two outputs.**
     - Inputs are **x**, **y**, and **z**.
         - x and y are two bits to be addes.
         - z is carry from lower significant position.
-    - Outputs are sum **(S)** and carry **(C).**
+    - Outputs are sum bit **(S)** and carry bit **(C).**
         - We only need two bits; because the output of adding two three bits is within range 0 to 3 and to represent those three bits are enough.
 
 ## Truth Table
@@ -114,8 +114,8 @@ Note that arithmetic operations ane different from logic operations. Example in 
 
 ### Disadvantages
 
-- It can only perform addition operation, i.e. we cant perform operation like (a + (-b)) = (a - b).
-- It has carry propogation delay.
+- It can **only perform addition operation,** i.e. we cant perform operation like (a + (-b)) = (a - b).
+- **It has carry propogation delay.**
     - Until the previous adder calculate the carry, the next adder can't calculate the result.
     - Hence to get the correct result all the adders must calculate the result one by one.
     - Hence if each adder performs one operation in one clock, we will require n clocks to perform addition of n bit number.

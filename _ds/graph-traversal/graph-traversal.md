@@ -1,14 +1,16 @@
 ---
-title: Graph traversal
+title: Graph Travarsal
+parent: true
 nav_order: 3
-description: "Graph traversal"
-child_of: Graph & Tree Travarsal
+description: "Graph traversal tree traversal bsf bft dfs dft"
+parent: true
 mathjax: true
 ---
 
 -  Graph traversal have two types:
     - **BFT** (Breadth first traverse)
     - **DFT** (Depth first traverse)
+- Graph traversal sequences may or may not be unique (unlike tree traversal sequences, which are unique).
 
 # Time Complexity
 

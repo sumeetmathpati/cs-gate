@@ -95,7 +95,7 @@ sub: true
 |I0|Shift,3|||1|2||
 |I1|||Accept||||
 |I2||Shift,5||||4|
-|I3||Reduce,3|||||
+|I3||Reduce,2|||||
 |I4|||Reduce,1||||
 |I5|||Reduce, 3||||
 
@@ -104,7 +104,7 @@ sub: true
 |Stack|Input Buffer|Action|
 |-|-|-|
 |$, 0|ab$|Shift 3|
-|$,0,a,3|b$|Reduce 3|
+|$,0,a,3|b$|Reduce 2|
 |$,0,A,2|b$|Shift 5|
 |$,0,A,2,b,5|$|Reduce 3|
 |$,0,A,2,B,4|$|Reduce 1|

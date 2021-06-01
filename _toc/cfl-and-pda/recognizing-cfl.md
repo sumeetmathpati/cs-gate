@@ -8,6 +8,9 @@ mathjax: true
 
 Recognize the languages below are CFL or not.
 
+If a non-cfl have epsilon string, then it's a REL else it's CSL.
+{: .note}
+
 ### 1) $L = \\{ a^nb^nc^n | n <= 10 \\}$
 
 - **Answer:** Languages is Regular and hence CFL.

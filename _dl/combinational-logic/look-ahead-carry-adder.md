@@ -7,7 +7,7 @@ sub: true
 mathjax: true
 ---
 
-- This adder circuit used to remove second disadvantage of ripple adder which is the delay in calculating the sum.
+- This adder circuit used to remove disadvantage of ripple adder which is the delay in calculating the sum.
     - In ripple an adder can calculate the result only after it gets the carry from previous adder.
 - The idea of look ahead carry generator is to **look at the lower order bits and predict if a higher order carry is to be generated.**
 - For that purpose it used two functions

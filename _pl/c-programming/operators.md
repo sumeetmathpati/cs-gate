@@ -25,7 +25,7 @@ nav_order: 8
 |Operators	|Associativity|
 |-|-|
 |`()`, `[]`, `->`, `.`| Left to right |
-|`!`, `~`, `+`, `-`, `++`, `--`, `&`, `*`, `sizeof`, `(type)`|Right to left|
+|`!`, `~`, `+`, `-`, `++`, `--`, `&`, `*`(dereference operator), `sizeof`, `(type)`|Right to left|
 |`*`, `/`, `%`|Left to right|
 |`+`, `-`|Left to right|
 |`<<`, `>>`|Left to right|

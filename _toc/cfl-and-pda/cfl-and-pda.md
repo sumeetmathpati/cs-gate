@@ -9,4 +9,3 @@ parent: true
 - CFLs are superset of regualr languages.
 - CFLs are subset of context sensitive languages.
 
-finite-automata.png

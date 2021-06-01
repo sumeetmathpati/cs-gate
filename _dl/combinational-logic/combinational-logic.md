@@ -6,12 +6,15 @@ nav_order: 5
 mathjax: true
 ---
 
+- **When a logic gates are connected together to produce a specific output on certain combinations of input variables, with no memory involved; then the resulting circuit is called combinational circuit.**
 - In combinational logic circuit, the **output of the circuit is determined by current combination of the inputs without regard to the previous inputs.**
-- Combinational circuits composed only of logic gates; unlike sequential circuits which are composed of logic gates and memory elements (binary cells).
+    - Output is a function of input, i.e. Output = f(input).
 - For $n$ boolean variables, there are $2^n$ possible input combinations; for each input combination; there is only one output.
 - A combinational circuit with m outpus can be expressed with m boolean functions, each for one output variable. Each output function is expressed in terms of $n$ input variables.
 
 # Usage
+
+- Some examples of combinational circuits are adder, subtractor, MUX, DEMUX, encoder, edocder, code-converters etc.
 
 - Combinational circuits are used in 
     - **ALUs**, 

@@ -1,6 +1,6 @@
 ---
-title: Pointers
-description: "Pointers in C programming language."
+title: Pointers & Arrays
+description: "Pointers arrays"
 child_of: "C Programming"
 nav_order: 12
 ---
@@ -274,7 +274,7 @@ a + 0 1448797153
 ## Memory Leak
 
 - Memory leak is when we allocate memory in head using `malloc` and point it using pointer and then we don't free that memory.
-{% highlight c%}
+{% highlight c %}
 int *p;
 ...
 ...
@@ -302,10 +302,128 @@ printf(*p);
 
 - We are using uninitialized pointer, i.e. the pointer to which we havn't assigned/allocated memory.
 
-{% highlight c%}
+{% highlight c %}
 main() {
     int *p;
     printf("%d", p);
 }
 {% endhighlight %}
 
+
+# Array
+
+- A[i] = *(A + i) = *(i + A) = i[A]
+- A[i][j] = *(*(a + i) + j)
+
+# Questions
+
+## Q1
+
+{% highlight c %}
+main() {
+    char a[] = "gate2011";
+    printf("%s", a + a[3] - a[1]);
+}
+{% endhighlight %}
+
+- **Answer:** 2011
+- **Solution:**
+    - a + a[3] - a[1]
+    - = BASE_ADDR + 'e' - 'a'
+    - = BASE_ADDR + 101 - 97
+    - = BASE_ADDR + 101 - 97
+    - = BASE_ADDR + 4
+
+## Q2
+
+Find the output.
+
+{% highlight c %}
+int main() {
+    int a[6] = {10, 20, 30, 40, 50, 60};
+    int *b[] = {a+2, a+3, a, a+1, a+4, a+5};
+    int **c = b;
+    *c++;
+    printf("%d %d %d\n", c-b, *c - a, **c);
+    *++*c;
+    printf("%d %d %d\n", c-b, *c - a, **c);
+    ++**c++;
+    printf("%d %d %d\n", c-b, *c - a, **c);
+    return 0;
+}
+{% endhighlight %}
+
+- **Output**
+
+{% highlight bash %}
+1 3 40
+1 4 50
+2 0 10
+{% endhighlight c%}
+
+## Q3
+
+Find the output
+
+{% highlight c %}
+int main() {
+    float c[6] = {70, 20, 60, 50, 10, 30};
+    float *a[] = {c+1, c+2, c+3, c, c+4, c+5};
+    float **b = a;
+    b + 2;
+    *b + 1;
+    printf("%d %d %d\n", b-a, *b - c, **b);
+    ++**b;
+    *++*(b+2);
+    printf("%d %d %d\n", b-a, *b - c, **b);
+}
+{% endhighlight %}
+
+- **Output**
+
+{% highlight bash %}
+0 1 20
+1 2 61
+{% endhighlight c%}
+
+## Q4
+
+Find the output
+
+{% highlight c %}
+int main() {
+    char *a[] = {"buffalo", "pig", "dog", "paapa", "bacha", "modiji", "didiji"};
+    char **b[] = {a+2, a+3, a+6, a+5, a, a+1, a+4};
+    char ***c = b;
+    ***c++;
+    printf("%s\n", **(c+3) + 2);
+    ***c+2;
+    printf("%c\n", *(**c + 2) + 5);
+}
+{% endhighlight %}
+
+- **Output**
+
+{% highlight bash %}
+ffalo
+f
+{% endhighlight c%}
+
+## Q5
+
+Find the output
+
+{% highlight c %}
+int main() {
+    int a[3][5] = {10, 20, 30, ... 150};
+    printf("%u %u %u\n", a+2, *a+2, a[2]+3);
+    printf("%u %u %u %d\n", *(a+2)+7, a+3, &a, **a+7); 
+}
+{% endhighlight %}
+
+- **Output**
+
+{% highlight bash %}
+1020 1004 1026
+1023 1030 1000 17
+{% endhighlight c%}

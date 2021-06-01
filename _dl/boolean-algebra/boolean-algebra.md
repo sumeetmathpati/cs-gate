@@ -30,7 +30,7 @@ mathjax: true
 
 ## Idempotent
 
-- $x + x = a$
+- $x + x = x$
 - $x \times x = x$
 
 ***
@@ -97,19 +97,6 @@ mathjax: true
 - Absorption
     - $x + xy = x$
     - $x(x + y) = x$
-
-## Duality
-
-- Example   
-    - We knwo that $1 + 0 = 1$ is true or correct statement.
-    - By the duality principle we can also say that, $0 \times 1 = 0$ this statement is also true.
-- **Duality Principle** says that:
-    - If we invert
-        - **0 with 1**,  
-        - **1 with 0**, 
-        - **$\times$ with $+$**, and 
-        - **$+$ with $\times$** from a boolean equation which is true
-    - Then we will get new equation which will also be true.
 
 
 # Operator Precedence
