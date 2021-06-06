@@ -1,6 +1,6 @@
 ---
 title:  "Combinational Logic"
-description: "Combinational logic circuit tutorial"
+description: "Combinational logic circuit"
 parent: true
 nav_order: 5
 mathjax: true

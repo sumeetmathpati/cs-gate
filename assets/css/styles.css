@@ -169,8 +169,7 @@ ul.warning {
 /* TOC End */
 
 /* Labels */
-.label,
-.label-blue {
+.label {
     display:inline-block;
     padding-top:0.16em;
     padding-right:0.56em;
@@ -181,9 +180,10 @@ ul.warning {
     color:#fff;
     text-transform:uppercase;
     vertical-align:middle;
-    background-color:#57707d;
+    background-color:#0c87eb;
     font-size:16px !important;
     box-shadow: 0 15px 35px rgba(50,50,93,0.1),0 5px 15px rgba(0,0,0,0.07) !important;
+    border-radius: 10px;
 }
 /* Labels End */
 

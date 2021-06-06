@@ -2,7 +2,6 @@
 title: Notes
 description: "Digital Logic Notes."
 nav_order: 999
-permalink: /dl/
 mathjax: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title:  "Demultiplexers"
-description: "Multiplexers tutorial"
+description: "Demultiplexers"
 child_of: Combinational Logic
 nav_order: 8
 mathjax: true

@@ -63,8 +63,7 @@ Sequence numbers requires >= sender window size + reciever's window size
 - Hence, sender resends the frame thinking data frame had lost.
 - Reciever gets duplicate frame; it discards the duplicate frame and resends the ACK.
 
-![Lost DACKata]({{ site.baseurl }}/assets/images/cn-lost-ack.jpg
-)
+![Lost DACKata]({{ site.baseurl }}/assets/images/cn-lost-ack.jpg)
 
 ## 3. Currupted Frame
 

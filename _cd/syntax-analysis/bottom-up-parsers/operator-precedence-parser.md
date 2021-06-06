@@ -18,7 +18,7 @@ mathjax: true
 
 # Operator Grammar
 
-- This grammar is used to define mathematical operators called an operator grammar.
+- This grammar is **used to define mathematical operators** called an operator grammar.
 - Operator grammar is a CFG, where
     - **No null productions are allowed**
     - **No two adjecent non-terminals on RHS.**
@@ -55,7 +55,7 @@ Every *operator grammar* is *operator precdence grammar*, but not vice versa.
 
 ## Shift/Reduce Rules
 
-- Let's suppose `x` is present in stack and lookahed pointer is on buffer symbol `y`.
+- Let's suppose `x` is present at top of the stack and lookahed pointer is on buffer symbol `y`.
 
 ### Shift Action
 
@@ -123,8 +123,7 @@ Every *operator grammar* is *operator precdence grammar*, but not vice versa.
 
 - Parse tree method is used to determine the precedence and associativity. To identify the precedence,
     - Construct a parse tree.
-    - Identify the precedence.
-    - The lower operator in parse tree levels has higher precedence.
+    - Identify the precedence (the lower operator in parse tree levels has higher precedence).
 - $ always have lesser precedence than other operators.
 - The identifiers always have higher precedence than other operators.
 - We don't fill the cell in table for same terminals.

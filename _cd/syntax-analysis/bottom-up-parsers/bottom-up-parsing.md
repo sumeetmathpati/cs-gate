@@ -3,12 +3,13 @@ title:  "Bottom Up Parsers"
 description: "Bottom up parsers, shirt reduce, handle"
 nav_order: 2
 child_of: Syntax Analysis
+mathjax: true
 ---
 
 - This parser, as name suggests **construct a perse tree from the leaves (from bottom of the tree) and goes towards the root (top of the tree).**
-- To do so, bottom-up parsing tries to find a **rightmost derivation of a given string backwards.**\  
+- To do so, bottom-up parsing tries to find a **rightmost derivation of a given string in reverse order.**
   - **Rightmost-derivation:** It means that; when we complete the derivation using algorithm below; the derivation will be similar to the righmost-derivation.
-    - **Reverse order:** We start from the string given and replace terminals with non-terminals (usually we replace non-terminals with terminals).
+  - **Reverse order:** We start from the string given and replace terminals with non-terminals (usually we replace non-terminals with terminals).
 - **Example,**
     - Let's say we have grammar `{ S --> AB, A --> a, B --> b}`
     - Let's say we have string to parse is `ab`.
@@ -29,7 +30,7 @@ child_of: Syntax Analysis
 - We find the handle and replaces with variable in the grammar.
     - To to this; first we perform **handle detection.**
 - Repeate the process until we get starting state.
-- If we reach the strating stae; there is not error in the string.
+- If we reach the strating state; there is not error in the string.
     - If we do not reach the starting state; there is an error in the string.
 
 ## Handle
@@ -38,14 +39,14 @@ child_of: Syntax Analysis
 - Replacement of handle should lead towards the starting symbol.
     - Not every substring that matches the right side of the production is a handle (because not every substring that matches leads towards the starting symbol).
 
-If grammar 𝐺is unambiguous, then every right sentential form has only one handle
+If grammar $G$ is unambiguous, then every right sentential form has only one handle
 {: .note}
 
 ## Problem
 
 - Sometime there could be multiple matches.
 - And replacing the leftmost (as we do) will not lead us towards the starting symbol.
-- Hence, selecting the correct handle is a problem in bottom up parsing.
+- Hence, **selecting the correct handle is a problem in bottom up parsing.**
 
 ## Example
 
@@ -104,7 +105,7 @@ abbcde
 # Shift-Reduce Parser
 
 - This is a practical implementation of bottom up parsers.
-- Hence bottom up parsers also called **shift reduce parsers.**
+- Hence, **bottom up parsers also called shift reduce parsers.**
 - It has two primary actions, **shift** and **reduce.**
   - Other obvious actions are **accept** and **error.**
 - The input string (i.e., being parsed) consists of two parts:

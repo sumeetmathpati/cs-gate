@@ -1,6 +1,6 @@
 ---
 title:  "Encoding techniques"
-description: "Encoding techniques tutorial, NRZ, RZ"
+description: "Encoding techniques tutorial NRZ RZ manchester differential manchester"
 child_of: Physical Layer
 nav_order: 1
 ---
@@ -25,6 +25,9 @@ nav_order: 1
 - There are differen polar encoding schemes.
 
 ## 1. NRZ (Non Return to Zero)
+
+Not Important For GATE
+{: .label .w3-red}
 
 - Uses two different volatages to represent binary 1 and 0.
 - Generally it uses,
@@ -51,6 +54,9 @@ nav_order: 1
 ***
 
 ## 2. RZ (Return to Zero)
+
+Not Important For GATE
+{: .label .w3-red}
 
 - Problem with NRZ is:
     - The receiver cannot know when a bit ended and when the next bit is started, in case when sender and receiver’s clock are not synchronized.
@@ -88,11 +94,14 @@ nav_order: 1
 
 ***
 
-![RZ]({{ site.baseurl }}/assets/images/cn-manchester-differential-manchester.jpg)
+![Manchester and Differential Manchester]({{ site.baseurl }}/assets/images/cn-manchester-differential-manchester.jpg)
 
 ***
 
 # Bipolar
+
+Not Important For GATE
+{: .label .w3-red}
 
 - **Zero voltage** for **0**
 - **Alternating +ve and -ve voltage levels** for **1**

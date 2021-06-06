@@ -1,6 +1,6 @@
 ---
 title:  "Adders"
-description: "Adders, half adder, full adder tutorial"
+description: "Adders half adder full adder tutorial"
 child_of: Combinational Logic
 nav_order: 1
 mathjax: true
