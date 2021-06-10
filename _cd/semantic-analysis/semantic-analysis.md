@@ -24,19 +24,31 @@ parent: true
 # Semantic Analyzer
 
 - Here we use **context sensitive grammars** and **linear bound automata.**
-    - To be specific, we use attribute grammars (we shall se what it it).
+    - To be specific, we use attribute grammars.
 - Semantic analyzer helps to **verify the meaning of the statement** is correct (according to our rules) or not.
 - If SDt is given to the bottom up parser; the semantic rule attached to the production is executed while reduce action.
+
+# Attribute Grammar
+
+- attribute grammar is a CFG where each grammar symbol have some attribute information.
+- Information like values, data-types which can help us to define correct meanings for the string.
+- Example of attribute grammar is:
+
+{% highlight bf %}
+S.type->AB.type
+A.type->a.type
+B.type->b.type
+{% endhighlight %}
 
 # Automata
 
 - The automata used in semantic analyzer is also a **linear bound automata** as parser.
-- LBA is a PDA with 2 stacks.
-- We just add another stack in our parser in sentax analysis phase.
+- LBA is just a PDA with 2 stacks.
+- We just add another stack in our previus parser in sentax analysis phase.
     - One stack is used for Syntax.
     - Another stack is used for semantics.
 
-The parser in compiler is composed of two stacks, one for sentax and another one is for semantics.
+The parser in practical compiler is composed of two stacks, one for sentax and another one is for semantics.
 {: .note}
 
 # Syntax Directed Tree

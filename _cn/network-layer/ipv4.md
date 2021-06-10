@@ -1,25 +1,14 @@
 ---
-title:  IP Addressing
-description: "IP addressing Tutorial."
+title:  IPv4
+description: "IPv4 addressing"
 child_of: Network Layer
-nav_order: 1
+nav_order: 2
 ---
 
-- IP address is a 32 bit (IPv4) address, used to identify the communication device over network layer.
+- IPv4 address is a **32 bit address,** used to identify the communication device over network layer.
 - IP address is not permanant, it may change.
 - IP has two versions, IPv4 and IPv4.
 - We have total 4,294,967,296 IPv4 addresses.
-
-# Network
-
-- Internet is composed of networks i.e. it is a network os networks.
-    - Internet is a biggest or outermost netowrk, in which we have different networks, in which also we may have multiple networks.
-- IP address of a communicating device will be unique in single network (same IP can be used by different device on different network).
-- Example of a network if given below.
-
-- TODO
-
-***
 
 # IP Address Part
 
@@ -32,11 +21,15 @@ nav_order: 1
 - This is the leftmost part of the IP address.
 - In a network all the hosts will have same network IP part indicating that they are in same network.
 
+***
+
 ## Host ID
 
 - It's the right part of the IP.
 - It consists of the bits not consists in network ID.
 - In a network, all the netowrks will have same data in netowrk ID part but will have different data in host ID part indicating that they are different hosts in same network.   
+
+***
 
 ## Network Mask
 
@@ -44,7 +37,7 @@ nav_order: 1
 - If *n* bits IP are used for net IP, then the rightmost *n* bits are set to 1's and all the other bits are set to 0's.
     - Example 11111111.11111111.11111111.00000000<sub>(2)</sub> = 255.255.11111255111.0<sub>(10)</sub> says that the net IP is of 24 bits.
 
-### Getting Net IP from IP
+### Getting Network ID from IP
 
 - As we know mask has all *n* bits set to 1 for *n* bit IP address.
 - If we AND the IP with MASK we will get net IP.

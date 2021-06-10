@@ -190,10 +190,10 @@ struct node* deleteLastNode(struct node *head) {
         return NULL;
     }
 
-    If LL has only one node.
-    if(head->next == NULL) {
+    // If LL has only one node.
+    if(tmpHead->next == NULL) {
         free(head);
-        head = NULL; 
+        tmpHead = NULL;
         return head;
     }
 
@@ -204,6 +204,46 @@ struct node* deleteLastNode(struct node *head) {
     struct node *tmp = tmpHead->next;
     tmpHead->next = NULL;
     free(tmp);
+
+    return head;
+}
+{% endhighlight %}
+
+## Q8
+
+Write a C program to delete last node of SLL.
+
+**Solution:**
+
+{% highlight c %}
+struct node* deleteData(struct node *head, int x) {
+
+    struct node *tmpHead = head;
+
+    // If LL is empty.
+    if (head == NULL) {
+        return NULL;
+    }
+
+    // If LL has only one node.
+    if(head->data == x) {
+        if (head->next) {
+            struct node *tmp = head;
+            head = head->next;
+            free(tmp);
+            return head;
+        }
+    }
+
+    while (tmpHead->next->data != x && != tmpHead->next != NULL) {
+        tmpHead = tmpHead->next;
+    }
+
+    if (tmpHead->next->data == x) {
+        struct node tmp* tempHead->next;
+        tmpHead->next = tmpHead->next->next;
+        free(tmp);
+    }
 
     return head;
 }

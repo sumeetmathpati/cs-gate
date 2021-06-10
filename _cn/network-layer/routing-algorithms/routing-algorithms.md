@@ -1,8 +1,8 @@
 ---
 title: Routing Algorithms
-description: "Routing algorithms."
+description: "Routing algorithms"
 child_of: Network Layer
-nav_order: 2
+nav_order: 9
 ---
 - Routing is a process of moving information (in this case a IP packet) from source to destination.
 - We try to select best path for routing.
