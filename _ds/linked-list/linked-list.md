@@ -248,3 +248,67 @@ struct node* deleteData(struct node *head, int x) {
     return head;
 }
 {% endhighlight %}
+
+## Q9
+
+Write a C program to get the address of the middle node.
+
+**Solution:**
+
+{% highlight c %}
+struct node* deleteData(struct node *head, int x) {
+
+    struct node *tmpHead = head;
+
+    // If LL is empty.
+    if (head == NULL) {
+        return NULL;
+    }
+
+    while(tmpHead->next && tmpHead->next->next) {
+        tmpHead = tmpHead->next->next;
+        head = head->next;
+    }
+
+    return head;
+}
+{% endhighlight %}
+
+
+## Q10
+
+Write a C program perform binary search on linked list.
+
+**Solution:**
+
+{% highlight c %}
+BC(struct node *s, int x) {
+    if (s->next == NULL) {
+        if (s->data == x)
+            return s;
+        else
+            return NUll;
+    } else {
+        m = mid(s); //Function in previous example.
+        if (m->data == x) 
+            return m;
+        else {
+            if (x < m->data) {
+                m->next = NULL;
+                BS(s, x);
+            } else {
+                BS(m-next, x);
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+- Reccurence relation (WC): **T(n) = n + T(n/2)**
+- Time complexity: 
+    - BC: O(n).
+    - AC: O(n).
+    - WC: O(n).
+
+Therefore, linear search is better for linked lists.
+{: .info}
