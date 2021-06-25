@@ -1,6 +1,6 @@
 ---
 title: Programming Languages
-description: ""
+description: "GATE Programming languages tutorial."
 nav_order: 1
-permalink: /pl/
+permalink: /programming-languages/
 ---

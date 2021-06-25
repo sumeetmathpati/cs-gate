@@ -1,14 +1,14 @@
 subjects:
   - title: CN
-    link: "/cn"
+    link: "/computer-networks"
     title_tag: "Computer Networks"
     fontawesome_class: "fas fa-network-wired"
   - title: OS
-    link: "/os"
+    link: "/operating-system"
     title_tag: "Operating System"
     fontawesome_class: "fas fa-network-wired"
   - title: COA
-    link: "/coa"
+    link: "/computer-organization-architecture"
     title_tag: "Computer Organization and Archiecture"
     fontawesome_class: "fas fa-network-wired"
   - title: DBMS
@@ -21,19 +21,19 @@ subjects_hidden:
     title_tag: "Programming Languages"
     fontawesome_class: "fas fa-network-wired"
   - title: DS
-    link: "/ds"
+    link: "/data-structures"
     title_tag: "Data Structures"
     fontawesome_class: "fas fa-network-wired"
   - title: AL
-    link: "/al"
+    link: "/algorithms"
     title_tag: "Algorithms"
     fontawesome_class: "fas fa-network-wired"
   - title: CD
-    link: "/cd"
+    link: "/compiler-design"
     title_tag: "Compiler Design"
     fontawesome_class: "fas fa-network-wired"
   - title: DM
-    link: "/dm"
+    link: "/discrete-maths"
     title_tag: "Discrete Maths"
     fontawesome_class: "fas fa-network-wired"
   - title: TOC
@@ -41,7 +41,7 @@ subjects_hidden:
     title_tag: "Theory of Computation"
     fontawesome_class: "fas fa-network-wired"
   - title: DL
-    link: "/dl"
+    link: "/digital-electronics"
     title_tag: "Digital Logic"
     fontawesome_class: "fas fa-network-wired"
 questions:

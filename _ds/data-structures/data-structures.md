@@ -2,8 +2,8 @@
 title: Data Structures
 parent: true
 nav_order: 1
-description: "Data structure tutorial."
-permalink: /ds/
+description: "Data structure tutorial. GATE Data structures."
+permalink: /data-structures/
 ---
 
 - **Data structure is mathematical model of organizing the interrelated data.**

@@ -1,8 +1,8 @@
 ---
 title: Digital Logic
-description: "Digital Logic tutorial."
+description: "Digital Logic tutorial. GATE Digital Electronics."
 nav_order: 1
-permalink: /dl/
+permalink: /digital-electronics/
 ---
 
 - **Electrical and Electronics:**

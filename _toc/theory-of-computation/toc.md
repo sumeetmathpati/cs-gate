@@ -1,8 +1,8 @@
 ---
 title: Theory Of Computation
-description: "Theory Of Computation tutorial."
+description: "Theory Of Computation tutorial. GATE Theory of Computation. GATE TOC."
 nav_order: 1
-permalink: /toc/
+permalink: /theory-of-computation/
 parent: true
 ---
 

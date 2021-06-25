@@ -1,7 +1,7 @@
 ---
 title: Operating System
-description: "Operating system."
-permalink: /os/
+description: "Operating system. GATE Operating system."
+permalink: /operating-system/
 nav_order: 1
 ---
 

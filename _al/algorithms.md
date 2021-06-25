@@ -1,8 +1,8 @@
 ---
 title: Algorithms
-description: ""
+description: "Algorithms Tutorial. GATE Algorithms."
 nav_order: 1
-permalink: /al/
+permalink: /algorithms/
 ---
 
 - 

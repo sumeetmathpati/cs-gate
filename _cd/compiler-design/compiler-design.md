@@ -2,7 +2,7 @@
 title: Compiler Design
 description: "Compiler Design Tutorial"
 nav_order: 1
-permalink: /cd/
+permalink: /compiler-design/
 parent: trues
 ---
 
