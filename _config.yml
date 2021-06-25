@@ -11,7 +11,7 @@ title: GATE CS
 tagline: "The One Place To Learn It All."
 description: >- # this means to ignore newlines until "baseurl:"
   All the computer science study material for GATE.
-baseurl: "/cs-gate"
+baseurl: "/gatecomputerscience"
 url: "https://sumeetmathpati.github.io"
 author: Sumeet Mathati
 favicon: "./logo.png" # relative path to site's favicon
