@@ -1,0 +1,18 @@
+---
+layout: default
+title: PYQs
+permalink: /pyqs
+---
+
+<div>
+    <h1 style="font-weight: bold; font-size: 48px;">PYQs</h1>
+    <hr>
+</div>
+
+<h2>Year Wise</h2>
+
+{% for year in site.data.pyqs %}
+    <a href="{{ site.baseurl }}/{{ year.url }}">{{ year.title }}</a> <br>
+{% endfor %}
+
+<h2>Subject and Topic Wise</h2>

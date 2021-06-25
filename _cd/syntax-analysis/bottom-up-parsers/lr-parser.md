@@ -6,71 +6,20 @@ child_of: Syntax Analysis
 sub: true
 ---
 
-# Key Ideas
-
-- LR parsers can parse a strictly larger class of grammars than (top-down) predictive parsers.
-- LR parsers can usually recognize all programming language construct that can be specified by context-free grammars.
-- LR parsers detect errors fast.
-- We can use an LR parser generator such as YACC.
-
-***
-
 - In the name LR,
     - **L** indicates that it scans string from **l**eft to right.
     - **R** indicated that it generated right-most derivation.
 - The term LR(k) is also very common.
   - The k refers to the unconsumed lookahead symbols.
 - A context free grammar is called LR(k) grammar, if there exist a LR(k) parser for it.
-- We have further different types of LR parsers:
-  - **LR(0)**
-  - **SLR(1)**
-  - **LALR(1)**
-  - **CLR(1)**
-- The powers of above parsers are different and each other.
-  - **LR(0) ⊂ SLR(1) ⊂ LALR(1) ⊂ CLR(1)**
 - The **time complexity is O(n).**
 
-# LR Table
+# Key Ideas
 
-- We've seen that there may be more that one variable in grammar which we can replace our handle with. So we need to know what to do in that situation.
-- To know what to do in that situation, LR parser uses LR table.    
-- An LR-Parser uses
-    - **DFA** states to memorize information during the parsing process,
-    - an *action table* to make decision (such as shift or reduce) and to compute states
-    - a *goto table* to compute states
-
-![LR Table]({{ site.baseurl }}/assets/images/cd/lr-table.png)
-
-## Action Table
-
-- This tells us what to do when we encounter the terminal in the DFA.
-- When we **shift** the terminal, this tells the next step to go in the dfa.
-- Using this table, we can also know we when to **reduce** the string with which production in the grammar.
-- This also tells us when to **accept** the string.
-- If we are at some state, and we get the input to which the cell in the table is empty, then there is an **error.**
-
-### Shift Action
-
-- In `shift j`, `j` is state number.
-- If we have action `A[S, a] = shift j` we do following actions:
-    - Push a into the stack.
-    - Push j on top of the stack.
-    - Increment lookahead pointer.
-
-### Reduce Action
-
-- In `reduce j`, `j` is production number (which which handle to be replaced).
-- Whenever we have reduce action, we replace handle with non-terminal.
-- Reducing is done as follows:
-    - Suppose we hace action `A[S, a] = Reduce A --> B`.
-        - Pop 2*\|B\|
-            - Multiplied with 2 because previously we've also pushed states with symbols.
-        - Push A
-        - Push Goto(i, A) 
-
-## GoTo Table
-
-- This table tells us the state name to go (hence the name *GoTo*), if we encounter the non-terminal in the stack.
+- LR parsers can **parse a strictly larger class of grammars than (top-down) predictive parsers.**
+- LR parsers can usually recognize all programming language construct that can be specified by context-free grammars.
+- LR parsers detect errors fast.
+- We can use an LR parser generator such as YACC.
 
 # Parsing Example
 

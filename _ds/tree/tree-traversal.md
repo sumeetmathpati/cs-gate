@@ -14,6 +14,7 @@ nav_order: 2
 	- **Postorder**
 		- Nodes visiting order: **Left-Right-Root**
 - The time complexity of all algorithms given above is **O(n).**
+- The tree traversal is unique (unlike graph traversal).
 
 # Preorder Tree Traversal
 
@@ -227,19 +228,21 @@ int main() {
 }
 {% endhighlight %}
 
+# Time Complexity
+
+- T(n) = O(|V| + |E|)
+    - = O(|V| + |V|) ... (|E| = |V| - 1)
+    - = **O(|V|)**
+    
 # Examples
-walking
+
 ## Q1
 
 Find the preorder, inorder, and postorder traversal for all the followind trees.
 
 ![Tree Traversal]({{ site.baseurl }}/assets/images/plds-tree-traversal-q1.png)
 
-<div class="w3-card w3-round">
-<div class="w3-white">
-<button onclick="toggleAccordion('answers')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-        class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Answers</button>
-<div id="answers" class="w3-hide w3-container" markdown="1">
+**Solution:**
 
 - **Q1:** 
     - Preorder: **A B D F H C E G I**
@@ -253,9 +256,6 @@ Find the preorder, inorder, and postorder traversal for all the followind trees.
     - Preorder: **A B D E H C F I D G**
     - Inorder: **D B H E A F D I C G**
     - Postorder: **D H E B D I F G C A**
-</div>
-</div>
-</div>
 
 ***
 
@@ -273,18 +273,11 @@ Note that in these type of questions, you will surely have the inorder sequence,
     - **Inorder:** B F D A C G E
 - **Find:** Postorder
 
-## Q2 GATE-2015
+## Q3
 
 A BT has 200 leaf nodes in tree T, then how many no. of nodes will be there having two children?
 
-<div class="w3-card w3-round">
-<div class="w3-white">
-<button onclick="toggleAccordion('answerq3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-        class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Answers</button>
-<div id="answerq3" class="w3-hide w3-container" markdown="1">
+**Solution:**
 
 199
 
-</div>
-</div>
-</div>

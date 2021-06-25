@@ -73,7 +73,7 @@ c
 
 ## Q4
 
-The given function will always return 1 on what king of SLL?
+The given function will always return 1 on what kind of SLL?
 Assume we have an linked list.
 
 {% highlight c %}
@@ -147,7 +147,7 @@ struct node* insertXBeforeY(struct node *head, int x, int y) {
         return head; 
     } else {
         // Go to the node before data y.
-        while (tmpHead->next->data != y && tmpHead->next != null) {
+        while (tmpHead->next != null && tmpHead->next->data != y) {
             tmpHead = tmpHead->next;
         }
 
@@ -255,25 +255,44 @@ Write a C program to get the address of the middle node.
 
 **Solution:**
 
+### Method 1
+
 {% highlight c %}
-struct node* deleteData(struct node *head, int x) {
+struct node* midAddress(struct node *head, int x) {
 
     struct node *tmpHead = head;
+    int c = 0;
 
-    // If LL is empty.
-    if (head == NULL) {
-        return NULL;
+    while (tmpHead != NULL) {
+        tmpHead = tmpHead->next;
+        c++;
     }
 
-    while(tmpHead->next && tmpHead->next->next) {
-        tmpHead = tmpHead->next->next;
+    c = ceil(c/2);
+
+    while(c!=1) {
         head = head->next;
+        c--;
     }
 
     return head;
 }
 {% endhighlight %}
 
+### Method 2
+
+{% highlight c %}
+struct node* midAddress(struct node *head, int x) {
+
+    struct node *p = head;
+    while(p != NULL && p->next != NULL && p->next->next != NULL) {
+        p = p->next->next;
+        head = head->next;
+    }
+
+    return head;
+}
+{% endhighlight %}
 
 ## Q10
 
@@ -310,5 +329,97 @@ BC(struct node *s, int x) {
     - AC: O(n).
     - WC: O(n).
 
-Therefore, linear search is better for linked lists.
+Therefore, linear search is better forsingly  linked lists.
 {: .info}
+
+## Q11
+
+Write a C program to reverse a given singly linked list.
+
+**Solution:**
+
+{% highlight c %}
+reverse(s) {
+    struct node *p, *q = NULL;
+    while(s != NULL) {
+        p = q;
+        q = s;
+        s = s->next;
+        q->next = p;
+    }
+    return q;
+}
+
+{% endhighlight %}
+
+- Time complexity: O(n) every case.
+
+## Q12
+
+Write a C program to find if there is a cycle in a SLL.
+
+**Solution:**
+
+### Algorithm 1
+
+- Use flag in all the nodes.
+- Start visiting all the nodes.
+    - After visiting check the flag value.
+        - If it's 0; make it 1.
+        - If it's already 1; cycle is there.
+
+- Time complexity: O(n) every case.
+- Space complexity: O(n) every case.
+
+### Algorithm 2
+
+- Take two pointers p and q, both pointing at start of SLL.
+- p will increment by 1 and q will increment by 2.
+- They both should never meet if there is no loop in a SLL; if they meet, then there is a cycle in SLL.
+
+- Time complexity: O(n) every case.
+- Space complexity: O(1) every case.
+
+
+## Q13
+
+Perform Merge algorithm on linked list.
+
+**Solution:**
+
+- BC: min(m, n)
+- WC, AC: O(m+n)
+
+## Q14
+
+Perform Merge sort on linked list.
+
+**Solution:**
+
+{% highlight c %}
+mergeSort(s) {
+    if (s->next == NULL) {
+        return s;
+    } else {
+        m = mid (s) // O(n)
+        p = m->next;
+        m->next = NULL;
+
+        s1 = mergeSort(s); // T(n/1)
+        s2 = mergeSort(p);  // T(n/2)
+        s = merge(s1, s1) // O(n)
+    }
+
+    return s;
+}
+
+{% endhighlight %}
+
+- T(n) = 2T(n/2) + 2n
+- = 2T(n/2) + n
+- = n * Log(n); ... (For every case)
+
+# Drawbacks of SLL
+
+- We cannot go back because there is no back link.
+- The next pointer in the last node is NULL i.e. we are not using it.

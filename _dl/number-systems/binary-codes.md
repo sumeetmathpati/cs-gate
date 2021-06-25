@@ -2,7 +2,7 @@
 title:  "Binary Codes"
 description: "Binary codes."
 child_of: Number Systems
-nav_order: 7
+nav_order: 8
 mathjax: true
 ---
 

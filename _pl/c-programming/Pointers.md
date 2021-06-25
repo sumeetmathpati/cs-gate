@@ -267,6 +267,16 @@ a + 0 1448797153
 */
 {% endhighlight %}
 
+# Constant Pointer and Pointer to Constant
+
+## Pointer to Constant
+
+- Syntax: `const type *ptr;`
+
+## Constant Pointer
+
+- Syntax: `type *const ptr;`
+
 # Problems With Pointers
 
 - Following are the problems with heap allocation and pointer.

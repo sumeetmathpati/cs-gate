@@ -2,7 +2,7 @@
 title: Graph Travarsal
 parent: true
 nav_order: 3
-description: "Graph traversal tree traversal bsf bft dfs dft"
+description: "Graph traversal tree traversal bsf bft dfs dft adjecency matrix adjecency list"
 parent: true
 mathjax: true
 ---
@@ -21,14 +21,18 @@ mathjax: true
 
 ## Adjecency Matrix
 
-- This has time complexity of $V^2$
+- This has space complexity of $V^2$
     - Where V is number of vertices.
+- Time complexity to find the degree of a node = O(n) ...E.C.
 
 ## Adjecency List
 
-- This has time complexity of $V + E$
+- This has space complexity of $V + E$
     - $V$ is number of vertices.
     - $E$ is number of edges.
+- Time complexity to find the degree of a node = 
+    - O(V) ...W.C.
+    - O(1) ...B.C.
 
 
 # Space Complexity

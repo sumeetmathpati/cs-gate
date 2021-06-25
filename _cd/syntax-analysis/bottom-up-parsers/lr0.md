@@ -80,31 +80,30 @@ closure of above item:
 {% endhighlight %}
 
 
-## LR(0) DFA Construction
+# LR(0) DFA Construction
 
-### Steps
+## Steps
 
 - Construct autgmented grammar.
 - Construct LR(0) items DFA using *closure()* and *goto()*.
-- Construct parsing table.
+- Convert a DFA into transition table or parsing table.
 
-### Note
+## Note
 
 - Terminal transitions = shift actions
 - Non-terminal transitions = Goto entries
 - LR(0) items with dot at the end = Reduce
 
-### Example
-
+## Example
 
 ![Parse Tree Table]({{ site.baseurl }}/assets/images/cd/lr0-dfa.png)
 
 
 # LR(0) Grammar
 
-- If any CFG LR(0) parsing table contains Shift/Reduce conflict or Reduce/Reduce conflict then that grammar is NOT LR(0) grammar.
-    - Shift/Reduce conflict: In a single cell, *shift* and *reduce* both are present.
-    - Reduce/Reduce conflict: In a single cell, multiple *reduce* are present.
+- **If any CFG LR(0) parsing table contains Shift/Reduce conflict or Reduce/Reduce conflict then that grammar is NOT LR(0) grammar.**
+    - **Shift/Reduce conflict:** In a single cell, *shift* and *reduce* both are present.
+    - **Reduce/Reduce conflict:** In a single cell, multiple *reduce* are present.
 
 ## Checking LR(0) Grammar
 
@@ -131,3 +130,14 @@ closure of above item:
 
 - Takes shift/reduce decisions without any lookahead token.
     - Lacks the power to parse programming language grammars
+
+
+# Questions
+
+## Q1
+
+Construct a parsing table from given grammar.
+
+![q1]({{ site.baseurl }}/assets/images/cd/syntax-analysis/lr0-q1.jpg)
+![q2]({{ site.baseurl }}/assets/images/cd/syntax-analysis/lr0-q2.jpg)
+

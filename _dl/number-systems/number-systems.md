@@ -5,7 +5,7 @@ parent: true
 nav_order: 2
 mathjax: true
 ---
-
+    
 - A number system is **ordered set** of symbols (known as digits) with **rules defined for arithmetic** operations (like addition, subtraction etc.).
 - A collection of these digits has two parts **integer part** and **fractional part,** saperated by radix point (.).
 

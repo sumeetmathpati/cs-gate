@@ -7,7 +7,7 @@ page_gen:
     title_expr: record['year'] + " " + record['title']
     dir: 'pyqs'
 
-title: CS GATE
+title: GATE CS
 tagline: "The One Place To Learn It All."
 description: >- # this means to ignore newlines until "baseurl:"
   All the computer science study material for GATE.
@@ -58,6 +58,8 @@ collections:
   pl:
     output: true
   dl:
+    output: true
+  questions:
     output: true
   test:
     output: true
@@ -130,6 +132,12 @@ defaults:
     values:
       layout: "post"
       subject: "Discrete Mathematics"
+  - scope:
+      path: ""
+      type: "questions"
+    values:
+      layout: "post"
+      subject: "Questions"
   - scope:
       path: ""
       type: "test"
