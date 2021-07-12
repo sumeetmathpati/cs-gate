@@ -20,8 +20,8 @@ child_of: Semantic Analysis
 
 # Need
 
-- But why we require two types of attributes.
-- We require these two methods to construct symbol table and can pass the attribute information around.
+- But why we require two types of attributes?
+- We require these two methods** to construct symbol table** and **to pass the attribute information around.**
 - Example, suppose we have string `int a, b, c`  and from that we have following symbol table (before semantic analysis).
 
 |lex|token|type|
@@ -30,9 +30,7 @@ child_of: Semantic Analysis
 |b|id||
 |c|id||
 
-## Grammar
-
-- And the gramamr we have is:
+- and the gramamr we have is:
 
 {% highlight bf %}
 S->TL
@@ -42,27 +40,21 @@ L->L id
 L->id
 {% endhighlight %}
 
-## Parse Tree
-
 - We can see that we don't have the type information, because that information we shall get after the semantic analysis phase.
 
 ![Attribute Tree]({{ site.baseurl }}/assets/images/cd/attribute-1.png)
 
-- We've constructed parse tree for the string `int a, b, c`.
+- We've constructed parse tree (see above image) for the string `int a, b, c`.
     - Assume that this is the tree for the declaration syntax.
-    - Hence we want to specify the type to the variables `a`, `b`, and `c`.
+    - Hence we want to specify the type to the variables `a`, `b`, and `c`, in this case it's `int`.
     - But that's not possible with only synthesized attribute methos.
 - We have to pass the attribute information in the following way:
-
-## Attribute Prase Tree
 
 ![Synthesied and Inherited Attribute Example]({{ site.baseurl }}/assets/images/cd/synthesized-inherited-attribute-example.png)
 
 - We can see that, in above tree, we passed the type information to all the id's (a, b, c).
 
-## SDT
-
-- To get the above tree as output, we can use the SDT below.
+- To get the above tree as output, we can use the **SDT** below.
     - The `addtype(id, type)` is a method used to add the type of a certain variable into the symbol table.
     
 {% highlight bf %}

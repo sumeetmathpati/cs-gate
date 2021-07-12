@@ -6,9 +6,8 @@ nav_order: 5
 sub: true
 ---
 
-- Here we are going to see the instruction format in general register organization machine.
-- In this organization we provide location of both the oprands explicitely. Hence it's also called **two address instruction format.** 
-- Two address machine **also supports zero and one address instructions** if there is free space available after allovating two address instructions.
+- In **general register organization** organization we provide location of all the oprands explicitely. Hence it's also called **two or three address instruction format.** 
+- This organization **also supports zero and one address instructions** if there is free space available after allocating two or three address instructions.
 - CPUs can't perform ALU operations between two memory locations.
     - Hence one of the ALU oprand must be in register.
     - Another may be in register or in memory.
@@ -16,14 +15,14 @@ sub: true
     - **Register to memory reference** architecture
     - **Register to register reference** architecture
     
-
 # Register to Memory Reference Architecture
 
+- In this organization we use **two address instructions.**
 - This architectures support less number of registers.
 - Here, 
-    - First oprand is register
-    - Second oprand is memory
-    - Destination is same register as first oprand
+    - First oprand is register.
+    - Second oprand is memory or register.
+    - Destination is same register as first oprand.
 
 ## Instruction Format 
 
@@ -75,6 +74,7 @@ sub: true
 
 # Register to Rgister Reference Architecture
 
+- Here we use **three address instructions.**
 - In previous register to memory reference architecture, the source register which was also a destination register was being ovewritten while performing ALU operations.
     - Example, in `ADD r0, r1` instruction, `r0` was being overwritten by `r0+r1`.
 - To reomove this overwriting, we use another register as destination.

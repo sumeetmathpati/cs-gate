@@ -1,11 +1,13 @@
 ---
 title: Binary Search Tree
-description: "Binary search tree tutorial."
+description: "Binary search tree tutorial, BST, Search tree"
 child_of: "Trees"
 nav_order: 3
 ---
 
 - In this tree, **key value (node value) is always is smaller than right subtree and greater than left subtree.**
+- The inorder traversal of binary search tree gives ascending sequence.
+- It will take O(n) time to construct a BST from given preorder or postorder.
 
 # Number of BSTs
 
@@ -70,7 +72,15 @@ struct node *search(struct node *root, int value) {
 
 ## Insertion
 
-- Insertion can be done at leaf node only.
+- Inserted element becomes a leave of the new BST. Insertion is done at the place of `NULL`.    
+- **Steps to inset x:**
+    1. Create a node with data x.
+    2. Find correct place of x in BST.
+    3. Insert node with correct linking of nodes.
+- Time complexity: 
+    - O(1) ... B.C.
+    - O(n) ... W.C.
+    - O(logn) ...A.C.
 
 ***
 
@@ -85,15 +95,15 @@ struct node *search(struct node *root, int value) {
 
 #### Algorithm
 
-- Search the node, O(log (n))
-- Set NULL, O(1)
+1. Search the node to be deleted, O(n)
+2. Set NULL, O(1)
 
 ### Deleting Node With One Child
 
 #### Algorithm
 
-- Search the node, O(log (n))
-- Update pointer i.e. set the pointer from parent to the child of the node to be deleted, O(1)
+1. Search the node to be deleted., O(n)
+2. Update pointer i.e. set the pointer from parent to the child of the node to be deleted, O(1)
 
 ### Deleting Node With Two Children
 
@@ -101,5 +111,75 @@ struct node *search(struct node *root, int value) {
 
 #### Algorithm
 
-- Replace with inorder successor/predecessor, O(log (n))
-- Delete the inorder successor/predecessor, O(log (n))
+1. Search the node to be deleted, O(n)
+2. Search the predecessor or successor, O(n).
+3. Replace with inorder successor/predecessor, O(1)
+3. Delete the inorder successor/predecessor, O(1)
+
+# Questions
+
+## Q1
+
+How may BSTs are possible with 15 notes in such a way that 6 is a root and 10 is root for right side tree.
+
+**Solution:** 8820
+
+## Q2
+
+Given a set with *n* distinct elements an unlabelled binary tree. How many ways are there to keep data from set into that unlabelled binary tree so that it becomes BST
+
+**Solution:** 1
+
+Note that, according to above problem and solution if we have 2 unlabelled binary trees, 2 different BSTs are possible. Hence we can say that number of **unlaballed binary trees = number of BSTs.**
+{: .note}
+
+## Q3
+
+Given a set with *n* distinct elements an unlabelled binary tree. How many ways are there to keep data from set into that unlabelled binary tree so that it becomes BT
+
+**Solution:** n!
+
+## Q4
+
+n = 9 (1, 2, 3...9). How many BSTs possible such that in all these BST height is 8
+
+**Solution:** 256
+
+## Q5
+
+The time required to find the maximum element in BST, BT, AVL tree, and minheap.
+
+**Solution:**
+
+||BC|WC|AV|
+|-|-|-|-|
+|BST|1|n|logn|
+|BT|n|n|n|
+|AVL|logn|logn|logn|
+|Minheap|n|n|n|
+
+## Q6
+
+The time required to find the element x which is present in BST, BT, AVL tree, and minheap.
+
+**Solution:**
+
+||BC|WC|AV|
+|-|-|-|-|
+|BST|1|n|logn|
+|BT|1|n|n|
+|AVL|1|logn|logn|
+|Minheap|1|n|n|
+
+## Q7
+
+The time required to check if the element x is present in BST, BT, AVL tree, and minheap or not.
+
+**Solution:**
+
+||BC|WC|AV|
+|-|-|-|-|
+|BST|1|n|logn|
+|BT|n|n|n|
+|AVL|logn|logn|logn|
+|Minheap|1|n|n| 

@@ -2,7 +2,7 @@
 title: Pipelining
 description: "Pipelining in Computer Organization and Architecture."
 child_of: CPU Organization
-nav_order: 2
+nav_order: 6
 ---
 
 # Flynn's Classification

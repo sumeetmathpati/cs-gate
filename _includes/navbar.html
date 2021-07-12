@@ -47,8 +47,9 @@
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-large w3-center">
-    <a href="#" class="w3-border w3-bar-item w3-button w3-padding-large">-</a>
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-large w3-center w3-top" style=" position: fixed;
+top: 0px;">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme" onclick="openNav()">x</a>
     {% for navitem in site.data.navitems.subjects %}
     <a href="{{ site.baseurl }}{{ navitem.link }}" class="w3-bar-item w3-button w3-padding-large w3-hover-theme"
         title_tag="{{ navitem.title_tag }}">{{ navitem.title }}</a>

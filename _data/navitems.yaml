@@ -37,7 +37,7 @@ subjects_hidden:
     title_tag: "Discrete Maths"
     fontawesome_class: "fas fa-network-wired"
   - title: TOC
-    link: "/toc"
+    link: "/theory-of-computation"
     title_tag: "Theory of Computation"
     fontawesome_class: "fas fa-network-wired"
   - title: DL

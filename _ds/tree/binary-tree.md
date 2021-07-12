@@ -129,7 +129,7 @@ int checkIfStrict(struct btNode *r) {
 {% endhighlight %}
 
 - TC: $2T(n/2) + c$
-	- $= O(n) ... W.C. & A.C$
+	- $= O(n) ... W.C. \& A.C$
 	- $= O(1) ... A.C.$
 
 
@@ -170,7 +170,9 @@ int isEqual(struct btNode *r1, struct btNode *r2) {
 		return 1;
 	}
 
-	if ((r1 == NULL && r2 != NULL) || (r1 != NULL && r2 == NULL))
+	if ((r1 == NULL && r2 != NULL) || (r1 != NULL && r2 == NULL)) {
+		return 0
+	}
 
 	if (r1->data == r2->data) {
 		return isEqual(r1->lc, r2->lc) && isEqual(r1->rc, r2->rc);
@@ -189,7 +191,7 @@ int isEqual(struct btNode *r1, struct btNode *r2) {
 
 ## Q6
 
-Write a program to conver a binary tree inot it's morror image.
+Write a program to conver a binary tree into it's mirror image.
 
 {% highlight c %}
 

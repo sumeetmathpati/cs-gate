@@ -2,7 +2,7 @@
 title: Performace Evaluation of Processor
 description: "Performace Evaluation of Processor in Computer Organization and Architecture."
 child_of: CPU Organization
-nav_order: 1
+nav_order: 5
 ---
 
 - We can define the performance on the basis of one of the following:

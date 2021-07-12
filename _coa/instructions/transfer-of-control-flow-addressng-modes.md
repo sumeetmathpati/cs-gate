@@ -6,83 +6,11 @@ nav_order: 9
 sub: true
 ---
 
-- When program has control structures (like if-else, loops, subprograms) we use **transfer of control instructions (TOC)** to jump to some non sequential location.
-- For this we have three possible opcodes:
-    - **Branch**
-    - **Jump**
-    - **Skip**
-- We have two types of transfer of control instructions:
-    - **Conditional**
-    - **Unconditional**
+- Under *transfer of control addressing modes*, we have two addressing modes.
 
-- While executing any instruction, PC contains the address of enxt sequential instruction, but when instruction gets decoded and if it's a TOC instruction; the PC is replaces with target address of that TOC instruction.
+# PC Relative Addressing Mode
 
-# Unconditional Tranfer of Control
-
-- In ths type, the **control is tranfered without checking any condition.**
-- Example,
-    - `JMP 1000`    
-        - This is unconditional jump.
-        - When this instruction encountered, flow control is passed to target location without checking any condition.
-- We use`GOTO`, `HALT` or any other machine controlled instruction to implement unconditional TOC.
-
-## HALT
-
-- `HALT` instruction is unconditional TOC.
-- It's **used to stop the program.**
-- The program is stopped or halted by giving the same address (of `HALT` instruction) as a target address, so that the control doesn't go forward and continues at the same location.
-- Example
-```
-1000
-1001
-1002: HALT
-1002: HALT
-1002: HALT
-...
-...
-```
-
-# Conditional Transfer of Control
-
-- In ths type, the **control is tranfered depending on some condition.**
-- When the condition is true, the control is transfered; else next sequential instruction is executed.
-    - If the condition is true, the content of PC is replaced with target address.
-- Condition is checked with respect to the previous instruction.
-- Used in implementation of:
-    - Conditional selection
-        - Example `IF-ELSE` statements.
-    - Subprograms   
-        - Example functions.
-- Example,
-    - `JNZ 2000`
-        - Here we jump to location 2000 if the result by the previous instruction is NOT zero.
-        - If the zero flag is set by an instruction; then it's result is zero.
-- Condition TOC is further divided into two types:
-    - **Direct TOC**
-    - **Indirect TOC**
-
-## Direct TOC
-
-- In this, the target address is present in instruction.
-
-***
-
-## Indirect TOC
-
-- Here, the target address is not present in instruction itself.
-
-***
-
-|TOC|Unconditional|Conditional|
-|Direct|`JMP <addr>`, `CALL <addr>`, `GOTO`, `HALT`|`JNZ <addr>`, IF-ELSE, loops, `CALL Z`, `CALL NZ`
-|Indirect|`RET`|`RET Z`, `RET NZ`, `RET C`, `RET NZ'C`|
-
-# Addressing Modes
-
-- Under TOC, we have two addressing modes.
-
-## Relative or PC Relative Addressing Mode
-
+- It's also called *position independent* addressing mode.
 - Here the target address will be **within the segment.**
 - The target we get is in the form of offset with respect to PC.
 - The offset can be negetive of positive.
@@ -91,11 +19,49 @@ sub: true
     - Then our effective target address is 970.
 - **EA = PC + Address field value**
 - **PC = PC + Relative value**
+- This addressing mode will work only in intrasegment instructions i.e. jumping within same segment.
 
-## Base Register Addressing Mode
+# Base Register Addressing Mode
 
+- Unlike PC relative addressing mode; this addressing mode can be used to intersegment jumping.
 - Here **target address can be in different segment.**
 - This method is useful for position independent code (example subprogram).
-- In this mode effective address is obtained by adding base register value to address field value. 
-- **EA= Base register + Address field value**
-- **PC= Base register + Relative value**
+- As in PC relative mode we were adding offset vlaue into PC. Here we use another register called *baser register* instead of PC and obtain *effective address* adding *base register* value to *address field* value. 
+- The *base register* contains the base address of the segment.
+- **EA = Base register + Address field value**
+- **PC = Base register + Relative value**
+
+In the case of process relocation; no need to change the instructions of the process for above two addressing mode.
+{: .info}
+
+# Questions
+
+## Q1
+
+An instruction is stored at location 300 with it's address part is stored at location 301. The address field has value 400. A processor register contains value 150. Evalueate the effective address for following addressing modes:
+
+**Solution:**
+
+PC will be 302.
+
+|Addressing modes|Effective address|
+|-|-|
+|Direct|400|
+|Immediate|301|
+|Relative(predecrement)|302+400 = 701|
+|Register indirect|150|
+
+## Q2
+
+A relative branch mode type instruction is stored in memory location 300. The branch is made to an instruction 450.
+
+1. What should be the value of relative address field of an instruction?
+2. Determine the value of PC before instruction fetch, after the fetch and after the execution phase?
+
+**Solution:**
+
+||PC|
+|-|-|
+|Before fetch|300|
+|After fetch|301|
+|After execution phase|450|

@@ -6,16 +6,13 @@ nav_order: 4
 ---
 
 - This tree is proposed by three scientists **A**delson, **V**elsky, and **L**andis, and hence called AVL tree.
-- AVL tree is
-    - **Binary tree**
-    - **Binary seach tree**
-    - **Height balanced tree**
-- Height balance tree is a tree whose balance factor is in {-1, 0, 1}.
+- AVL tree is **Height balanced binary search tree.**
+- In AVL tree balance factor at any node is in {-1, 0, 1}.
 - **Balance factor =** Number of levels in left subtree - Number of levels in right subtree
 - See the examples shown below, the balance factors is shown besides the nodes.
     - ![AVL Balanced Tree]({{ site.baseurl }}/assets/images/plds-balanced-tree.png)
-- **Deletion** in AVl tree is same as BST.
-    - After deleting, balance factor is recalculated and tree is balanceed again if it is not balanced (balancing you will see below) after deletion.
+- **Deletion ans insertion** in AVl tree is same as BST.
+    - After every deletion and insertion, balance factor is recalculated and tree is balanced again if it is not balanced (balancing you will see below) after deletion/insertion.
 
 # Balancing AVL Tree
 
@@ -48,7 +45,7 @@ nav_order: 4
 
 ## Solution
 
-- We knoe that these trees may be unbalanced but **they are search trees.**
+- We know that these trees may be unbalanced but **they are search trees.**
 - To fix all the above problems we just have two intensions: **Make height balance keeping search tree maintained.**
 - We don't have to remember all the rotations, just do the following:
     - **Bring the median ternodem at top (root),**
@@ -60,23 +57,78 @@ Out of three nodes, lest node is node with smallest value, median node is node w
 
  - See the example below.
     - We can see that no matter what is problem is, we always bring the median to the node, lest element to the left of the node and the greatest element to the right side of the node.
-
+- **Time required for any type of roration is O(1).**
 ![L Rotation and R Rotation]({{ site.baseurl }}/assets/images/rotations.png)
 
 - While solving large tree
-    - **Calculate the balance factor of all nodes.**
-    - **Scan from down and see where the first node where the problem is i.e. balance factor is nor in {-1, 0, 1}.**
+    - **Scan from down (i.e. after inserting at bottom strat checking while going beck) and see where the first node where the problem is i.e. balance factor is not in {-1, 0, 1}.**
     - **Apply the rotation according to the problem.**
-- See the example below.
-    - Node '10' had the balance factor 2 due to LL problem.
-    - We solved the problem using R rotation. 
-      
+    - **After fixing the problem, no need to go further up and check for problem, because there can be only one unbalanced node.**
+
 
 # Time Complexity
 
 - In AVL tree deletion, insertion and searching can be done in **O(log(n))** time, where n is number of nodes.
 
-# Examples
+## Deletion
+
+- Deletion steps
+    - Find the node. O(log n)
+    - Delete node. O(1)
+    - If required add inorder successor or predecessor. O(1)
+    - Go back upto the root node and check if all node have correct balance factor.
+- Time complexity: **O(log n) ... E.C.**
+
+While searching for problem, we may find two problems at a node, we should solve a problem which requre less number of rotations.
+{: .note}
+
+While deleting a node with 2 children, we actually copy data from it's inorder successor/predecessor to it, and hen delete the inorder successor/predecessor, after than check for the problems on the pach we came to the inorder seccessor/predecessor upto the root.
+{: .note}
+
+***
+
+## Insertion
+
+- Insertion steps
+    - Create node. O(1)
+    - Find correct place. O(log n)
+    - Add the node. O(1)
+    - Go back on path we've come and verify if all the nodes have correct load factor. O(log n)
+- Time complexity: **O(log n)**
+
+***
+
+Time complexity of any operation on AVL is **O(log n).**
+{: .info}
+
+To create a AVL tree of *n* nodes, we need O(n log n) for every case.
+{: .note}
+
+In AVL tree, while going back (to check if every node has correct balance factor) maximum 1 problem can come and minimum 0 problems can come. But **in case of deletion, more than one problems can come, hence we have to check for problems until the root node.**
+{: .note}
+
+## Searching
+
+- AVLis a balanced binary search tree.
+- Hence, time complexity: **O(log n)**
+
+# Minimum Number of Nodes
+
+- Sometimes question is asked like: **Minimum number of nodes required to construct AVL tree of height *n*.**
+
+- MNN required for height *n* = **MNN(n-1) + MNN(n-2) + 1**
+- Examples
+    - MNN required for height 0: 1
+    - MNN required for height 1: 2
+    - MNN required for height 2: 1 + 2 + 1 = 4
+    - MNN required for height 3: 4 + 2 + 1 = 7 
+
+# Maximum Height of AVL
+
+- Sometimes question is asked like: **Maximum height of AVL tree with *n* nodes.**
+
+- Forumula: **1.44 * log(n)**
+
 
 ## Q1
 

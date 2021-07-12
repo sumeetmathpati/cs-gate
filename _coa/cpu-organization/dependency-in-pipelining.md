@@ -2,7 +2,7 @@
 title: Dependency in Pipelining
 description: "Pipelining dependencies in Computer Organization and Architecture."
 child_of: CPU Organization
-nav_order: 3
+nav_order: 7
 ---
 
 - In pipelining multiple instructions are executing (in different phases).

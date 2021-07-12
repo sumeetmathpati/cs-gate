@@ -14,6 +14,14 @@ parent: true
         - Turing machine not only can read the input, but also can write the data.
     - **Infinite length tape**
 - Languages are recognized using final state method.
+- Turing machine is more powerful than any other automata.
+
+# Turing Machine Structure
+
+- It has finite control and unbound input tape.
+- Finite control has finite number of states.
+- R/W head can read and write input by moving in left or right direction.
+- 
 
 # Formal Definitions
 

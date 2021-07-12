@@ -1,6 +1,6 @@
 ---
 title: Tree Traversal
-description: "Tree traversal tutorial."
+description: "Tree traversal tutorial, Tree traversal techniques, Preorder, Postorder, Inorder. "
 child_of: "Trees"
 nav_order: 2
 ---
@@ -262,18 +262,31 @@ Find the preorder, inorder, and postorder traversal for all the followind trees.
 ## Q2
 
 Find the order which is not given.
+- **Preorder:** A B D F C E G
+- **Inorder:** B F D A C G E
 
-Note that in these type of questions, you will surely have the inorder sequence, and you have to find either preorder or postorder.
+**Solution:**
+
+- **Postorder:** 
+
+
+Note that in these type of questions, you will surely have the inorder sequence, and you have to find either preorder or postorder. <br><br>But if in the question is's mentioned that the sequence is for search tree (like BST, AVL etc) there is no need of inorder sequence, because the inorder sequence of search tree is equal to the ascending sequence.
 {: .info}
 
-### 1)
-
-- **Given:**
-    - **Preorder:** A B D F C E G
-    - **Inorder:** B F D A C G E
-- **Find:** Postorder
-
 ## Q3
+
+Given the following preorder sequence of BST, find the postorder.
+
+- **Preorder:** 100, 20, 10, 80, 50, 40, 60, 90, 200
+
+**Solution:**
+
+- **Postorder:** 10, 40, 60, 50, 90, 80, 20, 200, 100
+
+Find the order which is not given.
+
+
+## Q4
 
 A BT has 200 leaf nodes in tree T, then how many no. of nodes will be there having two children?
 

@@ -1,12 +1,11 @@
 ---
 title: Accumulator Organization
-description: "Accumulator Organization Instruction formats in computer organization."
+description: "Accumulator Organization, one address instruction."
 child_of: Instructions
 nav_order: 4
 sub: true
 ---
 
-- Here we are going to see the instruction format in accumulator organization machine.
 - Here, **out of two oprands in instruction, one default oprand is accumulator. Another oprand could be register or memory.**
 - **Accumulator acts as source as will as destination.**
 - One address machine **also supports zero address instructions** if there is free space available after allovating one address instructions.
@@ -69,9 +68,9 @@ sub: true
     - **Step3:** Identify the free combinations after allocating the high order instructions.
     - **Step4:** Calculate the number of low order instructions by combining the address field with free combinations
 
-## Examples
+# Questions
 
-### Q1
+## Q1
 
 - Suppose a hypothetical CPU which supports zero and one address instruction.
     - It 6 bits for complete instructions.
@@ -88,3 +87,8 @@ sub: true
         - We dont need address for zero address instructions.
         - Therefore we can have 2 * 2^4 = **32 zero address instructions.**
     
+## Q2
+
+Consider a computer which supports 2 and 1 address instructions. Each instruction is of 6 bits and each address is of 2 bits. If there are 3 2-address instructions supported by computer, then maximum 2 address instructions supported by system is?
+
+**Solution:** 4

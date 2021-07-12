@@ -10,7 +10,7 @@ sub: true
 - A recursive language (subset of RE) can be decided by TM.
     - I.e. it will enter into final state for accepting string and halt at non-final state for rejecting the string.
 - There **exist a halting TM** for recursive languages.
-- For example, for language $L = \\{ a^n b^n c^n \| n >= 1\}}$ is recursive because we can construct a TM which will move to the final state if the string is in the form of $a^n b^n c^n$ else it will move to the non-final state.
+- For example, for language $L = \\{ a^n b^n c^n \| n >= 1 \\}$ is recursive because we can construct a TM which will move to the final state if the string is in the form of $a^n b^n c^n$ else it will move to the non-final state.
 - So, the TM will always halt in this case.
 - Recursive languages are also called as **decidable languages.**
 - **Recursive languges are subclass of recursive enumerable languages.**
