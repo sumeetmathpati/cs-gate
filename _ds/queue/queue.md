@@ -192,3 +192,8 @@ Time complexity of all functions `enqueue`, `dequeue`, `isEmpty` and `isNull` is
 
 In this case `dequeue` is more constly (O(n)) than `enqueue` (O(1)). But we reverse the implementation and make `enqueue` operation constly (O(n)) and `dequeue` in O(1).
 {: .note}
+
+# Life of Element in Queue
+
+- The lifetime of any element $x$ in queue is the (time after enqueue(x) - before dequeue(x)).
+- Unlike stack (you will see in stack chapter), lifetime of every element in queue is same.

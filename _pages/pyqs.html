@@ -11,8 +11,16 @@ permalink: /pyqs
 
 <h2>Year Wise</h2>
 
-{% for year in site.data.pyqs %}
-    <a href="{{ site.baseurl }}/{{ year.url }}">{{ year.title }}</a> <br>
-{% endfor %}
+<ul>
+    {% assign qyears = site.pages | sort: "year" | reverse %}
+    {% for year in qyears %}
+    {% if year.layout == 'questions' %}
+    <li>
+        <a href="{{ site.baseurl }}{{ year.url }}">{{ year.title }}</a> <br>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
 
 <h2>Subject and Topic Wise</h2>

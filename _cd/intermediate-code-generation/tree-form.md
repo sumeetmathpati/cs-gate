@@ -24,3 +24,8 @@ child_of: Intermediate Code Generation
 - DAG is a **syntax tree in which common sub expressions are eliminated.**
 
 ![Direct Acyclic Graph Example]({{ site.baseurl }}/assets/images/cd/dag-example.png)
+
+# Drawbacks of Tree Form
+
+- It's best suited only for expression statements andnot for all high level language statements.
+    - I.e. it's not suited for statements like *loops*, *IO statements*, *functions*, etc.

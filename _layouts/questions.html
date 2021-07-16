@@ -1,10 +1,11 @@
 ---
 layout: default
+mathjax: true
 ---
 
 {% for question in site.questions %}
 
-{% if question.year == page.year and question.set_number == page.set_number%}
+{% if question.year == page.year and question.set_number == page.set_number %}
 
 <div class="">
 <h2>Q{{ question.qno }}</h2>

@@ -5,6 +5,10 @@ nav_order: 3
 ---
 
 - **Process is program under execution.**
+- Some more definitions of process are:
+    - Process is schedulable unit.
+    - Process is executable unit/
+    - Process is instance of program
 - Process resides in **main memory.**
 - To execute instructions in program, it should aquire processor.
 
@@ -24,7 +28,7 @@ nav_order: 3
         - Unique ID given to process by OS at the time of process creation.
         - Used to identify the process.
     - **Process state**
-        - Process state denoted the current state of process..
+        - Process state denoted the current state of process.
     - **Program counter**
         - Program is a set of instructions.
         - PC stores the address of next instruction which will be executed When process will be schedules for execution.

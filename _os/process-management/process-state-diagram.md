@@ -63,6 +63,7 @@ nav_order: 1
 ## Terminated State
 
 - If the running process completes it's execution, it's placed in termination state.  
+- After termination, all the resources of process are deallocated.
 
 ***
 
